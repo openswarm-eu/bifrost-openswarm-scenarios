@@ -1,0 +1,32 @@
+name: proseco_scenarios
+services:
+    influxdb:
+        image: $REGISTRY_INFLUXDB:$IMG_TAG_INFLUXDB
+        environment:
+            DOCKER_INFLUXDB_INIT_MODE: 'setup'
+            DOCKER_INFLUXDB_INIT_USERNAME: 'proseco_user'
+            DOCKER_INFLUXDB_INIT_PASSWORD: 'proseco_str0ng_passw0rd'
+            DOCKER_INFLUXDB_INIT_ORG: 'proseco'
+            DOCKER_INFLUXDB_INIT_BUCKET: 'proseco'
+            DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: 'C8TXsDAjcGfCKqZJY6fI+u268gUMdRWhj6MpbZexj38='
+        volumes:
+            - ../data/influxdb/data:/var/lib/influxdb2
+            - ../data/influxdb/config:/etc/influxdb2
+
+    bifrost-core:
+        image: $REGISTRY_CORE:$IMG_TAG_CORE
+        environment:
+            BIFROST__server_host: '"::"'
+            BIFROST__cdl_url: '"http://influxdb:8086"'
+            BIFROST__cdl_org: '"proseco"'
+            BIFROST__cdl_user: '"proseco_user"'
+            BIFROST__cdl_token: '"C8TXsDAjcGfCKqZJY6fI+u268gUMdRWhj6MpbZexj38="'
+            # BIFROST__backup_autoImport: 'true'
+        volumes:
+            - ../data/story_volume/:/opt/bifrost/server/build/backup/
+            # - ../data/bsx_volume/:/opt/bifrost/server/build/imports/
+            - ../configs/core/:/opt/bifrost/server/build/server/config/user/
+        ports:
+            - '9091:9091'
+        command: >
+            sh -c "npm run start:server -- -- --config-user-module=proseco-scenarios-core-config.js"
