@@ -24,9 +24,13 @@ services:
             # BIFROST__backup_autoImport: 'true'
         volumes:
             - ../data/story_volume/:/opt/bifrost/server/build/backup/
-            # - ../data/bsx_volume/:/opt/bifrost/server/build/imports/
+            #  - ../data/bsx_volume/:/opt/bifrost/server/build/imports/
+            - ../fragments/core/:/opt/bifrost/server/fragment/
             - ../configs/core/:/opt/bifrost/server/build/server/config/user/
         ports:
             - '9091:9091'
-        command: >
-            sh -c "npm run start:server -- -- --config-user-module=proseco-scenarios-core-config.js"
+        command: |
+            sh -c "
+                npm run build:server && 
+                npm run start:server -- -- --config-user-module=proseco-scenarios-core-config.js
+            "

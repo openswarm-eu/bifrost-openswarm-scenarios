@@ -39,3 +39,13 @@ docker-compose -f ./docker/docker-compose-scenarios.yml --env-file ./env/docker.
 ## Tools
 
 Within the folder `tools` are some helper scripts (using python). For more information please use the [README](./tools/README.md) there...
+
+## Altering Core Fragments / Structures
+
+In this repository it is possible to start BIFROST with alternative structure fragments. The fragments in form of Typescript code can be found in [`./fragments/core`](./fragments/core/). 
+
+To work with the full potential of these Typescript files, you can import the `bifrost-zero-common` node modules & Typescript language support with the provided `package.json`. Just install all required Node modules with (after installing [Node.JS](https://nodejs.org/en), tested with version 20.13.1, npm 10.5.2):
+
+```sh
+npm install
+```
