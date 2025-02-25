@@ -1,6 +1,5 @@
 import { TFragment } from 'bifrost-zero-common'
 import datagridFragment from './datagrid.fragment.js'
-import dominionFragment from './dominion.fragment.js'
 import landscapeFragment from './landscape.fragment.js'
 import powergridFragment from './powergrid.fragment.js'
 import thermogridFragment from './thermogrid.fragment.js'
@@ -12,7 +11,6 @@ import thermogridFragment from './thermogrid.fragment.js'
 export function getBaseFragments(): TFragment[] {
     return [
         datagridFragment,
-        dominionFragment,
         landscapeFragment,
         powergridFragment,
         thermogridFragment

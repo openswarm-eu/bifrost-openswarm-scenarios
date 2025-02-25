@@ -85,12 +85,12 @@ const thermogridFragment: TFragment = {
             domain: 'landscape',
             memberOf: ['buildings', 'thermal'],
             placeOn: ['canvas'],
-            name: 'Heating accumulator',
+            name: 'Heat Pump',
             description: 'A heating accumulator which stores warm and cold water',
             size: 4,
             replace: false,
             defaultPairing: [],
-            requiredPairing: ['THERMOGRID-CONNECTOR'],
+            requiredPairing: ['POWERGRID-CONNECTOR','THERMOGRID-CONNECTOR'],
             forbiddenPairing: [],
             dynamics: [],
             flavors: ['107_SBC_heating-accumulator'],
@@ -161,91 +161,91 @@ const thermogridFragment: TFragment = {
                 emissiveOnConnection: true
             }
         },
-        'PRESSURE-VALVE': {
-            domain: 'thermogrid',
-            memberOf: ['taps'],
-            placeOn: ['canvas'],
-            name: 'Pressure valve',
-            description: 'A district heating/cooling pressure valve',
-            size: 1,
-            replace: true,
-            defaultPairing: [],
-            requiredPairing: [],
-            forbiddenPairing: [],
-            dynamics: [],
-            flavors: [],
-            renderData: {
-                file: '',
-                image: {
-                    base: 'objects/inactive/buildings/',
-                    hover: 'objects/active/buildings/',
-                    active: 'objects/active/buildings/'
-                },
-                rotationY: 0,
-                scale: 'default',
-                hideInPanel: false,
-                category: 'THERMAL',
-                sorting: 202
-            }
-        },
-        'HEAT-EXCHANGER': {
-            domain: 'thermogrid',
-            memberOf: [],
-            placeOn: ['THERMOGRID-CONNECTOR'],
-            name: 'Heat exchanger',
-            description: 'Upgrade for thermogrid connector',
-            size: 1,
-            replace: false,
-            defaultPairing: [],
-            requiredPairing: [],
-            forbiddenPairing: [],
-            dynamics: [],
-            flavors: ['108_SBC_heat-exchanger'],
-            renderData: {
-                file: 'buildings/',
-                image: {
-                    base: 'objects/inactive/buildings/',
-                    hover: 'objects/active/buildings/',
-                    active: 'objects/active/buildings/'
-                },
-                rotationY: 0.75,
-                hideObjectOnCanvas: true,
-                scale: 'default',
-                hideInPanel: false,
-                nightmode: false,
-                category: 'THERMAL',
-                sorting: 203
-            }
-        },
-        PUMP: {
-            domain: 'thermogrid',
-            memberOf: [],
-            placeOn: ['THERMOGRID-CONNECTOR'],
-            name: 'Pump',
-            description: 'A thermo pump',
-            size: 1,
-            replace: false,
-            defaultPairing: [],
-            requiredPairing: [],
-            forbiddenPairing: [],
-            dynamics: [],
-            flavors: ['109_SBC_pump'],
-            renderData: {
-                file: 'buildings/',
-                image: {
-                    base: 'objects/inactive/buildings/',
-                    hover: 'objects/active/buildings/',
-                    active: 'objects/active/buildings/'
-                },
-                rotationY: 0.75,
-                hideObjectOnCanvas: true,
-                scale: 'default',
-                hideInPanel: false,
-                nightmode: false,
-                category: 'THERMAL',
-                sorting: 204
-            }
-        }
+        // 'PRESSURE-VALVE': {
+        //     domain: 'thermogrid',
+        //     memberOf: ['taps'],
+        //     placeOn: ['canvas'],
+        //     name: 'Pressure valve',
+        //     description: 'A district heating/cooling pressure valve',
+        //     size: 1,
+        //     replace: true,
+        //     defaultPairing: [],
+        //     requiredPairing: [],
+        //     forbiddenPairing: [],
+        //     dynamics: [],
+        //     flavors: [],
+        //     renderData: {
+        //         file: '',
+        //         image: {
+        //             base: 'objects/inactive/buildings/',
+        //             hover: 'objects/active/buildings/',
+        //             active: 'objects/active/buildings/'
+        //         },
+        //         rotationY: 0,
+        //         scale: 'default',
+        //         hideInPanel: false,
+        //         category: 'THERMAL',
+        //         sorting: 202
+        //     }
+        // },
+        // 'HEAT-EXCHANGER': {
+        //     domain: 'thermogrid',
+        //     memberOf: [],
+        //     placeOn: ['THERMOGRID-CONNECTOR'],
+        //     name: 'Heat exchanger',
+        //     description: 'Upgrade for thermogrid connector',
+        //     size: 1,
+        //     replace: false,
+        //     defaultPairing: [],
+        //     requiredPairing: [],
+        //     forbiddenPairing: [],
+        //     dynamics: [],
+        //     flavors: ['108_SBC_heat-exchanger'],
+        //     renderData: {
+        //         file: 'buildings/',
+        //         image: {
+        //             base: 'objects/inactive/buildings/',
+        //             hover: 'objects/active/buildings/',
+        //             active: 'objects/active/buildings/'
+        //         },
+        //         rotationY: 0.75,
+        //         hideObjectOnCanvas: true,
+        //         scale: 'default',
+        //         hideInPanel: false,
+        //         nightmode: false,
+        //         category: 'THERMAL',
+        //         sorting: 203
+        //     }
+        // },
+        // PUMP: {
+        //     domain: 'thermogrid',
+        //     memberOf: [],
+        //     placeOn: ['THERMOGRID-CONNECTOR'],
+        //     name: 'Pump',
+        //     description: 'A thermo pump',
+        //     size: 1,
+        //     replace: false,
+        //     defaultPairing: [],
+        //     requiredPairing: [],
+        //     forbiddenPairing: [],
+        //     dynamics: [],
+        //     flavors: ['109_SBC_pump'],
+        //     renderData: {
+        //         file: 'buildings/',
+        //         image: {
+        //             base: 'objects/inactive/buildings/',
+        //             hover: 'objects/active/buildings/',
+        //             active: 'objects/active/buildings/'
+        //         },
+        //         rotationY: 0.75,
+        //         hideObjectOnCanvas: true,
+        //         scale: 'default',
+        //         hideInPanel: false,
+        //         nightmode: false,
+        //         category: 'THERMAL',
+        //         sorting: 204
+        //     }
+        // }
     },
     dynamics: {},
     mappings: {}

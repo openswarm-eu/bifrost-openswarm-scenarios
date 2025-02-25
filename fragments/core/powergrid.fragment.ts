@@ -149,117 +149,117 @@ const powergridFragment: TFragment = {
                 showPlaceholder: true
             }
         },
-        POWERSWITCH: {
-            domain: 'powergrid',
-            memberOf: ['electrical', 'taps'],
-            placeOn: ['canvas'],
-            name: 'Power Switch',
-            description: 'Power switch',
-            size: 1,
-            replace: false,
-            defaultPairing: [],
-            requiredPairing: [],
-            forbiddenPairing: [],
-            dynamics: [],
-            flavors: [],
-            renderData: {
-                file: '',
-                image: {
-                    base: 'objects/inactive/buildings/',
-                    hover: 'objects/active/buildings/',
-                    active: 'objects/active/buildings/'
-                },
-                rotationY: 0,
-                scale: 'default',
-                hideInPanel: false,
-                category: 'ELECTRICAL',
-                sorting: 401
-            }
-        },
-        FUSE: {
-            domain: 'powergrid',
-            memberOf: ['electrical', 'taps'],
-            placeOn: ['canvas'],
-            name: 'Fuse',
-            description: 'A three phase fuse',
-            size: 1,
-            replace: false,
-            defaultPairing: [],
-            requiredPairing: [],
-            forbiddenPairing: [],
-            dynamics: [],
-            flavors: [],
-            renderData: {
-                file: '',
-                image: {
-                    base: 'objects/inactive/buildings/',
-                    hover: 'objects/active/buildings/',
-                    active: 'objects/active/buildings/'
-                },
-                rotationY: 0,
-                scale: 'default',
-                hideInPanel: false,
-                category: 'ELECTRICAL',
-                sorting: 402
-            }
-        },
-        'BATTERY-STORAGE-SMALL': {
-            domain: 'powergrid',
-            memberOf: ['electrical', 'sources'],
-            placeOn: ['COMMERCIAL-BATTERY-SMALL'],
-            name: 'Battery Storage (Small)',
-            description: 'Battery storage element',
-            size: 4,
-            replace: false,
-            defaultPairing: [],
-            requiredPairing: [],
-            forbiddenPairing: [],
-            dynamics: [],
-            flavors: ['72_SBC_battery-storage'],
-            renderData: {
-                file: 'buildings/',
-                image: {
-                    base: 'objects/inactive/buildings/',
-                    hover: 'objects/active/buildings/',
-                    active: 'objects/active/buildings/'
-                },
-                rotationY: 0.75,
-                scale: 'default',
-                hideInPanel: true,
-                nightmode: false,
-                emissiveOnConnection: true,
-                category: 'ELECTRICAL'
-            }
-        },
-        'BATTERY-STORAGE-LARGE': {
-            domain: 'powergrid',
-            memberOf: ['electrical', 'sources'],
-            placeOn: ['COMMERCIAL-BATTERY-LARGE'],
-            name: 'Battery Storage (Large)',
-            description: 'Battery storage element',
-            size: 8,
-            replace: false,
-            defaultPairing: [],
-            requiredPairing: [],
-            forbiddenPairing: [],
-            dynamics: [],
-            flavors: ['72_SBC_battery-storage'],
-            renderData: {
-                file: 'buildings/',
-                image: {
-                    base: 'objects/inactive/buildings/',
-                    hover: 'objects/active/buildings/',
-                    active: 'objects/active/buildings/'
-                },
-                rotationY: 0.75,
-                scale: 'default',
-                hideInPanel: true,
-                nightmode: false,
-                emissiveOnConnection: true,
-                category: 'ELECTRICAL'
-            }
-        },
-        'COMMERCIAL-BATTERY-SMALL': {
+        // POWERSWITCH: {
+        //     domain: 'powergrid',
+        //     memberOf: ['electrical', 'taps'],
+        //     placeOn: ['canvas'],
+        //     name: 'Power Switch',
+        //     description: 'Power switch',
+        //     size: 1,
+        //     replace: false,
+        //     defaultPairing: [],
+        //     requiredPairing: [],
+        //     forbiddenPairing: [],
+        //     dynamics: [],
+        //     flavors: [],
+        //     renderData: {
+        //         file: '',
+        //         image: {
+        //             base: 'objects/inactive/buildings/',
+        //             hover: 'objects/active/buildings/',
+        //             active: 'objects/active/buildings/'
+        //         },
+        //         rotationY: 0,
+        //         scale: 'default',
+        //         hideInPanel: false,
+        //         category: 'ELECTRICAL',
+        //         sorting: 401
+        //     }
+        // },
+        // FUSE: {
+        //     domain: 'powergrid',
+        //     memberOf: ['electrical', 'taps'],
+        //     placeOn: ['canvas'],
+        //     name: 'Fuse',
+        //     description: 'A three phase fuse',
+        //     size: 1,
+        //     replace: false,
+        //     defaultPairing: [],
+        //     requiredPairing: [],
+        //     forbiddenPairing: [],
+        //     dynamics: [],
+        //     flavors: [],
+        //     renderData: {
+        //         file: '',
+        //         image: {
+        //             base: 'objects/inactive/buildings/',
+        //             hover: 'objects/active/buildings/',
+        //             active: 'objects/active/buildings/'
+        //         },
+        //         rotationY: 0,
+        //         scale: 'default',
+        //         hideInPanel: false,
+        //         category: 'ELECTRICAL',
+        //         sorting: 402
+        //     }
+        // },
+        // 'BATTERY-STORAGE-SMALL': {
+        //     domain: 'powergrid',
+        //     memberOf: ['electrical', 'sources'],
+        //     placeOn: ['COMMERCIAL-BATTERY-SMALL'],
+        //     name: 'Battery Storage (Small)',
+        //     description: 'Battery storage element',
+        //     size: 4,
+        //     replace: false,
+        //     defaultPairing: [],
+        //     requiredPairing: [],
+        //     forbiddenPairing: [],
+        //     dynamics: [],
+        //     flavors: ['72_SBC_battery-storage'],
+        //     renderData: {
+        //         file: 'buildings/',
+        //         image: {
+        //             base: 'objects/inactive/buildings/',
+        //             hover: 'objects/active/buildings/',
+        //             active: 'objects/active/buildings/'
+        //         },
+        //         rotationY: 0.75,
+        //         scale: 'default',
+        //         hideInPanel: true,
+        //         nightmode: false,
+        //         emissiveOnConnection: true,
+        //         category: 'ELECTRICAL'
+        //     }
+        // },
+        // 'BATTERY-STORAGE-LARGE': {
+        //     domain: 'powergrid',
+        //     memberOf: ['electrical', 'sources'],
+        //     placeOn: ['COMMERCIAL-BATTERY-LARGE'],
+        //     name: 'Battery Storage (Large)',
+        //     description: 'Battery storage element',
+        //     size: 8,
+        //     replace: false,
+        //     defaultPairing: [],
+        //     requiredPairing: [],
+        //     forbiddenPairing: [],
+        //     dynamics: [],
+        //     flavors: ['72_SBC_battery-storage'],
+        //     renderData: {
+        //         file: 'buildings/',
+        //         image: {
+        //             base: 'objects/inactive/buildings/',
+        //             hover: 'objects/active/buildings/',
+        //             active: 'objects/active/buildings/'
+        //         },
+        //         rotationY: 0.75,
+        //         scale: 'default',
+        //         hideInPanel: true,
+        //         nightmode: false,
+        //         emissiveOnConnection: true,
+        //         category: 'ELECTRICAL'
+        //     }
+        // },
+        'BATTERY-SMALL': {
             domain: 'landscape',
             memberOf: ['buildings', 'electrical', 'sources'],
             placeOn: ['canvas'],
@@ -268,8 +268,8 @@ const powergridFragment: TFragment = {
             size: 4,
             replace: false,
             defaultPairing: [],
-            requiredPairing: ['BATTERY-STORAGE-SMALL'],
-            forbiddenPairing: ['POWERGRID-CONNECTOR'],
+            requiredPairing: ['POWERGRID-CONNECTOR'],
+            forbiddenPairing: [],
             dynamics: [],
             flavors: ['41_SBC_commercial-storage-small'],
             renderData: {
@@ -293,203 +293,203 @@ const powergridFragment: TFragment = {
             },
             tags: ['base']
         },
-        'COMMERCIAL-BATTERY-LARGE': {
-            domain: 'landscape',
-            memberOf: ['buildings', 'electrical', 'sources'],
-            placeOn: ['canvas'],
-            name: 'Large Battery',
-            description: 'Large battery storage facility',
-            size: 8,
-            replace: false,
-            defaultPairing: [],
-            requiredPairing: ['BATTERY-STORAGE-LARGE'],
-            forbiddenPairing: ['POWERGRID-CONNECTOR'],
-            dynamics: [],
-            flavors: ['42_SBC_commercial-storage-large'],
-            renderData: {
-                file: 'buildings/',
-                image: {
-                    base: 'objects/inactive/buildings/',
-                    hover: 'objects/active/buildings/',
-                    active: 'objects/active/buildings/'
-                },
-                rotationY: 0.75,
-                scale: 'default',
-                hideInPanel: false,
-                category: 'ELECTRICAL',
-                sorting: 303,
-                nightmode: true,
-                geoObject: true,
-                widgetPosition: {
-                    '42_SBC_commercial-storage-large': [-1.5, 0.8, 0.4]
-                },
-                showPlaceholder: true
-            }
-        },
-        'BIOMASS-POWER-PLANT': {
-            domain: 'landscape',
-            memberOf: ['buildings', 'generators'],
-            placeOn: ['canvas'],
-            name: 'Biomass Power Plant',
-            description: 'A powerplant which uses biomass',
-            size: 4,
-            replace: false,
-            defaultPairing: [],
-            requiredPairing: [],
-            forbiddenPairing: [],
-            dynamics: [],
-            flavors: ['83_SBC_powerplant_biomass'],
-            renderData: {
-                file: 'buildings/',
-                image: {
-                    base: 'objects/inactive/buildings/',
-                    hover: 'objects/active/buildings/',
-                    active: 'objects/active/buildings/'
-                },
-                rotationY: 0.75,
-                scale: 'default',
-                hideInPanel: false,
-                category: 'ELECTRICAL',
-                sorting: 201,
-                nightmode: true,
-                showPlaceholder: true,
-                geoObject: true,
-                widgetPosition: {
-                    '83_SBC_powerplant_biomass': [-0.2, 1.75, -0.2]
-                },
-                decorators: {
-                    'SOLAR-PANEL': {
-                        link: 'buildings/65_SBC_flat-solar-panel',
-                        flavors: {
-                            '83_SBC_powerplant_biomass': {
-                                position: [-0.57, 0.3, -0.1],
-                                rotationY: 0.25,
-                                repeatY: 3
-                            }
-                        }
-                    },
-                    'CHARGING-POLE': {
-                        link: 'buildings/63_SBC_ev-ground-charger',
-                        flavors: {
-                            '83_SBC_powerplant_biomass': {
-                                position: [0.62, 0, 0.3],
-                                rotationY: 0.25
-                            }
-                        }
-                    }
-                }
-            },
-            tags: ['base', 'lvgrid', 'mvgrid']
-        },
-        'BIOGAS-POWER-PLANT': {
-            domain: 'landscape',
-            memberOf: ['buildings', 'generators'],
-            placeOn: ['canvas'],
-            name: 'Biogas Power Plant',
-            description: 'A powerplant which uses biogas',
-            size: 4,
-            replace: false,
-            defaultPairing: [],
-            requiredPairing: [],
-            forbiddenPairing: [],
-            dynamics: [],
-            flavors: ['84_SBC_powerplant_biogas'],
-            renderData: {
-                file: 'buildings/',
-                image: {
-                    base: 'objects/inactive/buildings/',
-                    hover: 'objects/active/buildings/',
-                    active: 'objects/active/buildings/'
-                },
-                rotationY: 0.75,
-                scale: 'default',
-                hideInPanel: false,
-                category: 'ELECTRICAL',
-                sorting: 202,
-                nightmode: true,
-                showPlaceholder: true,
-                geoObject: true,
-                widgetPosition: {
-                    '84_SBC_powerplant_biogas': [-0.3, 1.1, -0.3]
-                },
-                decorators: {
-                    'SOLAR-PANEL': {
-                        link: 'buildings/47_SBC_solar-panel',
-                        flavors: {
-                            '84_SBC_powerplant_biogas': {
-                                position: [-0.4, 0.68, 0]
-                            }
-                        }
-                    },
-                    'CHARGING-POLE': {
-                        link: 'buildings/63_SBC_ev-ground-charger',
-                        flavors: {
-                            '84_SBC_powerplant_biogas': {
-                                position: [0.3, 0, 0.62]
-                            }
-                        }
-                    }
-                }
-            },
-            tags: ['base', 'lvgrid', 'mvgrid']
-        },
-        'HYDRO-POWER-PLANT': {
-            domain: 'landscape',
-            memberOf: ['buildings', 'generators'],
-            placeOn: ['canvas'],
-            name: 'Hydro Power Plant',
-            description: 'A hydro power plant',
-            size: 8,
-            replace: false,
-            defaultPairing: [],
-            requiredPairing: [],
-            forbiddenPairing: [],
-            dynamics: [],
-            flavors: ['87_SBC_hydropower-plant'],
-            renderData: {
-                file: 'buildings/',
-                image: {
-                    base: 'objects/inactive/buildings/',
-                    hover: 'objects/active/buildings/',
-                    active: 'objects/active/buildings/'
-                },
-                rotationY: 0.75,
-                scale: 'default',
-                hideInPanel: false,
-                category: 'ELECTRICAL',
-                sorting: 203,
-                nightmode: true,
-                showPlaceholder: true,
-                geoObject: true,
-                widgetPosition: {
-                    '87_SBC_hydropower-plant': [0, 1.1, 0]
-                },
-                decorators: {
-                    'SOLAR-PANEL': {
-                        link: 'buildings/47_SBC_solar-panel',
-                        flavors: {
-                            '87_SBC_hydropower-plant': {
-                                position: [-0.7, 0.035, 0.7],
-                                rotationY: 0,
-                                rotationX: 0,
-                                scale: 1,
-                                repeatX: 3
-                            }
-                        }
-                    },
-                    'CHARGING-POLE': {
-                        link: 'buildings/63_SBC_ev-ground-charger',
-                        flavors: {
-                            '87_SBC_hydropower-plant': {
-                                position: [0.5, 0, 0.8],
-                                rotationY: 0.25
-                            }
-                        }
-                    }
-                }
-            },
-            tags: ['base', 'lvgrid', 'mvgrid']
-        },
+        // 'COMMERCIAL-BATTERY-LARGE': {
+        //     domain: 'landscape',
+        //     memberOf: ['buildings', 'electrical', 'sources'],
+        //     placeOn: ['canvas'],
+        //     name: 'Large Battery',
+        //     description: 'Large battery storage facility',
+        //     size: 8,
+        //     replace: false,
+        //     defaultPairing: [],
+        //     requiredPairing: ['BATTERY-STORAGE-LARGE'],
+        //     forbiddenPairing: ['POWERGRID-CONNECTOR'],
+        //     dynamics: [],
+        //     flavors: ['42_SBC_commercial-storage-large'],
+        //     renderData: {
+        //         file: 'buildings/',
+        //         image: {
+        //             base: 'objects/inactive/buildings/',
+        //             hover: 'objects/active/buildings/',
+        //             active: 'objects/active/buildings/'
+        //         },
+        //         rotationY: 0.75,
+        //         scale: 'default',
+        //         hideInPanel: false,
+        //         category: 'ELECTRICAL',
+        //         sorting: 303,
+        //         nightmode: true,
+        //         geoObject: true,
+        //         widgetPosition: {
+        //             '42_SBC_commercial-storage-large': [-1.5, 0.8, 0.4]
+        //         },
+        //         showPlaceholder: true
+        //     }
+        // },
+        // 'BIOMASS-POWER-PLANT': {
+        //     domain: 'landscape',
+        //     memberOf: ['buildings', 'generators'],
+        //     placeOn: ['canvas'],
+        //     name: 'Biomass Power Plant',
+        //     description: 'A powerplant which uses biomass',
+        //     size: 4,
+        //     replace: false,
+        //     defaultPairing: [],
+        //     requiredPairing: [],
+        //     forbiddenPairing: [],
+        //     dynamics: [],
+        //     flavors: ['83_SBC_powerplant_biomass'],
+        //     renderData: {
+        //         file: 'buildings/',
+        //         image: {
+        //             base: 'objects/inactive/buildings/',
+        //             hover: 'objects/active/buildings/',
+        //             active: 'objects/active/buildings/'
+        //         },
+        //         rotationY: 0.75,
+        //         scale: 'default',
+        //         hideInPanel: false,
+        //         category: 'ELECTRICAL',
+        //         sorting: 201,
+        //         nightmode: true,
+        //         showPlaceholder: true,
+        //         geoObject: true,
+        //         widgetPosition: {
+        //             '83_SBC_powerplant_biomass': [-0.2, 1.75, -0.2]
+        //         },
+        //         decorators: {
+        //             'SOLAR-PANEL': {
+        //                 link: 'buildings/65_SBC_flat-solar-panel',
+        //                 flavors: {
+        //                     '83_SBC_powerplant_biomass': {
+        //                         position: [-0.57, 0.3, -0.1],
+        //                         rotationY: 0.25,
+        //                         repeatY: 3
+        //                     }
+        //                 }
+        //             },
+        //             'CHARGING-POLE': {
+        //                 link: 'buildings/63_SBC_ev-ground-charger',
+        //                 flavors: {
+        //                     '83_SBC_powerplant_biomass': {
+        //                         position: [0.62, 0, 0.3],
+        //                         rotationY: 0.25
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     },
+        //     tags: ['base', 'lvgrid', 'mvgrid']
+        // },
+        // 'BIOGAS-POWER-PLANT': {
+        //     domain: 'landscape',
+        //     memberOf: ['buildings', 'generators'],
+        //     placeOn: ['canvas'],
+        //     name: 'Biogas Power Plant',
+        //     description: 'A powerplant which uses biogas',
+        //     size: 4,
+        //     replace: false,
+        //     defaultPairing: [],
+        //     requiredPairing: [],
+        //     forbiddenPairing: [],
+        //     dynamics: [],
+        //     flavors: ['84_SBC_powerplant_biogas'],
+        //     renderData: {
+        //         file: 'buildings/',
+        //         image: {
+        //             base: 'objects/inactive/buildings/',
+        //             hover: 'objects/active/buildings/',
+        //             active: 'objects/active/buildings/'
+        //         },
+        //         rotationY: 0.75,
+        //         scale: 'default',
+        //         hideInPanel: false,
+        //         category: 'ELECTRICAL',
+        //         sorting: 202,
+        //         nightmode: true,
+        //         showPlaceholder: true,
+        //         geoObject: true,
+        //         widgetPosition: {
+        //             '84_SBC_powerplant_biogas': [-0.3, 1.1, -0.3]
+        //         },
+        //         decorators: {
+        //             'SOLAR-PANEL': {
+        //                 link: 'buildings/47_SBC_solar-panel',
+        //                 flavors: {
+        //                     '84_SBC_powerplant_biogas': {
+        //                         position: [-0.4, 0.68, 0]
+        //                     }
+        //                 }
+        //             },
+        //             'CHARGING-POLE': {
+        //                 link: 'buildings/63_SBC_ev-ground-charger',
+        //                 flavors: {
+        //                     '84_SBC_powerplant_biogas': {
+        //                         position: [0.3, 0, 0.62]
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     },
+        //     tags: ['base', 'lvgrid', 'mvgrid']
+        // },
+        // 'HYDRO-POWER-PLANT': {
+        //     domain: 'landscape',
+        //     memberOf: ['buildings', 'generators'],
+        //     placeOn: ['canvas'],
+        //     name: 'Hydro Power Plant',
+        //     description: 'A hydro power plant',
+        //     size: 8,
+        //     replace: false,
+        //     defaultPairing: [],
+        //     requiredPairing: [],
+        //     forbiddenPairing: [],
+        //     dynamics: [],
+        //     flavors: ['87_SBC_hydropower-plant'],
+        //     renderData: {
+        //         file: 'buildings/',
+        //         image: {
+        //             base: 'objects/inactive/buildings/',
+        //             hover: 'objects/active/buildings/',
+        //             active: 'objects/active/buildings/'
+        //         },
+        //         rotationY: 0.75,
+        //         scale: 'default',
+        //         hideInPanel: false,
+        //         category: 'ELECTRICAL',
+        //         sorting: 203,
+        //         nightmode: true,
+        //         showPlaceholder: true,
+        //         geoObject: true,
+        //         widgetPosition: {
+        //             '87_SBC_hydropower-plant': [0, 1.1, 0]
+        //         },
+        //         decorators: {
+        //             'SOLAR-PANEL': {
+        //                 link: 'buildings/47_SBC_solar-panel',
+        //                 flavors: {
+        //                     '87_SBC_hydropower-plant': {
+        //                         position: [-0.7, 0.035, 0.7],
+        //                         rotationY: 0,
+        //                         rotationX: 0,
+        //                         scale: 1,
+        //                         repeatX: 3
+        //                     }
+        //                 }
+        //             },
+        //             'CHARGING-POLE': {
+        //                 link: 'buildings/63_SBC_ev-ground-charger',
+        //                 flavors: {
+        //                     '87_SBC_hydropower-plant': {
+        //                         position: [0.5, 0, 0.8],
+        //                         rotationY: 0.25
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     },
+        //     tags: ['base', 'lvgrid', 'mvgrid']
+        // },
         'SOLAR-FARM': {
             domain: 'landscape',
             memberOf: ['buildings', 'generators'],
@@ -499,7 +499,7 @@ const powergridFragment: TFragment = {
             size: 4,
             replace: false,
             defaultPairing: [],
-            requiredPairing: [],
+            requiredPairing: ['POWERGRID-CONNECTOR'],
             forbiddenPairing: [],
             dynamics: [],
             flavors: ['68_SBC_powergrid'],
@@ -568,40 +568,40 @@ const powergridFragment: TFragment = {
             },
             tags: ['base', 'lvgrid', 'mvgrid']
         },
-        'BACKUP-POWER-SUPPLY': {
-            domain: 'landscape',
-            memberOf: ['buildings', 'generators'],
-            placeOn: ['canvas'],
-            name: 'Backup Power Supply',
-            description: 'A backup power supply',
-            size: 1,
-            replace: false,
-            defaultPairing: [],
-            requiredPairing: [],
-            forbiddenPairing: [],
-            dynamics: [],
-            flavors: ['88_SBC_backup-power-supply'],
-            renderData: {
-                file: 'buildings/',
-                image: {
-                    base: 'objects/inactive/buildings/',
-                    hover: 'objects/active/buildings/',
-                    active: 'objects/active/buildings/'
-                },
-                rotationY: 0.75,
-                scale: 'default',
-                hideInPanel: false,
-                category: 'ELECTRICAL',
-                sorting: 206,
-                nightmode: true,
-                showPlaceholder: true,
-                geoObject: true,
-                widgetPosition: {
-                    '88_SBC_backup-power-supply': [-0.35, 0.48, -0.35]
-                }
-            },
-            tags: ['base', 'lvgrid', 'mvgrid']
-        },
+        // 'BACKUP-POWER-SUPPLY': {
+        //     domain: 'landscape',
+        //     memberOf: ['buildings', 'generators'],
+        //     placeOn: ['canvas'],
+        //     name: 'Backup Power Supply',
+        //     description: 'A backup power supply',
+        //     size: 1,
+        //     replace: false,
+        //     defaultPairing: [],
+        //     requiredPairing: [],
+        //     forbiddenPairing: [],
+        //     dynamics: [],
+        //     flavors: ['88_SBC_backup-power-supply'],
+        //     renderData: {
+        //         file: 'buildings/',
+        //         image: {
+        //             base: 'objects/inactive/buildings/',
+        //             hover: 'objects/active/buildings/',
+        //             active: 'objects/active/buildings/'
+        //         },
+        //         rotationY: 0.75,
+        //         scale: 'default',
+        //         hideInPanel: false,
+        //         category: 'ELECTRICAL',
+        //         sorting: 206,
+        //         nightmode: true,
+        //         showPlaceholder: true,
+        //         geoObject: true,
+        //         widgetPosition: {
+        //             '88_SBC_backup-power-supply': [-0.35, 0.48, -0.35]
+        //         }
+        //     },
+        //     tags: ['base', 'lvgrid', 'mvgrid']
+        // },
         'EV-STATION': {
             domain: 'landscape',
             memberOf: ['buildings', 'electrical', 'sources'],
@@ -612,7 +612,7 @@ const powergridFragment: TFragment = {
             replace: false,
             defaultPairing: [],
             requiredPairing: ['POWERGRID-CONNECTOR'],
-            forbiddenPairing: ['MV-POWERGRID-CONNECTOR'],
+            forbiddenPairing: [],
             dynamics: [],
             flavors: ['38_SBC_ev-station'],
             renderData: {
@@ -646,126 +646,126 @@ const powergridFragment: TFragment = {
                 }
             }
         },
-        'SOLAR-PANEL': {
-            domain: 'powergrid',
-            memberOf: ['electrical', 'sources'],
-            placeOn: ['POWERGRID-CONNECTOR'],
-            name: 'Solar Panel',
-            description: 'Photovoltaic installation',
-            size: 1,
-            replace: false,
-            defaultPairing: [],
-            requiredPairing: [],
-            forbiddenPairing: [],
-            dynamics: [],
-            flavors: ['76_SBC_plugin'],
-            renderData: {
-                file: 'buildings/',
-                image: {
-                    base: 'objects/inactive/buildings/',
-                    hover: 'objects/active/buildings/',
-                    active: 'objects/active/buildings/'
-                },
-                rotationY: 0.75,
-                hideObjectOnCanvas: true,
-                scale: 'default',
-                hideInPanel: false,
-                nightmode: false,
-                emissiveOnConnection: true,
-                category: 'ELECTRICAL',
-                sorting: 502
-            }
-        },
-        'CHARGING-POLE': {
-            domain: 'powergrid',
-            memberOf: ['electrical'],
-            placeOn: ['POWERGRID-CONNECTOR'],
-            name: 'E-Car Charging Pole',
-            description: 'E-car charging pole',
-            size: 1,
-            replace: false,
-            defaultPairing: [],
-            requiredPairing: [],
-            forbiddenPairing: [],
-            dynamics: [],
-            flavors: ['76_SBC_plugin'],
-            renderData: {
-                file: 'buildings/',
-                image: {
-                    base: 'objects/inactive/buildings/',
-                    hover: 'objects/active/buildings/',
-                    active: 'objects/active/buildings/'
-                },
-                rotationY: 0.75,
-                hideObjectOnCanvas: true,
-                scale: 'default',
-                hideInPanel: false,
-                nightmode: false,
-                emissiveOnConnection: true,
-                category: 'ELECTRICAL',
-                sorting: 503
-            }
-        },
-        'HOUSEHOLD-BATTERY': {
-            domain: 'powergrid',
-            memberOf: ['electrical'],
-            placeOn: ['POWERGRID-CONNECTOR'],
-            name: 'Household Battery',
-            description: 'Household battery',
-            size: 1,
-            replace: false,
-            defaultPairing: [],
-            requiredPairing: [],
-            forbiddenPairing: [],
-            dynamics: [],
-            flavors: ['72_SBC_battery-storage'],
-            renderData: {
-                file: 'buildings/',
-                image: {
-                    base: 'objects/inactive/buildings/',
-                    hover: 'objects/active/buildings/',
-                    active: 'objects/active/buildings/'
-                },
-                rotationY: 0.75,
-                hideObjectOnCanvas: true,
-                scale: 'default',
-                hideInPanel: false,
-                nightmode: false,
-                emissiveOnConnection: true,
-                category: 'ELECTRICAL',
-                sorting: 504
-            }
-        },
-        'TAP-CHANGER': {
-            domain: 'powergrid',
-            memberOf: ['electrical'],
-            placeOn: ['LV-TRANSFORMER'],
-            name: 'Tap Changer',
-            description: 'Tap changer',
-            size: 1,
-            replace: false,
-            defaultPairing: [],
-            requiredPairing: [],
-            forbiddenPairing: [],
-            dynamics: [],
-            flavors: ['75_SBC_upgrade'],
-            renderData: {
-                file: 'buildings/',
-                image: {
-                    base: 'objects/inactive/buildings/',
-                    hover: 'objects/active/buildings/',
-                    active: 'objects/active/buildings/'
-                },
-                rotationY: 0.75,
-                hideObjectOnCanvas: true,
-                scale: 'default',
-                hideInPanel: false,
-                nightmode: false,
-                emissiveOnConnection: true,
-                category: 'ELECTRICAL',
-                sorting: 505
-            }
-        }
+        // 'SOLAR-PANEL': {
+        //     domain: 'powergrid',
+        //     memberOf: ['electrical', 'sources'],
+        //     placeOn: ['POWERGRID-CONNECTOR'],
+        //     name: 'Solar Panel',
+        //     description: 'Photovoltaic installation',
+        //     size: 1,
+        //     replace: false,
+        //     defaultPairing: [],
+        //     requiredPairing: [],
+        //     forbiddenPairing: [],
+        //     dynamics: [],
+        //     flavors: ['76_SBC_plugin'],
+        //     renderData: {
+        //         file: 'buildings/',
+        //         image: {
+        //             base: 'objects/inactive/buildings/',
+        //             hover: 'objects/active/buildings/',
+        //             active: 'objects/active/buildings/'
+        //         },
+        //         rotationY: 0.75,
+        //         hideObjectOnCanvas: true,
+        //         scale: 'default',
+        //         hideInPanel: false,
+        //         nightmode: false,
+        //         emissiveOnConnection: true,
+        //         category: 'ELECTRICAL',
+        //         sorting: 502
+        //     }
+        // },
+        // 'CHARGING-POLE': {
+        //     domain: 'powergrid',
+        //     memberOf: ['electrical'],
+        //     placeOn: ['POWERGRID-CONNECTOR'],
+        //     name: 'E-Car Charging Pole',
+        //     description: 'E-car charging pole',
+        //     size: 1,
+        //     replace: false,
+        //     defaultPairing: [],
+        //     requiredPairing: [],
+        //     forbiddenPairing: [],
+        //     dynamics: [],
+        //     flavors: ['76_SBC_plugin'],
+        //     renderData: {
+        //         file: 'buildings/',
+        //         image: {
+        //             base: 'objects/inactive/buildings/',
+        //             hover: 'objects/active/buildings/',
+        //             active: 'objects/active/buildings/'
+        //         },
+        //         rotationY: 0.75,
+        //         hideObjectOnCanvas: true,
+        //         scale: 'default',
+        //         hideInPanel: false,
+        //         nightmode: false,
+        //         emissiveOnConnection: true,
+        //         category: 'ELECTRICAL',
+        //         sorting: 503
+        //     }
+        // },
+        // 'HOUSEHOLD-BATTERY': {
+        //     domain: 'powergrid',
+        //     memberOf: ['electrical'],
+        //     placeOn: ['POWERGRID-CONNECTOR'],
+        //     name: 'Household Battery',
+        //     description: 'Household battery',
+        //     size: 1,
+        //     replace: false,
+        //     defaultPairing: [],
+        //     requiredPairing: [],
+        //     forbiddenPairing: [],
+        //     dynamics: [],
+        //     flavors: ['72_SBC_battery-storage'],
+        //     renderData: {
+        //         file: 'buildings/',
+        //         image: {
+        //             base: 'objects/inactive/buildings/',
+        //             hover: 'objects/active/buildings/',
+        //             active: 'objects/active/buildings/'
+        //         },
+        //         rotationY: 0.75,
+        //         hideObjectOnCanvas: true,
+        //         scale: 'default',
+        //         hideInPanel: false,
+        //         nightmode: false,
+        //         emissiveOnConnection: true,
+        //         category: 'ELECTRICAL',
+        //         sorting: 504
+        //     }
+        // },
+        // 'TAP-CHANGER': {
+        //     domain: 'powergrid',
+        //     memberOf: ['electrical'],
+        //     placeOn: ['LV-TRANSFORMER'],
+        //     name: 'Tap Changer',
+        //     description: 'Tap changer',
+        //     size: 1,
+        //     replace: false,
+        //     defaultPairing: [],
+        //     requiredPairing: [],
+        //     forbiddenPairing: [],
+        //     dynamics: [],
+        //     flavors: ['75_SBC_upgrade'],
+        //     renderData: {
+        //         file: 'buildings/',
+        //         image: {
+        //             base: 'objects/inactive/buildings/',
+        //             hover: 'objects/active/buildings/',
+        //             active: 'objects/active/buildings/'
+        //         },
+        //         rotationY: 0.75,
+        //         hideObjectOnCanvas: true,
+        //         scale: 'default',
+        //         hideInPanel: false,
+        //         nightmode: false,
+        //         emissiveOnConnection: true,
+        //         category: 'ELECTRICAL',
+        //         sorting: 505
+        //     }
+        // }
     },
     dynamics: {},
     mappings: {}
