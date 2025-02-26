@@ -24,6 +24,7 @@ services:
             # BIFROST__backup_autoImport: 'true'
         volumes:
             - ../data/story_volume/:/opt/bifrost/server/build/backup/
+            - ../images/:/opt/bifrost/server/build/public/custom/
             #  - ../data/bsx_volume/:/opt/bifrost/server/build/imports/
             - ../fragments/core/:/opt/bifrost/server/fragment/
             - ../configs/core/:/opt/bifrost/server/build/server/config/user/

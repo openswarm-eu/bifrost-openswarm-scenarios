@@ -49,3 +49,22 @@ To work with the full potential of these Typescript files, you can import the `b
 ```sh
 npm install
 ```
+
+## Adding Images
+
+BIFROST core can host your own images (to be integrated in panel cards or notifications). For this the [`./images`](./images/) folder is mapped to the `./custom/` subfolder of the public BIFROST folder. This is done via the [`docker-compose.yml`](./docker/docker-compose-scenarios.yml) file:
+
+```yml
+services:
+    [...]
+    bifrost-core:
+        [...]
+        volumes:
+            - ../images/:/opt/bifrost/server/build/public/custom/
+            [...]
+```
+
+You can use than a URL like http://127.0.0.1:9091/custom/[`your-image-name`] to integrate the image in present panel cards or notifications
+
+Current available images:
+- GridFailure.gif (http://127.0.0.1:9091/custom/GridFailure.gif)
