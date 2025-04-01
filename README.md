@@ -1,4 +1,4 @@
-# ProSeCO-scenarios
+# OpenSwarm-scenarios
 
 ## Start the Scenarios
 
@@ -9,7 +9,7 @@ python ./tools/reset_for_demo.py
 
 Zip the BSX:
 ```sh
-python ./tools/zero_bsx_zip.py --story_label="ProSeCO-Scenarios"
+python ./tools/zero_bsx_zip.py --story_label="OpenSwarm-Scenarios"
 ```
 
 Start BIFROST ZERO.
@@ -28,7 +28,7 @@ Start interacting with BIFROST and DC-DEMO.
 
 Add the changes to this repo via
 ```sh
-python ./tools/zero_bsx_get.py --story_label="ProSeCO-Scenarios" --operating_system="windows"
+python ./tools/zero_bsx_get.py --story_label="OpenSwarm-Scenarios" --operating_system="windows"
 ```
 
 After you are finished, shut down BIFROST with

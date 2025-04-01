@@ -6,8 +6,8 @@ services:
             DOCKER_INFLUXDB_INIT_MODE: 'setup'
             DOCKER_INFLUXDB_INIT_USERNAME: 'proseco_user'
             DOCKER_INFLUXDB_INIT_PASSWORD: 'proseco_str0ng_passw0rd'
-            DOCKER_INFLUXDB_INIT_ORG: 'proseco'
-            DOCKER_INFLUXDB_INIT_BUCKET: 'proseco'
+            DOCKER_INFLUXDB_INIT_ORG: 'openswarm'
+            DOCKER_INFLUXDB_INIT_BUCKET: 'openswarm'
             DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: 'C8TXsDAjcGfCKqZJY6fI+u268gUMdRWhj6MpbZexj38='
         volumes:
             - ../data/influxdb/data:/var/lib/influxdb2
@@ -18,7 +18,7 @@ services:
         environment:
             BIFROST__server_host: '"::"'
             BIFROST__cdl_url: '"http://influxdb:8086"'
-            BIFROST__cdl_org: '"proseco"'
+            BIFROST__cdl_org: '"openswarm"'
             BIFROST__cdl_user: '"proseco_user"'
             BIFROST__cdl_token: '"C8TXsDAjcGfCKqZJY6fI+u268gUMdRWhj6MpbZexj38="'
             # BIFROST__backup_autoImport: 'true'
@@ -33,5 +33,5 @@ services:
         command: |
             sh -c "
                 npm run build:server && 
-                npm run start:server -- -- --config-user-module=proseco-scenarios-core-config.js
+                npm run start:server -- -- --config-user-module=openswarm-scenarios-core-config.js
             "

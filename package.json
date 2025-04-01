@@ -1,5 +1,5 @@
 {
-  "name": "proseco-scenarios",
+  "name": "openswarm-scenarios",
   "version": "1.0.0",
   "description": "Handle Typescript code here correctly.",
   "main": "./fragments/core/index.js",
