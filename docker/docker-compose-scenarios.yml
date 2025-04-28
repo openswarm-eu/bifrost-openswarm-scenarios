@@ -35,3 +35,12 @@ services:
                 npm run build:server && 
                 npm run start:server -- -- --config-user-module=openswarm-scenarios-core-config.js
             "
+    
+    fenrir:
+        image: cr.siemens.com/bifrost/bifrost-fenrir:zero-v1.3.0
+        environment:
+            MODULE_URL: "http://fenrir:7001"
+            BIFROST_URL: "http://bifrost-core:9091"
+            SAMPLING_RATE: 900
+        depends_on:
+            - bifrost-core
