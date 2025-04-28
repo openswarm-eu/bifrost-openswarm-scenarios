@@ -19,11 +19,6 @@ docker-compose -f ./docker/docker-compose-scenarios.yml --env-file ./env/docker.
 ```
 and open http://127.0.0.1:9091/ 
 
-Open the DC-DEMO environment
-https://launch.dcdemo.ngm-demo.grid-software.siemens.cloud/coreui/
-
-Start interacting with BIFROST and DC-DEMO.
-
 ## Save your work
 
 Add the changes to this repo via

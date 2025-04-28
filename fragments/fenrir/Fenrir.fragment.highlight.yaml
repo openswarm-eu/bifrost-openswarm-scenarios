@@ -36,7 +36,7 @@ dynamics:
     domain: powergrid
     name: Voltage Angle
     description: 3-phase voltage angle
-    visible: true
+    visible: false
     actionable: false
     alwaysUpdate: false
     unit: deg
@@ -90,7 +90,7 @@ dynamics:
     domain: powergrid
     name: Reactive Power
     description: Element reactive power (positive = drawing)
-    visible: true
+    visible: false
     actionable: false
     alwaysUpdate: false
     unit: kvar
