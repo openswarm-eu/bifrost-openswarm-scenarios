@@ -42,5 +42,8 @@ services:
             MODULE_URL: "http://fenrir:7001"
             BIFROST_URL: "http://bifrost-core:9091"
             SAMPLING_RATE: 900
+        volumes:
+            - ../configs/fenrir/:/app/config/
+            - ../fragments/fenrir/:/app/fragments/
         depends_on:
             - bifrost-core
