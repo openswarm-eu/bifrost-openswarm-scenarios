@@ -120,36 +120,6 @@ const datagridFragment: TFragment = {
                 sorting: 201
             }
         },
-        // ROUTER: {
-        //     domain: 'datagrid',
-        //     memberOf: [],
-        //     placeOn: ['DATAGRID-CONNECTOR'],
-        //     name: 'Router',
-        //     description: 'A wired or wireless data router',
-        //     size: 1,
-        //     replace: false,
-        //     defaultPairing: [],
-        //     requiredPairing: [],
-        //     forbiddenPairing: [],
-        //     dynamics: [],
-        //     flavors: ['73_SBC_router'],
-        //     renderData: {
-        //         file: 'buildings/',
-        //         image: {
-        //             base: 'objects/inactive/buildings/',
-        //             hover: 'objects/active/buildings/',
-        //             active: 'objects/active/buildings/'
-        //         },
-        //         rotationY: 0.75,
-        //         hideObjectOnCanvas: true,
-        //         scale: 'default',
-        //         hideInPanel: false,
-        //         nightmode: false,
-        //         emissiveOnConnection: true,
-        //         category: 'DATAGRID',
-        //         sorting: 202
-        //     }
-        // }
     },
     dynamics: {},
     mappings: {}
