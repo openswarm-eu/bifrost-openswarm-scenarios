@@ -149,6 +149,33 @@ const powergridFragment: TFragment = {
                 showPlaceholder: true
             }
         },
+        'POWERSWITCH': {
+            domain: 'powergrid',
+            memberOf: ['electrical', 'taps'],
+            placeOn: ['canvas'],
+            name: 'Power Switch',
+            description: 'Power switch',
+            size: 1,
+            replace: false,
+            defaultPairing: [],
+            requiredPairing: [],
+            forbiddenPairing: [],
+            dynamics: [],
+            flavors: [],
+            renderData: {
+                file: '',
+                image: {
+                    base: 'objects/inactive/buildings/',
+                    hover: 'objects/active/buildings/',
+                    active: 'objects/active/buildings/'
+                },
+                rotationY: 0,
+                scale: 'default',
+                hideInPanel: false,
+                category: 'ELECTRICAL',
+                sorting: 401
+            }
+        },
     },
     dynamics: {},
     mappings: {}

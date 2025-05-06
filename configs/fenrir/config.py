@@ -22,7 +22,7 @@ highlightActive = False
 highlightWarning = 70
 highlightAlert = 100
 
-author = "mmat"
+author = "fxz"
 # logging level
 #loggingLevel = "error"
 #loggingLevel = "warning"
@@ -39,20 +39,10 @@ exportNetwork = False
 MODULE_SUBSCRIPTIONS = [
       "ACTIVE-POWER-3P",
       "CONDUCTIVE",
-      "TAP-POSITION",
       "SWITCH-POSITION",
-      "POWERSWITCH-POSITION-3P",
       "POWERED",
       "TRAFO-TYPE",
-      "CABLE-LENGTH",
-      "MV-ACTIVE-POWER-3P",
-      "MV-POWERED",
-      "MV-CONDUCTIVE",
-      "MV-SWITCH-POSITION",
-      "MV-CABLE-LENGTH",
-      "MV-TRAFO-TYPE",
-      "MV-VOLTAGE-SET",
-      "MV-ACTIVE-POWER-SET"]
+      "CABLE-LENGTH"]
 
 MODULE_PROVISIONS = [
       "VOLTAGE-3P",
@@ -62,37 +52,18 @@ MODULE_PROVISIONS = [
       "CURRENT-3P",
       "LOADING",
       "CONDUCTIVE",
-      "TAP-POSITION",
       "SWITCH-POSITION",
-      "POWERSWITCH-POSITION-3P",
       "POWERED",
       "TRAFO-TYPE",
       "TRAFO-CURRENT",
       "TRAFO-VOLTAGE",
-      "CABLE-LENGTH",
-      "MV-VOLTAGE-3P",
-      "MV-VOLTAGE-SET",
-      "MV-VOLTAGE-ANGLE-3P"
-      "MV-ACTIVE-POWER-3P",
-      "MV-ACTIVE-POWER-SET",
-      "MV-REACTIVE-POWER-3P",
-      "MV-CONDUCTIVE",
-      "MV-POWERED",
-      "MV-LOADING",
-      "MV-CURRENT-3P",
-      "MV-SWITCH-POSITION",
-      "MV-CABLE-LENGTH",
-      "MV-TRAFO-TYPE",
-      "MV-TRAFO-CURRENT",
-      "MV-TRAFO-VOLTAGE",
-      "MV-VOLTAGE-SET",
-      "MV-ACTIVE-POWER-SET"]
+      "CABLE-LENGTH",]
 
 # register info for bifrost
 register_info = {
   "moduleId"    : "Fenrir",
-  "label"       : "Fenrir",
-  "about"       : "A load flow solver based on PandaPower.",
+  "label"       : "Load Flow Solver",
+  "about"       : "A load flow solver module based on PandaPower.",
   "hook"				: [900],
   "samplingRate": 600,
   "endpoints"   : {
