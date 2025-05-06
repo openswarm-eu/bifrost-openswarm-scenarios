@@ -116,7 +116,7 @@ dynamics:
     domain: powergrid
     name: Element Powered?
     description: Indicates if the element is powered
-    visible: true
+    visible: false
     actionable: true
     alwaysUpdate: false
     defaultValue: true
@@ -188,7 +188,7 @@ dynamics:
     domain: powergrid
     name: Loading
     description: Loading with respect to rated current
-    visible: true
+    visible: false
     actionable: false
     alwaysUpdate: false
     unit: "%"
