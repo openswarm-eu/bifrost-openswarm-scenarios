@@ -93,7 +93,7 @@ register_info = {
   "moduleId"    : "Fenrir",
   "label"       : "Fenrir",
   "about"       : "A load flow solver based on PandaPower.",
-  "hook"				: [999],
+  "hook"				: [900],
   "samplingRate": 600,
   "endpoints"   : {
     "doc"       : "www.google.at",
