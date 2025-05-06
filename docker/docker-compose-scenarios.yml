@@ -1,11 +1,11 @@
-name: proseco_scenarios
+name: openswarm_scenarios
 services:
     influxdb:
         image: $REGISTRY_INFLUXDB:$IMG_TAG_INFLUXDB
         environment:
             DOCKER_INFLUXDB_INIT_MODE: 'setup'
-            DOCKER_INFLUXDB_INIT_USERNAME: 'proseco_user'
-            DOCKER_INFLUXDB_INIT_PASSWORD: 'proseco_str0ng_passw0rd'
+            DOCKER_INFLUXDB_INIT_USERNAME: 'openswarm_user'
+            DOCKER_INFLUXDB_INIT_PASSWORD: 'openswarm_str0ng_passw0rd'
             DOCKER_INFLUXDB_INIT_ORG: 'openswarm'
             DOCKER_INFLUXDB_INIT_BUCKET: 'openswarm'
             DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: 'C8TXsDAjcGfCKqZJY6fI+u268gUMdRWhj6MpbZexj38='
@@ -19,7 +19,7 @@ services:
             BIFROST__server_host: '"::"'
             BIFROST__cdl_url: '"http://influxdb:8086"'
             BIFROST__cdl_org: '"openswarm"'
-            BIFROST__cdl_user: '"proseco_user"'
+            BIFROST__cdl_user: '"openswarm_user"'
             BIFROST__cdl_token: '"C8TXsDAjcGfCKqZJY6fI+u268gUMdRWhj6MpbZexj38="'
             # BIFROST__backup_autoImport: 'true'
         volumes:
