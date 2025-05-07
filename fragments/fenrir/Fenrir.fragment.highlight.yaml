@@ -155,7 +155,7 @@ dynamics:
     domain: powergrid
     name: Conductive
     description: Conductiveness indicator
-    visible: true
+    visible: false
     actionable: true
     alwaysUpdate: false
     defaultValue: true
@@ -340,7 +340,6 @@ mappings:
   CABLE-LENGTH:
     - CABLE-UNDERGROUND-SD
   ACTIVE-POWER-3P:
-    - POWERGRID-NODE
     - POWERGRID-CONNECTOR
     - LV-TRANSFORMER
   REACTIVE-POWER-3P:

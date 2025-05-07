@@ -1,5 +1,9 @@
 name: openswarm_scenarios
 services:
+    mqtt-broker: 
+        image: emqx/emqx
+        ports:
+            - 1883:1883
     influxdb:
         image: $REGISTRY_INFLUXDB:$IMG_TAG_INFLUXDB
         environment:
@@ -12,7 +16,6 @@ services:
         volumes:
             - ../data/influxdb/data:/var/lib/influxdb2
             - ../data/influxdb/config:/etc/influxdb2
-
     bifrost-core:
         image: $REGISTRY_CORE:$IMG_TAG_CORE
         environment:
@@ -35,9 +38,20 @@ services:
                 npm run build:server && 
                 npm run start:server -- -- --config-user-module=openswarm-scenarios-core-config.js
             "
-    
+    energy-community-controller-connector:
+        image: $REGISTRY_MODULE_CONNECTOR:$IMG_TAG_MODULE_CONNECTOR
+        environment:
+            BIFROST_URL: 'http://bifrost-core:9091'
+            MODULE_URL: 'http://energy-community-controller-connector:1809'
+            MQTT_URL: 'mqtt://mqtt-broker'
+        privileged: true
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+        depends_on:
+            - bifrost-core
+            - mqtt-broker
     fenrir:
-        image: cr.siemens.com/bifrost/bifrost-fenrir:zero-v1.3.0
+        image: $REGISTRY_MODULE_LOADFLOWSOLVER:$IMG_TAG_LOADFLOWSOLVER
         environment:
             MODULE_URL: "http://fenrir:7001"
             BIFROST_URL: "http://bifrost-core:9091"
@@ -47,3 +61,9 @@ services:
             - ../fragments/fenrir/:/app/fragments/
         depends_on:
             - bifrost-core
+
+    energy-community-asset-simulator:
+        image: $REGISTRY_MODULE_ASSETSIMULATION:$IMG_TAG_MODULE_ASSETSIMULATION
+        environment:
+            BIFROST_URL: 'http://bifrost-core:9091'
+            MODULE_URL: 'http://energy-community-asset-simulator:1809'
