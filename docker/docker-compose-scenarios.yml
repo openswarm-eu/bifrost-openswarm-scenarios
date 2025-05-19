@@ -24,11 +24,11 @@ services:
             BIFROST__cdl_org: '"openswarm"'
             BIFROST__cdl_user: '"openswarm_user"'
             BIFROST__cdl_token: '"C8TXsDAjcGfCKqZJY6fI+u268gUMdRWhj6MpbZexj38="'
-            # BIFROST__backup_autoImport: 'true'
+            BIFROST__backup_autoImport: 'true'
         volumes:
             - ../data/story_volume/:/opt/bifrost/server/build/backup/
             - ../images/:/opt/bifrost/server/build/public/custom/
-            #  - ../data/bsx_volume/:/opt/bifrost/server/build/imports/
+            - ../data/bsx_volume/:/opt/bifrost/server/build/imports/
             - ../fragments/core/:/opt/bifrost/server/fragment/
             - ../configs/core/:/opt/bifrost/server/build/server/config/user/
         ports:
