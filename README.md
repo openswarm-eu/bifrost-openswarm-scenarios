@@ -45,6 +45,13 @@ To work with the full potential of these Typescript files, you can import the `b
 npm install
 ```
 
+## OpenSwarm github Repository
+Here some commands which where used to mirror the code.siemens.com repository to the openswarm github repository:
+```sh
+git remote add openswarmgithub https://github.com/openswarm-eu/bifrost-openswarm-scenarios.git
+git push openswarmgithub main
+```
+
 ## Adding Images
 
 BIFROST core can host your own images (to be integrated in panel cards or notifications). For this the [`./images`](./images/) folder is mapped to the `./custom/` subfolder of the public BIFROST folder. This is done via the [`docker-compose.yml`](./docker/docker-compose-scenarios.yml) file:
