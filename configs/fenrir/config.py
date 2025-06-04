@@ -65,7 +65,7 @@ register_info = {
   "label"       : "Load Flow Solver",
   "about"       : "A load flow solver module based on PandaPower.",
   "hook"				: [900],
-  "samplingRate": 600,
+  "samplingRate": 60,
   "endpoints"   : {
     "doc"       : "www.google.at",
     "fragment"  : "{module_url}/rest/fragment",
