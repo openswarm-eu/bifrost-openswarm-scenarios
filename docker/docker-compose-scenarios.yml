@@ -69,3 +69,4 @@ services:
             BIFROST_URL: 'http://bifrost-core:9091'
             MODULE_URL: 'http://energy-community-asset-simulator:1809'
             SAMPLING_RATE: 60
+            HOOK: '[100, 200]'
