@@ -9,12 +9,13 @@ bifrost_url = "http://127.0.0.1:9091"
 PATH_TO_FRAGMENTFILE = './fragments/Fenrir.fragment.yaml'
 PATH_TO_FRAGMENTFILE_HIGHLIGHT = './fragments/Fenrir.fragment.highlight.yaml'
 
-loadFlowMode = "symmetrical"
-#loadFlowMode = "asymmetrical"
 
 # calculate cable-length automatically
 calcCableLength = True
 # calcCableLength = False
+
+# Minimum Cable-Length when calculate results in 0 or faulty dynamics were set
+minCableLength = 0.01
 
 # Highlight Cables/Trafo at critical Loadings
 highlightActive = False
@@ -23,6 +24,7 @@ highlightWarning = 70
 highlightAlert = 100
 
 author = "fxz"
+
 # logging level
 #loggingLevel = "error"
 #loggingLevel = "warning"
@@ -46,7 +48,6 @@ MODULE_SUBSCRIPTIONS = [
 
 MODULE_PROVISIONS = [
       "VOLTAGE-3P",
-      "VOLTAGE-ANGLE-3P"
       "ACTIVE-POWER-3P",
       "REACTIVE-POWER-3P",
       "CURRENT-3P",
@@ -105,6 +106,7 @@ MV_CABLE_OVERHEAD_TYPE_ID = "MV-CABLE-OVERHEAD"
 
 MV_CABLE_LENGTH_TYPE_ID = "MV-CABLE-LENGTH"
 CABLE_LENGTH_TYPE_ID = "CABLE-LENGTH"
+CABLE_POWER_ID ="CABLE-POWER-3PF"
 
 LV_POWERSWITCH_TYPE_ID = "POWERSWITCH"
 MV_POWERSWITCH_TYPE_ID = "MV-POWERSWITCH"

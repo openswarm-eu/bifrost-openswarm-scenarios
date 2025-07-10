@@ -4,6 +4,7 @@ services:
         image: emqx/emqx
         ports:
             - 1883:1883
+
     influxdb:
         image: $REGISTRY_INFLUXDB:$IMG_TAG_INFLUXDB
         environment:
@@ -16,6 +17,7 @@ services:
         volumes:
             - ../data/influxdb/data:/var/lib/influxdb2
             - ../data/influxdb/config:/etc/influxdb2
+
     bifrost-core:
         image: $REGISTRY_CORE:$IMG_TAG_CORE
         environment:
@@ -38,6 +40,7 @@ services:
                 npm run build:server && 
                 npm run start:server -- -- --config-user-module=openswarm-scenarios-core-config.js
             "
+
     energy-community-controller-connector:
         image: $REGISTRY_MODULE_CONNECTOR:$IMG_TAG_MODULE_CONNECTOR
         environment:
@@ -51,6 +54,7 @@ services:
         depends_on:
             - bifrost-core
             - mqtt-broker
+
     fenrir:
         image: $REGISTRY_MODULE_LOADFLOWSOLVER:$IMG_TAG_LOADFLOWSOLVER
         environment:
@@ -70,3 +74,4 @@ services:
             MODULE_URL: 'http://energy-community-asset-simulator:1809'
             SAMPLING_RATE: 60
             HOOK: '[100, 200]'
+            NODE_ENV: 'production'

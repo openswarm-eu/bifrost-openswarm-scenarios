@@ -4,30 +4,6 @@ name: BasicGeneratorFragment
 structures: {}
 
 dynamics:
-  HIGHLIGHT:
-    domain: any
-    name: Highlight
-    description: Highlight
-    visible: false
-    unit: ""
-    defaultValue: LEVEL_NONE
-    chartType: LINE
-    widgetType: NONE
-    schema:
-      type: string
-      enum:
-        - LEVEL_NONE
-        - LEVEL_SELECT
-        - LEVEL_LOWLIGHT
-        - LEVEL_HIGHLIGHT_1
-        - LEVEL_HIGHLIGHT_2
-        - LEVEL_HIGHLIGHT_3
-        - LEVEL_WARNING
-        - LEVEL_ALERT
-    tags:
-      - string
-      - alwaysUpdate
-  
   VOLTAGE-3P:
     domain: powergrid
     name: Voltage
@@ -56,14 +32,14 @@ dynamics:
         minimum: 0
     tags:
       - lvgrid
-  VOLTAGE-ANGLE-3P:
+  CABLE-POWER-3PF:
     domain: powergrid
-    name: Voltage Angle
-    description: 3-phase voltage angle
+    name: Cable Power From
+    description: 3-phase power from
     visible: false
     actionable: false
     alwaysUpdate: false
-    unit: deg
+    unit: kW
     defaultValue:
       - 0
       - 0
@@ -73,15 +49,13 @@ dynamics:
       - L1
       - L2
       - L3
-    chartType: LINE
+    chartType: STACKED_AREA
     schema:
       type: array
       minItems: 3
       maxItems: 3
       items:
         type: number
-        maximum: 180
-        minimum: -180
     tags:
       - lvgrid
   ACTIVE-POWER-3P:
@@ -323,23 +297,58 @@ dynamics:
     tags:
       - lvgrid
 
-mappings:
   HIGHLIGHT:
-    - TRAFO-BUILDING
-    - LV-TRANSFORMER
-    - CABLE-UNDERGROUND-SD
+    domain: any
+    name: Highlight
+    description: Highlight
+    visible: false
+    unit: ""
+    defaultValue: LEVEL_NONE
+    chartType: LINE
+    widgetType: NONE
+    schema:
+      type: string
+      enum:
+        - LEVEL_NONE
+        - LEVEL_SELECT
+        - LEVEL_LOWLIGHT
+        - LEVEL_HIGHLIGHT_1
+        - LEVEL_HIGHLIGHT_2
+        - LEVEL_HIGHLIGHT_3
+        - LEVEL_WARNING
+        - LEVEL_ALERT
+    tags:
+      - string
+      - alwaysUpdate
   
+  GLOBAL-LOADFLOW:
+    domain: landscape
+    name: Loadflow
+    description: Which Loadflow is used
+    visible: true
+    actionable: true
+    defaultValue: symmetrical
+    pinnable: true
+    dataLabels: []
+    chartType: LINE
+    schema:
+      type: string
+      enum:
+        - symmetrical
+        - asymmetrical
+
+mappings:
   VOLTAGE-3P:
-    - POWERGRID-NODE
-    - POWERGRID-CONNECTOR
-  VOLTAGE-ANGLE-3P:
     - POWERGRID-NODE
     - POWERGRID-CONNECTOR
   CURRENT-3P:
     - CABLE-UNDERGROUND-SD
   CABLE-LENGTH:
     - CABLE-UNDERGROUND-SD
+  CABLE-POWER-3PF:
+    - CABLE-UNDERGROUND-SD
   ACTIVE-POWER-3P:
+    - POWERGRID-NODE
     - POWERGRID-CONNECTOR
     - LV-TRANSFORMER
   REACTIVE-POWER-3P:
@@ -361,6 +370,14 @@ mappings:
     - LV-TRANSFORMER
   SWITCH-POSITION:
     - POWERSWITCH
+
+  HIGHLIGHT:
+    - TRAFO-BUILDING
+    - LV-TRANSFORMER
+    - CABLE-UNDERGROUND-SD
+  
+  GLOBAL-LOADFLOW:
+    - GLOBAL
 
 
 

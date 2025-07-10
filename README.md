@@ -2,18 +2,30 @@
 
 ## Start the Scenarios
 
-(Optional) Reset the demo repository (clean up old data from former demo starts and prune the docker environment):
+**Step 0:** (Optional) Reset the demo repository (clean up old data from former demo starts and prune the docker environment):
 ```sh
 python ./tools/reset_for_demo.py
 ```
 
-Zip the BSX:
+**Step 1:** zip the BSX for the demos:
 ```sh
 python ./tools/zero_bsx_zip.py --story_label="OpenSwarm-Scenarios"
 python ./tools/zero_bsx_zip.py --story_label="Simple-Test"
 ```
 
-Start BIFROST ZERO.
+**Step 1a:** (Optional) Get sure, you have pulled / built the latest versions of the openswarm energy community controller docker images
+* cr.siemens.com/openswarm/energy-community-controller/charger 
+* cr.siemens.com/openswarm/energy-community-controller/pv
+* cr.siemens.com/openswarm/energy-community-controller/sensor
+Use
+```sh
+docker pull cr.siemens.com/openswarm/energy-community-controller/charger
+docker pull cr.siemens.com/openswarm/energy-community-controller/pv
+docker pull cr.siemens.com/openswarm/energy-community-controller/sensor
+```
+to pull them from cr.siemens.com.
+
+**Step 2:** Start BIFROST ZERO.
 ```sh
 docker-compose -f ./docker/docker-compose-scenarios.yml --env-file ./env/docker.env pull
 docker-compose -f ./docker/docker-compose-scenarios.yml --env-file ./env/docker.env up -d
