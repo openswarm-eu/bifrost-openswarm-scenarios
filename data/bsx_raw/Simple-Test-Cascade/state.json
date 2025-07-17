@@ -8867,2151 +8867,2385 @@
     },
     "directory": {
         "meta": {
-            "deferredMappings": {},
-            "globalDynamicTypeIds": [
-                "GLOBAL-LOADFLOW"
-            ]
+        "deferredMappings": {},
+        "globalDynamicTypeIds": [
+            "GLOBAL-LOADFLOW"
+        ]
         },
         "structures": {
-            "ids": [
-                "DATA-NODE",
-                "DATA-CONNECTION-WIRED",
-                "DATA-CONNECTION-WIRELESS",
-                "DATAGRID-CONNECTOR",
-                "RESIDENTIAL-SINGLE",
-                "CONTROL-CENTER",
-                "RESIDENTIAL-MULTI-LARGE",
-                "FOREST",
-                "BILLBOARD",
-                "ROAD",
-                "ROAD-CURVE",
-                "ROAD-CROSSING-T",
-                "ROAD-CROSSING-4",
-                "POWERGRID-CONNECTOR",
-                "POWERGRID-NODE",
-                "CABLE-UNDERGROUND-SD",
-                "LV-TRANSFORMER",
-                "TRAFO-BUILDING",
-                "POWERSWITCH",
-                "THERMAL-NODE",
-                "HEATING-PIPE",
-                "COOLING-PIPE",
-                "THERMOGRID-CONNECTOR",
-                "EV-STATION",
-                "SOLAR-FARM",
-                "SOLAR-PANEL",
-                "CHARGING-POLE",
-                "GRID-SENSOR"
+        "ids": [
+            "DATA-NODE",
+            "DATA-CONNECTION-WIRED",
+            "DATA-CONNECTION-WIRELESS",
+            "DATAGRID-CONNECTOR",
+            "RESIDENTIAL-SINGLE",
+            "CONTROL-CENTER",
+            "RESIDENTIAL-MULTI-LARGE",
+            "FOREST",
+            "BILLBOARD",
+            "ROAD",
+            "ROAD-CURVE",
+            "ROAD-CROSSING-T",
+            "ROAD-CROSSING-4",
+            "POWERGRID-CONNECTOR",
+            "POWERGRID-NODE",
+            "CABLE-UNDERGROUND-SD",
+            "LV-TRANSFORMER",
+            "TRAFO-BUILDING",
+            "POWERSWITCH",
+            "THERMAL-NODE",
+            "HEATING-PIPE",
+            "COOLING-PIPE",
+            "THERMOGRID-CONNECTOR",
+            "EV-STATION",
+            "SOLAR-FARM",
+            "BATTERY-STATION",
+            "SOLAR-PANEL",
+            "CHARGING-POLE",
+            "BATTERY-SYSTEM",
+            "GRID-SENSOR"
+        ],
+        "entities": {
+            "DATA-NODE": {
+            "structureTypeId": "DATA-NODE",
+            "domain": "datagrid",
+            "memberOf": [
+                "nodes"
             ],
-            "entities": {
-                "DATA-NODE": {
-                    "structureTypeId": "DATA-NODE",
-                    "domain": "datagrid",
-                    "memberOf": [
-                        "nodes"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Data node",
-                    "description": "A basic datagrid node",
-                    "size": 1,
-                    "replace": false,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [],
-                    "renderData": {
-                        "file": "buildings/",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0,
-                        "scale": "default",
-                        "hideInPanel": true,
-                        "category": "DATAGRID"
-                    },
-                    "timestamp": 1752222762734,
-                    "touched": false,
-                    "tags": [
-                        "datagrid"
-                    ],
-                    "contributor": "datagrid",
-                    "applicationData": {}
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Data node",
+            "description": "A basic datagrid node",
+            "size": 1,
+            "replace": false,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [],
+            "flavors": [],
+            "renderData": {
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
                 },
-                "DATA-CONNECTION-WIRED": {
-                    "structureTypeId": "DATA-CONNECTION-WIRED",
-                    "domain": "datagrid",
-                    "memberOf": [
-                        "connections"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Wired connection",
-                    "description": "A wired logical data connection",
-                    "size": 1,
-                    "replace": true,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [],
-                    "renderData": {
-                        "file": "",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "category": "DATAGRID",
-                        "sorting": 101,
-                        "sounds": {
-                            "build": "BUILD_POWERLINE"
-                        },
-                        "reselectAfterPlace": true
-                    },
-                    "timestamp": 1752222762735,
-                    "touched": false,
-                    "tags": [
-                        "datagrid"
-                    ],
-                    "contributor": "datagrid",
-                    "applicationData": {}
+                "rotationY": 0,
+                "scale": "default",
+                "hideInPanel": true,
+                "category": "DATAGRID"
+            },
+            "timestamp": 1752774735916,
+            "touched": false,
+            "tags": [
+                "datagrid"
+            ],
+            "contributor": "datagrid",
+            "applicationData": {}
+            },
+            "DATA-CONNECTION-WIRED": {
+            "structureTypeId": "DATA-CONNECTION-WIRED",
+            "domain": "datagrid",
+            "memberOf": [
+                "connections"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Wired connection",
+            "description": "A wired logical data connection",
+            "size": 1,
+            "replace": true,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [],
+            "flavors": [],
+            "renderData": {
+                "file": "",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
                 },
-                "DATA-CONNECTION-WIRELESS": {
-                    "structureTypeId": "DATA-CONNECTION-WIRELESS",
-                    "domain": "datagrid",
-                    "memberOf": [
-                        "connections"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Wireless connection",
-                    "description": "A wireless logical data connection",
-                    "size": 1,
-                    "replace": true,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [],
-                    "renderData": {
-                        "file": "",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "category": "DATAGRID",
-                        "sorting": 102,
-                        "sounds": {
-                            "build": "BUILD_POWERLINE"
-                        },
-                        "reselectAfterPlace": true
-                    },
-                    "timestamp": 1752222762735,
-                    "touched": false,
-                    "tags": [
-                        "datagrid"
-                    ],
-                    "contributor": "datagrid",
-                    "applicationData": {}
+                "rotationY": 0,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "DATAGRID",
+                "sorting": 101,
+                "sounds": {
+                "build": "BUILD_POWERLINE"
                 },
-                "DATAGRID-CONNECTOR": {
-                    "structureTypeId": "DATAGRID-CONNECTOR",
-                    "domain": "datagrid",
-                    "memberOf": [
-                        "sources",
-                        "sinks",
-                        "connectors"
-                    ],
-                    "placeOn": [
-                        "buildings"
-                    ],
-                    "name": "Datagrid connector",
-                    "description": "A basic element to establish connection to the datagrid",
-                    "size": 1,
-                    "replace": false,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [
-                        "74_SBC_transceiver"
-                    ],
-                    "renderData": {
-                        "file": "buildings/",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0.75,
-                        "scale": "default",
-                        "nightmode": false,
-                        "emissiveOnConnection": true,
-                        "category": "DATAGRID",
-                        "sorting": 201
-                    },
-                    "timestamp": 1752222762735,
-                    "touched": false,
-                    "tags": [
-                        "datagrid"
-                    ],
-                    "contributor": "datagrid",
-                    "applicationData": {}
+                "reselectAfterPlace": true
+            },
+            "timestamp": 1752774735916,
+            "touched": false,
+            "tags": [
+                "datagrid"
+            ],
+            "contributor": "datagrid",
+            "applicationData": {}
+            },
+            "DATA-CONNECTION-WIRELESS": {
+            "structureTypeId": "DATA-CONNECTION-WIRELESS",
+            "domain": "datagrid",
+            "memberOf": [
+                "connections"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Wireless connection",
+            "description": "A wireless logical data connection",
+            "size": 1,
+            "replace": true,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [],
+            "flavors": [],
+            "renderData": {
+                "file": "",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
                 },
-                "RESIDENTIAL-SINGLE": {
-                    "structureTypeId": "RESIDENTIAL-SINGLE",
-                    "domain": "landscape",
-                    "memberOf": [
-                        "buildings"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Residential building (small)",
-                    "description": "A single household",
-                    "size": 4,
-                    "replace": false,
-                    "defaultPairing": [
-                        "POWERGRID-CONNECTOR"
-                    ],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [
-                        "10_SBC_residentialsingle"
-                    ],
-                    "renderData": {
-                        "flavorNames": [
-                            "Small house"
-                        ],
-                        "file": "buildings/",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0.75,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "category": "RESIDENTIAL",
-                        "sorting": 100,
-                        "nightmode": true,
-                        "showPlaceholder": true,
-                        "geoObject": true,
-                        "widgetPosition": {
-                            "10_SBC_residentialsingle": [
-                                0.2,
-                                1,
-                                -0.3
-                            ]
-                        },
-                        "decorators": {
-                            "SOLAR-PANEL": {
-                                "link": "buildings/47_SBC_solar-panel",
-                                "flavors": {
-                                    "10_SBC_residentialsingle": {
-                                        "link": "buildings/65_SBC_flat-solar-panel",
-                                        "position": [
-                                            0.04,
-                                            0.55,
-                                            -0.4
-                                        ],
-                                        "rotationY": 0,
-                                        "rotationX": 0.2,
-                                        "scale": 1.4
-                                    }
-                                }
-                            },
-                            "CHARGING-POLE": {
-                                "link": "buildings/63_SBC_ev-ground-charger",
-                                "flavors": {
-                                    "10_SBC_residentialsingle": {
-                                        "position": [
-                                            0.2,
-                                            0,
-                                            0.62
-                                        ],
-                                        "rotationY": 0
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "timestamp": 1752222762735,
-                    "touched": false,
-                    "tags": [
-                        "base"
-                    ],
-                    "contributor": "base",
-                    "applicationData": {}
+                "rotationY": 0,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "DATAGRID",
+                "sorting": 102,
+                "sounds": {
+                "build": "BUILD_POWERLINE"
                 },
-                "CONTROL-CENTER": {
-                    "structureTypeId": "CONTROL-CENTER",
-                    "domain": "landscape",
-                    "memberOf": [
-                        "buildings"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Control Center",
-                    "description": "This is a control center",
-                    "size": 4,
-                    "replace": false,
-                    "defaultPairing": [
-                        "POWERGRID-CONNECTOR"
-                    ],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [
-                        "118_SBC_control-center"
-                    ],
-                    "renderData": {
-                        "flavorNames": [
-                            "Control Center"
-                        ],
-                        "file": "buildings/",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0.75,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "category": "COMMERCIAL",
-                        "sorting": 100,
-                        "nightmode": false,
-                        "showPlaceholder": true,
-                        "geoObject": true,
-                        "widgetPosition": {
-                            "118_SBC_control-center": [
-                                0.2,
-                                1,
-                                -0.3
-                            ]
-                        },
-                        "decorators": {}
-                    },
-                    "timestamp": 1752222762735,
-                    "touched": false,
-                    "tags": [
-                        "base"
-                    ],
-                    "contributor": "base",
-                    "applicationData": {}
+                "reselectAfterPlace": true
+            },
+            "timestamp": 1752774735916,
+            "touched": false,
+            "tags": [
+                "datagrid"
+            ],
+            "contributor": "datagrid",
+            "applicationData": {}
+            },
+            "DATAGRID-CONNECTOR": {
+            "structureTypeId": "DATAGRID-CONNECTOR",
+            "domain": "datagrid",
+            "memberOf": [
+                "sources",
+                "sinks",
+                "connectors"
+            ],
+            "placeOn": [
+                "buildings"
+            ],
+            "name": "Datagrid connector",
+            "description": "A basic element to establish connection to the datagrid",
+            "size": 1,
+            "replace": false,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [],
+            "flavors": [
+                "74_SBC_transceiver"
+            ],
+            "renderData": {
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
                 },
-                "RESIDENTIAL-MULTI-LARGE": {
-                    "structureTypeId": "RESIDENTIAL-MULTI-LARGE",
-                    "domain": "landscape",
-                    "memberOf": [
-                        "buildings"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Residential building (large)",
-                    "description": "Large multi-household",
-                    "size": 12,
-                    "replace": false,
-                    "defaultPairing": [
-                        "POWERGRID-CONNECTOR"
-                    ],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [
-                        "55_SBC_council-housing"
-                    ],
-                    "renderData": {
-                        "flavorNames": [
-                            "Huge house"
-                        ],
-                        "file": "buildings/",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0.75,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "category": "RESIDENTIAL",
-                        "sorting": 300,
-                        "nightmode": true,
-                        "showPlaceholder": true,
-                        "geoObject": true,
-                        "widgetPosition": {
-                            "55_SBC_council-housing": [
-                                1.2,
-                                2.1,
-                                0
-                            ]
-                        },
-                        "decorators": {
-                            "CHARGING-POLE": {
-                                "link": "buildings/63_SBC_ev-ground-charger",
-                                "flavors": {
-                                    "55_SBC_council-housing": {
-                                        "position": [
-                                            2.75,
-                                            0.04,
-                                            0
-                                        ],
-                                        "rotationY": 0
-                                    }
-                                }
-                            },
-                            "SOLAR-PANEL": {
-                                "link": "buildings/66_SBC_solar-panel_council_housing",
-                                "flavors": {
-                                    "55_SBC_council-housing": {
-                                        "position": [
-                                            0,
-                                            0,
-                                            0
-                                        ],
-                                        "rotationY": 0.75
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "timestamp": 1752222762736,
-                    "touched": false,
-                    "tags": [
-                        "base"
-                    ],
-                    "contributor": "base",
-                    "applicationData": {}
+                "rotationY": 0.75,
+                "scale": "default",
+                "nightmode": false,
+                "emissiveOnConnection": true,
+                "category": "DATAGRID",
+                "sorting": 201
+            },
+            "timestamp": 1752774735916,
+            "touched": false,
+            "tags": [
+                "datagrid"
+            ],
+            "contributor": "datagrid",
+            "applicationData": {}
+            },
+            "RESIDENTIAL-SINGLE": {
+            "structureTypeId": "RESIDENTIAL-SINGLE",
+            "domain": "landscape",
+            "memberOf": [
+                "buildings"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Residential building (small)",
+            "description": "A single household",
+            "size": 4,
+            "replace": false,
+            "defaultPairing": [
+                "POWERGRID-CONNECTOR"
+            ],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [],
+            "flavors": [
+                "10_SBC_residentialsingle"
+            ],
+            "renderData": {
+                "flavorNames": [
+                "Small house"
+                ],
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
                 },
-                "FOREST": {
-                    "structureTypeId": "FOREST",
-                    "domain": "landscape",
-                    "memberOf": [
-                        "nature"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Forest",
-                    "description": "",
-                    "size": 1,
-                    "replace": true,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [
-                        "20_SBC_forest"
-                    ],
-                    "renderData": {
-                        "file": "buildings/",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0.75,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "category": "LANDSCAPE",
-                        "sorting": 101,
-                        "drawable": true,
-                        "reselectAfterPlace": true
-                    },
-                    "timestamp": 1752222762736,
-                    "touched": false,
-                    "tags": [
-                        "base"
-                    ],
-                    "contributor": "base",
-                    "applicationData": {}
+                "rotationY": 0.75,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "RESIDENTIAL",
+                "sorting": 100,
+                "nightmode": true,
+                "showPlaceholder": true,
+                "geoObject": true,
+                "widgetPosition": {
+                "10_SBC_residentialsingle": [
+                    0.2,
+                    1,
+                    -0.3
+                ]
                 },
-                "BILLBOARD": {
-                    "structureTypeId": "BILLBOARD",
-                    "domain": "landscape",
-                    "memberOf": [
-                        "buildings",
-                        "communal"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Billboard",
-                    "description": "Animated billboard",
-                    "size": 4,
-                    "replace": false,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [
-                        "40_SBC_billboard"
-                    ],
-                    "renderData": {
-                        "file": "buildings/",
-                        "logo": "40_SBC_billboard_text",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0.75,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "category": "LANDSCAPE",
-                        "sorting": 301,
-                        "nightmode": true
-                    },
-                    "timestamp": 1752222762736,
-                    "touched": false,
-                    "tags": [
-                        "base"
-                    ],
-                    "contributor": "base",
-                    "applicationData": {}
-                },
-                "ROAD": {
-                    "structureTypeId": "ROAD",
-                    "domain": "landscape",
-                    "memberOf": [
-                        "traffic",
-                        "transit"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Road",
-                    "description": "",
-                    "size": 1,
-                    "replace": true,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [
-                        "16_SBC_road"
-                    ],
-                    "renderData": {
-                        "file": "buildings/",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0.75,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "category": "ROAD",
-                        "sorting": 101,
-                        "drawable": true,
-                        "autoRotateDrawable": true,
-                        "reselectAfterPlace": true
-                    },
-                    "timestamp": 1752222762736,
-                    "touched": false,
-                    "tags": [
-                        "base"
-                    ],
-                    "contributor": "base",
-                    "applicationData": {}
-                },
-                "ROAD-CURVE": {
-                    "structureTypeId": "ROAD-CURVE",
-                    "domain": "landscape",
-                    "memberOf": [
-                        "traffic",
-                        "transit"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Road curve",
-                    "description": "",
-                    "size": 1,
-                    "replace": true,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [
-                        "17_SBC_road_curve"
-                    ],
-                    "renderData": {
-                        "file": "buildings/",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0.75,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "category": "ROAD",
-                        "sorting": 102,
-                        "reselectAfterPlace": true
-                    },
-                    "timestamp": 1752222762736,
-                    "touched": false,
-                    "tags": [
-                        "base"
-                    ],
-                    "contributor": "base",
-                    "applicationData": {}
-                },
-                "ROAD-CROSSING-T": {
-                    "structureTypeId": "ROAD-CROSSING-T",
-                    "domain": "landscape",
-                    "memberOf": [
-                        "traffic",
-                        "transit"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Road t-crossing",
-                    "description": "",
-                    "size": 1,
-                    "replace": true,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [
-                        "18_SBC_road_crossing_t"
-                    ],
-                    "renderData": {
-                        "file": "buildings/",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0.75,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "category": "ROAD",
-                        "sorting": 103,
-                        "reselectAfterPlace": true
-                    },
-                    "timestamp": 1752222762736,
-                    "touched": false,
-                    "tags": [
-                        "base"
-                    ],
-                    "contributor": "base",
-                    "applicationData": {}
-                },
-                "ROAD-CROSSING-4": {
-                    "structureTypeId": "ROAD-CROSSING-4",
-                    "domain": "landscape",
-                    "memberOf": [
-                        "traffic",
-                        "transit"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Road x-crossing",
-                    "description": "",
-                    "size": 1,
-                    "replace": true,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [
-                        "19_SBC_road_crossing_4"
-                    ],
-                    "renderData": {
-                        "file": "buildings/",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0.75,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "category": "ROAD",
-                        "sorting": 104,
-                        "reselectAfterPlace": true
-                    },
-                    "timestamp": 1752222762736,
-                    "touched": false,
-                    "tags": [
-                        "base"
-                    ],
-                    "contributor": "base",
-                    "applicationData": {}
-                },
-                "POWERGRID-CONNECTOR": {
-                    "structureTypeId": "POWERGRID-CONNECTOR",
-                    "domain": "powergrid",
-                    "memberOf": [
-                        "electrical",
-                        "connectors"
-                    ],
-                    "placeOn": [
-                        "buildings",
-                        "generators"
-                    ],
-                    "name": "Powergrid Connector",
-                    "description": "A connection point to the powergrid",
-                    "size": 1,
-                    "replace": false,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [
-                        "GRID-SENSOR-ASSIGNMENT",
-                        "ENERGY-COMMUNITY",
-                        "ACTIVE-POWER-3P",
-                        "POWERED",
-                        "REACTIVE-POWER-3P",
-                        "VOLTAGE-3P"
-                    ],
-                    "flavors": [
-                        "71_SBC_house-connector"
-                    ],
-                    "renderData": {
-                        "file": "buildings",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "scale": "default",
-                        "rotationY": 0.75,
-                        "category": "ELECTRICAL",
-                        "sorting": 501,
-                        "nightmode": false,
-                        "emissiveOnConnection": true
-                    },
-                    "timestamp": 1752222762770,
-                    "touched": true,
-                    "tags": [
-                        "powergrid"
-                    ],
-                    "contributor": "powergrid",
-                    "applicationData": {}
-                },
-                "POWERGRID-NODE": {
-                    "structureTypeId": "POWERGRID-NODE",
-                    "domain": "powergrid",
-                    "memberOf": [
-                        "electrical",
-                        "nodes"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Grid Node",
-                    "description": "A floating node in the powergrid",
-                    "size": 1,
-                    "replace": false,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [
-                        "ACTIVE-POWER-3P",
-                        "CONDUCTIVE",
-                        "VOLTAGE-3P"
-                    ],
-                    "flavors": [],
-                    "renderData": {
-                        "file": "buildings/",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0,
-                        "scale": "default",
-                        "hideInPanel": true,
-                        "category": "ELECTRICAL"
-                    },
-                    "timestamp": 1752222762770,
-                    "touched": true,
-                    "tags": [
-                        "powergrid"
-                    ],
-                    "contributor": "powergrid",
-                    "applicationData": {}
-                },
-                "CABLE-UNDERGROUND-SD": {
-                    "structureTypeId": "CABLE-UNDERGROUND-SD",
-                    "domain": "powergrid",
-                    "memberOf": [
-                        "electrical",
-                        "connections"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Underground Cable",
-                    "description": "Underground cable",
-                    "size": 1,
-                    "replace": true,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [
-                        "CABLE-LENGTH",
-                        "CABLE-POWER-3PF",
-                        "CURRENT-3P",
-                        "LOADING"
-                    ],
-                    "flavors": [],
-                    "renderData": {
-                        "file": "",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "category": "ELECTRICAL",
-                        "sorting": 1,
-                        "sounds": {
-                            "build": "BUILD_POWERLINE"
-                        },
-                        "reselectAfterPlace": true
-                    },
-                    "timestamp": 1752222762768,
-                    "touched": true,
-                    "tags": [
-                        "powergrid"
-                    ],
-                    "contributor": "powergrid",
-                    "applicationData": {}
-                },
-                "LV-TRANSFORMER": {
-                    "structureTypeId": "LV-TRANSFORMER",
-                    "domain": "powergrid",
-                    "memberOf": [
-                        "electrical",
-                        "sources",
-                        "connectors"
-                    ],
-                    "placeOn": [
-                        "TRAFO-BUILDING"
-                    ],
-                    "name": "Low Voltage Transformer",
-                    "description": "Low voltage transformer",
-                    "size": 1,
-                    "replace": false,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [
-                        "ACTIVE-POWER-3P",
-                        "LOADING",
-                        "POWERED",
-                        "REACTIVE-POWER-3P",
-                        "TRAFO-CURRENT",
-                        "TRAFO-TYPE",
-                        "TRAFO-VOLTAGE"
-                    ],
-                    "flavors": [
-                        "71_SBC_house-connector"
-                    ],
-                    "renderData": {
-                        "file": "buildings/",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "hideInPanel": true,
-                        "nightmode": false,
-                        "emissiveOnConnection": true,
-                        "category": "ELEMENTS"
-                    },
-                    "timestamp": 1752222762770,
-                    "touched": true,
-                    "tags": [
-                        "powergrid"
-                    ],
-                    "contributor": "powergrid",
-                    "applicationData": {}
-                },
-                "TRAFO-BUILDING": {
-                    "structureTypeId": "TRAFO-BUILDING",
-                    "domain": "landscape",
-                    "memberOf": [
-                        "buildings",
-                        "electrical",
-                        "generators"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Transformer Building (LV)",
-                    "description": "The transformer building",
-                    "size": 1,
-                    "replace": false,
-                    "defaultPairing": [],
-                    "requiredPairing": [
-                        "LV-TRANSFORMER"
-                    ],
-                    "forbiddenPairing": [
-                        "POWERGRID-CONNECTOR"
-                    ],
-                    "dynamics": [],
-                    "flavors": [
-                        "25_SBC_transformer"
-                    ],
-                    "renderData": {
-                        "file": "buildings/",
-                        "logo": "25_SBC_transformer_text",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "category": "ELECTRICAL",
-                        "sorting": 100,
-                        "nightmode": true,
-                        "geoObject": true,
-                        "widgetPosition": {
-                            "25_SBC_transformer": [
-                                0,
-                                1.3,
-                                0
-                            ]
-                        },
-                        "showPlaceholder": true
-                    },
-                    "timestamp": 1752222762737,
-                    "touched": false,
-                    "tags": [
-                        "powergrid"
-                    ],
-                    "contributor": "powergrid",
-                    "applicationData": {}
-                },
-                "POWERSWITCH": {
-                    "structureTypeId": "POWERSWITCH",
-                    "domain": "powergrid",
-                    "memberOf": [
-                        "electrical",
-                        "taps"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Power Switch",
-                    "description": "Power switch",
-                    "size": 1,
-                    "replace": false,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [
-                        "SWITCH-POSITION"
-                    ],
-                    "flavors": [],
-                    "renderData": {
-                        "file": "",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "category": "ELECTRICAL",
-                        "sorting": 401
-                    },
-                    "timestamp": 1752222762769,
-                    "touched": true,
-                    "tags": [
-                        "powergrid"
-                    ],
-                    "contributor": "powergrid",
-                    "applicationData": {}
-                },
-                "THERMAL-NODE": {
-                    "structureTypeId": "THERMAL-NODE",
-                    "domain": "thermogrid",
-                    "memberOf": [
-                        "nodes"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Thermal node",
-                    "description": "A basic thermogrid node",
-                    "size": 1,
-                    "replace": false,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [],
-                    "renderData": {},
-                    "timestamp": 1752222762737,
-                    "touched": false,
-                    "tags": [
-                        "thermogrid"
-                    ],
-                    "contributor": "thermogrid",
-                    "applicationData": {}
-                },
-                "HEATING-PIPE": {
-                    "structureTypeId": "HEATING-PIPE",
-                    "domain": "thermogrid",
-                    "memberOf": [
-                        "connections"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Heating pipe",
-                    "description": "A district heating pipe",
-                    "size": 1,
-                    "replace": true,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [],
-                    "renderData": {
-                        "file": "",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "category": "THERMAL",
-                        "sorting": 1,
-                        "sounds": {
-                            "build": "BUILD_POWERLINE"
-                        },
-                        "reselectAfterPlace": true
-                    },
-                    "timestamp": 1752222762737,
-                    "touched": false,
-                    "tags": [
-                        "thermogrid"
-                    ],
-                    "contributor": "thermogrid",
-                    "applicationData": {}
-                },
-                "COOLING-PIPE": {
-                    "structureTypeId": "COOLING-PIPE",
-                    "domain": "thermogrid",
-                    "memberOf": [
-                        "connections"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Cooling pipe",
-                    "description": "A district cooling pipe",
-                    "size": 1,
-                    "replace": true,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [],
-                    "renderData": {
-                        "file": "",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "category": "THERMAL",
-                        "sorting": 2,
-                        "sounds": {
-                            "build": "BUILD_POWERLINE"
-                        },
-                        "reselectAfterPlace": true
-                    },
-                    "timestamp": 1752222762737,
-                    "touched": false,
-                    "tags": [
-                        "thermogrid"
-                    ],
-                    "contributor": "thermogrid",
-                    "applicationData": {}
-                },
-                "THERMOGRID-CONNECTOR": {
-                    "structureTypeId": "THERMOGRID-CONNECTOR",
-                    "domain": "thermogrid",
-                    "memberOf": [
-                        "sources",
-                        "sinks",
-                        "connectors"
-                    ],
-                    "placeOn": [
-                        "buildings"
-                    ],
-                    "name": "Thermogrid connector",
-                    "description": "A basic element to establish connection to the heating and cooling network",
-                    "size": 1,
-                    "replace": false,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [
-                        "110_SBC_thermal-grid-connector"
-                    ],
-                    "renderData": {
-                        "file": "buildings/",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "scale": "default",
-                        "rotationY": 0.75,
-                        "category": "THERMAL",
-                        "sorting": 201,
-                        "nightmode": false,
-                        "emissiveOnConnection": true
-                    },
-                    "timestamp": 1752222762738,
-                    "touched": false,
-                    "tags": [
-                        "thermogrid"
-                    ],
-                    "contributor": "thermogrid",
-                    "applicationData": {}
-                },
-                "EV-STATION": {
-                    "structureTypeId": "EV-STATION",
-                    "domain": "landscape",
-                    "memberOf": [
-                        "buildings",
-                        "electrical"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "E-Car Charging Station",
-                    "description": "E-charging station",
-                    "size": 4,
-                    "replace": false,
-                    "defaultPairing": [],
-                    "requiredPairing": [
-                        "POWERGRID-CONNECTOR",
-                        "CHARGING-POLE"
-                    ],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [
-                        "38_SBC_ev-station"
-                    ],
-                    "renderData": {
-                        "file": "buildings/",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0.75,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "category": "ELECTRICAL",
-                        "sorting": 301,
-                        "nightmode": true,
-                        "showPlaceholder": true,
-                        "geoObject": true,
-                        "widgetPosition": {
-                            "38_SBC_ev-station": [
-                                -0.7,
-                                0.5,
-                                0
-                            ]
-                        },
-                        "decorators": {
-                            "SOLAR-PANEL": {
-                                "link": "buildings/47_SBC_solar-panel",
-                                "flavors": {
-                                    "38_SBC_ev-station": {
-                                        "position": [
-                                            -0.8,
-                                            0.027,
-                                            0.9
-                                        ],
-                                        "repeatX": 4
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "timestamp": 1752222762744,
-                    "touched": false,
-                    "tags": [
-                        "OpenSwarmPoC1AssetSimulationModule"
-                    ],
-                    "contributor": "OpenSwarm Asset Simulator",
-                    "applicationData": {}
-                },
-                "SOLAR-FARM": {
-                    "structureTypeId": "SOLAR-FARM",
-                    "domain": "landscape",
-                    "memberOf": [
-                        "buildings",
-                        "generators"
-                    ],
-                    "placeOn": [
-                        "canvas"
-                    ],
-                    "name": "Solar Farm",
-                    "description": "",
-                    "size": 4,
-                    "replace": false,
-                    "defaultPairing": [],
-                    "requiredPairing": [
-                        "POWERGRID-CONNECTOR",
-                        "SOLAR-PANEL"
-                    ],
-                    "forbiddenPairing": [],
-                    "dynamics": [],
-                    "flavors": [
-                        "68_SBC_powergrid"
-                    ],
-                    "renderData": {
-                        "file": "buildings/",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0.75,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "category": "ELECTRICAL",
-                        "sorting": 204,
-                        "nightmode": true,
-                        "geoObject": true,
-                        "widgetPosition": {
-                            "68_SBC_powergrid": [
-                                0,
-                                0.5,
-                                0.3
-                            ]
-                        },
-                        "showPlaceholder": true
-                    },
-                    "timestamp": 1752222762744,
-                    "touched": false,
-                    "tags": [
-                        "base",
-                        "lvgrid",
-                        "mvgrid",
-                        "OpenSwarmPoC1AssetSimulationModule"
-                    ],
-                    "contributor": "OpenSwarm Asset Simulator",
-                    "applicationData": {}
-                },
+                "decorators": {
                 "SOLAR-PANEL": {
-                    "structureTypeId": "SOLAR-PANEL",
-                    "domain": "powergrid",
-                    "memberOf": [
-                        "electrical",
-                        "sources"
-                    ],
-                    "placeOn": [
-                        "POWERGRID-CONNECTOR"
-                    ],
-                    "name": "PV System",
-                    "description": "Photovoltaic installation",
-                    "size": 1,
-                    "replace": false,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [
-                        "PV-SYSTEM-POWER",
-                        "PV-SYSTEM-MAX-POWER"
-                    ],
-                    "flavors": [
-                        "76_SBC_plugin"
-                    ],
-                    "renderData": {
-                        "file": "buildings/",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0.75,
-                        "hideObjectOnCanvas": true,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "nightmode": false,
-                        "emissiveOnConnection": true,
-                        "category": "ELECTRICAL",
-                        "sorting": 502
-                    },
-                    "timestamp": 1752222762744,
-                    "touched": false,
-                    "tags": [
-                        "OpenSwarmPoC1AssetSimulationModule"
-                    ],
-                    "contributor": "OpenSwarm Asset Simulator",
-                    "applicationData": {}
+                    "link": "buildings/47_SBC_solar-panel",
+                    "flavors": {
+                    "10_SBC_residentialsingle": {
+                        "link": "buildings/65_SBC_flat-solar-panel",
+                        "position": [
+                        0.04,
+                        0.55,
+                        -0.4
+                        ],
+                        "rotationY": 0,
+                        "rotationX": 0.2,
+                        "scale": 1.4
+                    }
+                    }
                 },
                 "CHARGING-POLE": {
-                    "structureTypeId": "CHARGING-POLE",
-                    "domain": "powergrid",
-                    "memberOf": [
-                        "electrical"
-                    ],
-                    "placeOn": [
-                        "POWERGRID-CONNECTOR"
-                    ],
-                    "name": "E-Car Charging Pole",
-                    "description": "E-car charging pole",
-                    "size": 1,
-                    "replace": false,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [
-                        "CHGSTATION-POWER",
-                        "CHGSTATION-MAX-POWER"
-                    ],
-                    "flavors": [
-                        "76_SBC_plugin"
-                    ],
-                    "renderData": {
-                        "file": "buildings/",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0.75,
-                        "hideObjectOnCanvas": true,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "nightmode": false,
-                        "emissiveOnConnection": true,
-                        "category": "ELECTRICAL",
-                        "sorting": 503
-                    },
-                    "timestamp": 1752222762745,
-                    "touched": false,
-                    "tags": [
-                        "base",
-                        "lvgrid",
-                        "OpenSwarmPoC1AssetSimulationModule"
-                    ],
-                    "contributor": "OpenSwarm Asset Simulator",
-                    "applicationData": {}
-                },
-                "GRID-SENSOR": {
-                    "structureTypeId": "GRID-SENSOR",
-                    "domain": "powergrid",
-                    "memberOf": [
-                        "electrical"
-                    ],
-                    "placeOn": [
-                        "POWERGRID-NODE"
-                    ],
-                    "name": "Grid Sensor",
-                    "description": "Measurement for ALGO controller",
-                    "size": 1,
-                    "replace": false,
-                    "defaultPairing": [],
-                    "requiredPairing": [],
-                    "forbiddenPairing": [],
-                    "dynamics": [
-                        "GRID-SENSOR-NAME",
-                        "GRID-SENSOR-POWERMEASUREMENT",
-                        "GRID-SENSOR-POWERLIMIT",
-                        "GRID-SENSOR-ASSIGNMENT",
-                        "GRID-SENSOR-FLOW-DIRECTION"
-                    ],
-                    "flavors": [
-                        "74_SBC_transceiver"
-                    ],
-                    "renderData": {
-                        "file": "buildings/",
-                        "image": {
-                            "base": "objects/inactive/buildings/",
-                            "hover": "objects/active/buildings/",
-                            "active": "objects/active/buildings/"
-                        },
-                        "rotationY": 0.75,
-                        "hideObjectOnCanvas": true,
-                        "scale": "default",
-                        "hideInPanel": false,
-                        "nightmode": false,
-                        "emissiveOnConnection": true,
-                        "category": "ELECTRICAL",
-                        "sorting": 502
-                    },
-                    "timestamp": 1752222762745,
-                    "touched": false,
-                    "tags": [
-                        "algo",
-                        "OpenSwarmPoC1AssetSimulationModule"
-                    ],
-                    "contributor": "OpenSwarm Asset Simulator",
-                    "applicationData": {}
+                    "link": "buildings/63_SBC_ev-ground-charger",
+                    "flavors": {
+                    "10_SBC_residentialsingle": {
+                        "position": [
+                        0.2,
+                        0,
+                        0.62
+                        ],
+                        "rotationY": 0
+                    }
+                    }
                 }
-            }
-        },
-        "dynamics": {
-            "ids": [
-                "CHGSTATION-POWER",
-                "PV-SYSTEM-POWER",
-                "CHGSTATION-MAX-POWER",
-                "PV-SYSTEM-MAX-POWER",
-                "GRID-SENSOR-NAME",
+                }
+            },
+            "timestamp": 1752774735917,
+            "touched": false,
+            "tags": [
+                "base"
+            ],
+            "contributor": "base",
+            "applicationData": {}
+            },
+            "CONTROL-CENTER": {
+            "structureTypeId": "CONTROL-CENTER",
+            "domain": "landscape",
+            "memberOf": [
+                "buildings"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Control Center",
+            "description": "This is a control center",
+            "size": 4,
+            "replace": false,
+            "defaultPairing": [
+                "POWERGRID-CONNECTOR"
+            ],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [],
+            "flavors": [
+                "118_SBC_control-center"
+            ],
+            "renderData": {
+                "flavorNames": [
+                "Control Center"
+                ],
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
+                },
+                "rotationY": 0.75,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "COMMERCIAL",
+                "sorting": 100,
+                "nightmode": false,
+                "showPlaceholder": true,
+                "geoObject": true,
+                "widgetPosition": {
+                "118_SBC_control-center": [
+                    0.2,
+                    1,
+                    -0.3
+                ]
+                },
+                "decorators": {}
+            },
+            "timestamp": 1752774735917,
+            "touched": false,
+            "tags": [
+                "base"
+            ],
+            "contributor": "base",
+            "applicationData": {}
+            },
+            "RESIDENTIAL-MULTI-LARGE": {
+            "structureTypeId": "RESIDENTIAL-MULTI-LARGE",
+            "domain": "landscape",
+            "memberOf": [
+                "buildings"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Residential building (large)",
+            "description": "Large multi-household",
+            "size": 12,
+            "replace": false,
+            "defaultPairing": [
+                "POWERGRID-CONNECTOR"
+            ],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [],
+            "flavors": [
+                "55_SBC_council-housing"
+            ],
+            "renderData": {
+                "flavorNames": [
+                "Huge house"
+                ],
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
+                },
+                "rotationY": 0.75,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "RESIDENTIAL",
+                "sorting": 300,
+                "nightmode": true,
+                "showPlaceholder": true,
+                "geoObject": true,
+                "widgetPosition": {
+                "55_SBC_council-housing": [
+                    1.2,
+                    2.1,
+                    0
+                ]
+                },
+                "decorators": {
+                "CHARGING-POLE": {
+                    "link": "buildings/63_SBC_ev-ground-charger",
+                    "flavors": {
+                    "55_SBC_council-housing": {
+                        "position": [
+                        2.75,
+                        0.04,
+                        0
+                        ],
+                        "rotationY": 0
+                    }
+                    }
+                },
+                "SOLAR-PANEL": {
+                    "link": "buildings/66_SBC_solar-panel_council_housing",
+                    "flavors": {
+                    "55_SBC_council-housing": {
+                        "position": [
+                        0,
+                        0,
+                        0
+                        ],
+                        "rotationY": 0.75
+                    }
+                    }
+                }
+                }
+            },
+            "timestamp": 1752774735917,
+            "touched": false,
+            "tags": [
+                "base"
+            ],
+            "contributor": "base",
+            "applicationData": {}
+            },
+            "FOREST": {
+            "structureTypeId": "FOREST",
+            "domain": "landscape",
+            "memberOf": [
+                "nature"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Forest",
+            "description": "",
+            "size": 1,
+            "replace": true,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [],
+            "flavors": [
+                "20_SBC_forest"
+            ],
+            "renderData": {
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
+                },
+                "rotationY": 0.75,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "LANDSCAPE",
+                "sorting": 101,
+                "drawable": true,
+                "reselectAfterPlace": true
+            },
+            "timestamp": 1752774735917,
+            "touched": false,
+            "tags": [
+                "base"
+            ],
+            "contributor": "base",
+            "applicationData": {}
+            },
+            "BILLBOARD": {
+            "structureTypeId": "BILLBOARD",
+            "domain": "landscape",
+            "memberOf": [
+                "buildings",
+                "communal"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Billboard",
+            "description": "Animated billboard",
+            "size": 4,
+            "replace": false,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [],
+            "flavors": [
+                "40_SBC_billboard"
+            ],
+            "renderData": {
+                "file": "buildings/",
+                "logo": "40_SBC_billboard_text",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
+                },
+                "rotationY": 0.75,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "LANDSCAPE",
+                "sorting": 301,
+                "nightmode": true
+            },
+            "timestamp": 1752774735917,
+            "touched": false,
+            "tags": [
+                "base"
+            ],
+            "contributor": "base",
+            "applicationData": {}
+            },
+            "ROAD": {
+            "structureTypeId": "ROAD",
+            "domain": "landscape",
+            "memberOf": [
+                "traffic",
+                "transit"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Road",
+            "description": "",
+            "size": 1,
+            "replace": true,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [],
+            "flavors": [
+                "16_SBC_road"
+            ],
+            "renderData": {
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
+                },
+                "rotationY": 0.75,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "ROAD",
+                "sorting": 101,
+                "drawable": true,
+                "autoRotateDrawable": true,
+                "reselectAfterPlace": true
+            },
+            "timestamp": 1752774735917,
+            "touched": false,
+            "tags": [
+                "base"
+            ],
+            "contributor": "base",
+            "applicationData": {}
+            },
+            "ROAD-CURVE": {
+            "structureTypeId": "ROAD-CURVE",
+            "domain": "landscape",
+            "memberOf": [
+                "traffic",
+                "transit"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Road curve",
+            "description": "",
+            "size": 1,
+            "replace": true,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [],
+            "flavors": [
+                "17_SBC_road_curve"
+            ],
+            "renderData": {
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
+                },
+                "rotationY": 0.75,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "ROAD",
+                "sorting": 102,
+                "reselectAfterPlace": true
+            },
+            "timestamp": 1752774735917,
+            "touched": false,
+            "tags": [
+                "base"
+            ],
+            "contributor": "base",
+            "applicationData": {}
+            },
+            "ROAD-CROSSING-T": {
+            "structureTypeId": "ROAD-CROSSING-T",
+            "domain": "landscape",
+            "memberOf": [
+                "traffic",
+                "transit"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Road t-crossing",
+            "description": "",
+            "size": 1,
+            "replace": true,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [],
+            "flavors": [
+                "18_SBC_road_crossing_t"
+            ],
+            "renderData": {
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
+                },
+                "rotationY": 0.75,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "ROAD",
+                "sorting": 103,
+                "reselectAfterPlace": true
+            },
+            "timestamp": 1752774735918,
+            "touched": false,
+            "tags": [
+                "base"
+            ],
+            "contributor": "base",
+            "applicationData": {}
+            },
+            "ROAD-CROSSING-4": {
+            "structureTypeId": "ROAD-CROSSING-4",
+            "domain": "landscape",
+            "memberOf": [
+                "traffic",
+                "transit"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Road x-crossing",
+            "description": "",
+            "size": 1,
+            "replace": true,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [],
+            "flavors": [
+                "19_SBC_road_crossing_4"
+            ],
+            "renderData": {
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
+                },
+                "rotationY": 0.75,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "ROAD",
+                "sorting": 104,
+                "reselectAfterPlace": true
+            },
+            "timestamp": 1752774735918,
+            "touched": false,
+            "tags": [
+                "base"
+            ],
+            "contributor": "base",
+            "applicationData": {}
+            },
+            "POWERGRID-CONNECTOR": {
+            "structureTypeId": "POWERGRID-CONNECTOR",
+            "domain": "powergrid",
+            "memberOf": [
+                "electrical",
+                "connectors"
+            ],
+            "placeOn": [
+                "buildings",
+                "generators"
+            ],
+            "name": "Powergrid Connector",
+            "description": "A connection point to the powergrid",
+            "size": 1,
+            "replace": false,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [
                 "GRID-SENSOR-ASSIGNMENT",
-                "GRID-SENSOR-POWERMEASUREMENT",
-                "GRID-SENSOR-POWERLIMIT",
-                "GRID-SENSOR-FLOW-DIRECTION",
                 "ENERGY-COMMUNITY",
                 "ACTIVE-POWER-3P",
+                "POWERED",
+                "REACTIVE-POWER-3P",
+                "VOLTAGE-3P"
+            ],
+            "flavors": [
+                "71_SBC_house-connector"
+            ],
+            "renderData": {
+                "file": "buildings",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
+                },
+                "scale": "default",
+                "rotationY": 0.75,
+                "category": "ELECTRICAL",
+                "sorting": 501,
+                "nightmode": false,
+                "emissiveOnConnection": true
+            },
+            "timestamp": 1752774735965,
+            "touched": true,
+            "tags": [
+                "powergrid"
+            ],
+            "contributor": "powergrid",
+            "applicationData": {}
+            },
+            "POWERGRID-NODE": {
+            "structureTypeId": "POWERGRID-NODE",
+            "domain": "powergrid",
+            "memberOf": [
+                "electrical",
+                "nodes"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Grid Node",
+            "description": "A floating node in the powergrid",
+            "size": 1,
+            "replace": false,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [
+                "ACTIVE-POWER-3P",
+                "CONDUCTIVE",
+                "VOLTAGE-3P"
+            ],
+            "flavors": [],
+            "renderData": {
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
+                },
+                "rotationY": 0,
+                "scale": "default",
+                "hideInPanel": true,
+                "category": "ELECTRICAL"
+            },
+            "timestamp": 1752774735965,
+            "touched": true,
+            "tags": [
+                "powergrid"
+            ],
+            "contributor": "powergrid",
+            "applicationData": {}
+            },
+            "CABLE-UNDERGROUND-SD": {
+            "structureTypeId": "CABLE-UNDERGROUND-SD",
+            "domain": "powergrid",
+            "memberOf": [
+                "electrical",
+                "connections"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Underground Cable",
+            "description": "Underground cable",
+            "size": 1,
+            "replace": true,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [
                 "CABLE-LENGTH",
                 "CABLE-POWER-3PF",
-                "CONDUCTIVE",
                 "CURRENT-3P",
-                "GLOBAL-LOADFLOW",
+                "LOADING"
+            ],
+            "flavors": [],
+            "renderData": {
+                "file": "",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
+                },
+                "rotationY": 0,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "ELECTRICAL",
+                "sorting": 1,
+                "sounds": {
+                "build": "BUILD_POWERLINE"
+                },
+                "reselectAfterPlace": true
+            },
+            "timestamp": 1752774735963,
+            "touched": true,
+            "tags": [
+                "powergrid"
+            ],
+            "contributor": "powergrid",
+            "applicationData": {}
+            },
+            "LV-TRANSFORMER": {
+            "structureTypeId": "LV-TRANSFORMER",
+            "domain": "powergrid",
+            "memberOf": [
+                "electrical",
+                "sources",
+                "connectors"
+            ],
+            "placeOn": [
+                "TRAFO-BUILDING"
+            ],
+            "name": "Low Voltage Transformer",
+            "description": "Low voltage transformer",
+            "size": 1,
+            "replace": false,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [
+                "ACTIVE-POWER-3P",
                 "LOADING",
                 "POWERED",
                 "REACTIVE-POWER-3P",
-                "SWITCH-POSITION",
                 "TRAFO-CURRENT",
                 "TRAFO-TYPE",
-                "TRAFO-VOLTAGE",
-                "VOLTAGE-3P"
+                "TRAFO-VOLTAGE"
             ],
-            "entities": {
-                "CHGSTATION-POWER": {
-                    "dynamicTypeId": "CHGSTATION-POWER",
-                    "name": "Chargestation Power",
-                    "description": "Power situation of the charging station",
-                    "visible": true,
-                    "unit": "kW",
-                    "defaultValue": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "dataLabels": [
-                        "Power Demand",
-                        "Actual Power",
-                        "Shifted Demand"
-                    ],
-                    "chartType": "LINE",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "type": "array",
-                        "minItems": 3,
-                        "maxItems": 3,
-                        "items": {
-                            "type": "number"
-                        }
-                    },
-                    "timestamp": 1752222762751,
-                    "touched": false,
-                    "tags": [
-                        "energyCommunityController",
-                        "OpenSwarmPoC1AssetSimulationModule"
-                    ],
-                    "contributor": "OpenSwarmPoC1AssetSimulationModule"
+            "flavors": [
+                "71_SBC_house-connector"
+            ],
+            "renderData": {
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
                 },
-                "PV-SYSTEM-POWER": {
-                    "dynamicTypeId": "PV-SYSTEM-POWER",
-                    "name": "PV System Power",
-                    "description": "Power situation of the PV system",
-                    "visible": true,
-                    "unit": "kW",
-                    "defaultValue": [
-                        0,
-                        0
-                    ],
-                    "dataLabels": [
-                        "Infeed Potential",
-                        "Actual Infeed"
-                    ],
-                    "chartType": "LINE",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "type": "array",
-                        "minItems": 2,
-                        "maxItems": 2,
-                        "items": {
-                            "type": "number"
-                        }
-                    },
-                    "timestamp": 1752222762751,
-                    "touched": false,
-                    "tags": [
-                        "energyCommunityController",
-                        "OpenSwarmPoC1AssetSimulationModule"
-                    ],
-                    "contributor": "OpenSwarmPoC1AssetSimulationModule"
+                "hideInPanel": true,
+                "nightmode": false,
+                "emissiveOnConnection": true,
+                "category": "ELEMENTS"
+            },
+            "timestamp": 1752774735965,
+            "touched": true,
+            "tags": [
+                "powergrid"
+            ],
+            "contributor": "powergrid",
+            "applicationData": {}
+            },
+            "TRAFO-BUILDING": {
+            "structureTypeId": "TRAFO-BUILDING",
+            "domain": "landscape",
+            "memberOf": [
+                "buildings",
+                "electrical",
+                "generators"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Transformer Building (LV)",
+            "description": "The transformer building",
+            "size": 1,
+            "replace": false,
+            "defaultPairing": [],
+            "requiredPairing": [
+                "LV-TRANSFORMER"
+            ],
+            "forbiddenPairing": [
+                "POWERGRID-CONNECTOR"
+            ],
+            "dynamics": [],
+            "flavors": [
+                "25_SBC_transformer"
+            ],
+            "renderData": {
+                "file": "buildings/",
+                "logo": "25_SBC_transformer_text",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
                 },
-                "CHGSTATION-MAX-POWER": {
-                    "dynamicTypeId": "CHGSTATION-MAX-POWER",
-                    "name": "Chargingstation Power Limit",
-                    "description": "The currently limit of the power of this chargingstation",
-                    "visible": true,
-                    "unit": "kW",
-                    "defaultValue": 100,
-                    "dataLabels": [
-                        "Charge Power Limit"
-                    ],
-                    "chartType": "LINE",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "type": "number"
-                    },
-                    "timestamp": 1752222762752,
-                    "touched": false,
-                    "tags": [
-                        "energyCommunityController",
-                        "OpenSwarmPoC1AssetSimulationModule"
-                    ],
-                    "contributor": "OpenSwarmPoC1AssetSimulationModule"
+                "rotationY": 0,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "ELECTRICAL",
+                "sorting": 100,
+                "nightmode": true,
+                "geoObject": true,
+                "widgetPosition": {
+                "25_SBC_transformer": [
+                    0,
+                    1.3,
+                    0
+                ]
                 },
-                "PV-SYSTEM-MAX-POWER": {
-                    "dynamicTypeId": "PV-SYSTEM-MAX-POWER",
-                    "name": "PV System Infeed Limit",
-                    "description": "The currently limit of the infeed of this PV system",
-                    "visible": true,
-                    "unit": "kW",
-                    "defaultValue": 100,
-                    "dataLabels": [
-                        "Infeed Limit"
-                    ],
-                    "chartType": "LINE",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "type": "number"
-                    },
-                    "timestamp": 1752222762752,
-                    "touched": false,
-                    "tags": [
-                        "energyCommunityController",
-                        "OpenSwarmPoC1AssetSimulationModule"
-                    ],
-                    "contributor": "OpenSwarmPoC1AssetSimulationModule"
+                "showPlaceholder": true
+            },
+            "timestamp": 1752774735919,
+            "touched": false,
+            "tags": [
+                "powergrid"
+            ],
+            "contributor": "powergrid",
+            "applicationData": {}
+            },
+            "POWERSWITCH": {
+            "structureTypeId": "POWERSWITCH",
+            "domain": "powergrid",
+            "memberOf": [
+                "electrical",
+                "taps"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Power Switch",
+            "description": "Power switch",
+            "size": 1,
+            "replace": false,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [
+                "SWITCH-POSITION"
+            ],
+            "flavors": [],
+            "renderData": {
+                "file": "",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
                 },
-                "GRID-SENSOR-NAME": {
-                    "dynamicTypeId": "GRID-SENSOR-NAME",
-                    "name": "Grid Sensor Name",
-                    "description": "Name of the grid sensor",
-                    "visible": true,
-                    "unit": "",
-                    "defaultValue": "Inactive",
-                    "dataLabels": [
-                        "Grid Sensor Name"
-                    ],
-                    "chartType": "TEXT",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "type": "string",
-                        "enum": [
-                            "S1",
-                            "S2",
-                            "S3",
-                            "S4",
-                            "S5",
-                            "S6",
-                            "S7",
-                            "S8",
-                            "S9",
-                            "Inactive"
-                        ]
-                    },
-                    "timestamp": 1752222762752,
-                    "touched": false,
-                    "tags": [
-                        "energyCommunityController",
-                        "OpenSwarmPoC1AssetSimulationModule"
-                    ],
-                    "contributor": "OpenSwarmPoC1AssetSimulationModule"
+                "rotationY": 0,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "ELECTRICAL",
+                "sorting": 401
+            },
+            "timestamp": 1752774735964,
+            "touched": true,
+            "tags": [
+                "powergrid"
+            ],
+            "contributor": "powergrid",
+            "applicationData": {}
+            },
+            "THERMAL-NODE": {
+            "structureTypeId": "THERMAL-NODE",
+            "domain": "thermogrid",
+            "memberOf": [
+                "nodes"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Thermal node",
+            "description": "A basic thermogrid node",
+            "size": 1,
+            "replace": false,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [],
+            "flavors": [],
+            "renderData": {},
+            "timestamp": 1752774735919,
+            "touched": false,
+            "tags": [
+                "thermogrid"
+            ],
+            "contributor": "thermogrid",
+            "applicationData": {}
+            },
+            "HEATING-PIPE": {
+            "structureTypeId": "HEATING-PIPE",
+            "domain": "thermogrid",
+            "memberOf": [
+                "connections"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Heating pipe",
+            "description": "A district heating pipe",
+            "size": 1,
+            "replace": true,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [],
+            "flavors": [],
+            "renderData": {
+                "file": "",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
                 },
-                "GRID-SENSOR-ASSIGNMENT": {
-                    "dynamicTypeId": "GRID-SENSOR-ASSIGNMENT",
-                    "name": "Grid Sensor Assignment",
-                    "description": "The assignment of the grid sensor to a specific grid segment",
-                    "visible": true,
-                    "unit": "",
-                    "defaultValue": "Unassigned",
-                    "dataLabels": [
-                        "Grid Sensor Assignment"
-                    ],
-                    "chartType": "TEXT",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "type": "string",
-                        "enum": [
-                            "S1",
-                            "S2",
-                            "S3",
-                            "S4",
-                            "S5",
-                            "S6",
-                            "S7",
-                            "S8",
-                            "S9",
-                            "Unassigned"
-                        ]
-                    },
-                    "timestamp": 1752222762752,
-                    "touched": false,
-                    "tags": [
-                        "energyCommunityController",
-                        "OpenSwarmPoC1AssetSimulationModule"
-                    ],
-                    "contributor": "OpenSwarmPoC1AssetSimulationModule"
+                "rotationY": 0,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "THERMAL",
+                "sorting": 1,
+                "sounds": {
+                "build": "BUILD_POWERLINE"
                 },
-                "GRID-SENSOR-POWERMEASUREMENT": {
-                    "dynamicTypeId": "GRID-SENSOR-POWERMEASUREMENT",
-                    "name": "Grid Sensor Power Measurement",
-                    "description": "Power measurement of the grid sensor",
-                    "visible": true,
-                    "unit": "kW",
-                    "defaultValue": 0,
-                    "dataLabels": [
-                        "Power Measurement"
-                    ],
-                    "chartType": "LINE",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "type": "number"
-                    },
-                    "timestamp": 1752222762752,
-                    "touched": false,
-                    "tags": [
-                        "energyCommunityController",
-                        "OpenSwarmPoC1AssetSimulationModule"
-                    ],
-                    "contributor": "OpenSwarmPoC1AssetSimulationModule"
+                "reselectAfterPlace": true
+            },
+            "timestamp": 1752774735919,
+            "touched": false,
+            "tags": [
+                "thermogrid"
+            ],
+            "contributor": "thermogrid",
+            "applicationData": {}
+            },
+            "COOLING-PIPE": {
+            "structureTypeId": "COOLING-PIPE",
+            "domain": "thermogrid",
+            "memberOf": [
+                "connections"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Cooling pipe",
+            "description": "A district cooling pipe",
+            "size": 1,
+            "replace": true,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [],
+            "flavors": [],
+            "renderData": {
+                "file": "",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
                 },
-                "GRID-SENSOR-POWERLIMIT": {
-                    "dynamicTypeId": "GRID-SENSOR-POWERLIMIT",
-                    "name": "Grid Sensor Power Limit",
-                    "description": "The currently limit of the power of this grid sensor",
-                    "visible": true,
-                    "unit": "kW",
-                    "defaultValue": 100,
-                    "dataLabels": [
-                        "Line Power Limit"
-                    ],
-                    "chartType": "LINE",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "type": "number"
-                    },
-                    "timestamp": 1752222762752,
-                    "touched": false,
-                    "tags": [
-                        "energyCommunityController",
-                        "OpenSwarmPoC1AssetSimulationModule"
-                    ],
-                    "contributor": "OpenSwarmPoC1AssetSimulationModule"
+                "rotationY": 0,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "THERMAL",
+                "sorting": 2,
+                "sounds": {
+                "build": "BUILD_POWERLINE"
                 },
-                "GRID-SENSOR-FLOW-DIRECTION": {
-                    "dynamicTypeId": "GRID-SENSOR-FLOW-DIRECTION",
-                    "name": "Grid Sensor Flow Direction",
-                    "description": "The direction of the measured power flow by the grid sensor",
-                    "visible": true,
-                    "unit": "",
-                    "defaultValue": "UP",
-                    "dataLabels": [
-                        "Flow Direction"
-                    ],
-                    "chartType": "TEXT",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "type": "string",
-                        "enum": [
-                            "UP",
-                            "DOWN"
-                        ]
-                    },
-                    "timestamp": 1752222762753,
-                    "touched": false,
-                    "tags": [
-                        "energyCommunityController",
-                        "OpenSwarmPoC1AssetSimulationModule"
-                    ],
-                    "contributor": "OpenSwarmPoC1AssetSimulationModule"
+                "reselectAfterPlace": true
+            },
+            "timestamp": 1752774735920,
+            "touched": false,
+            "tags": [
+                "thermogrid"
+            ],
+            "contributor": "thermogrid",
+            "applicationData": {}
+            },
+            "THERMOGRID-CONNECTOR": {
+            "structureTypeId": "THERMOGRID-CONNECTOR",
+            "domain": "thermogrid",
+            "memberOf": [
+                "sources",
+                "sinks",
+                "connectors"
+            ],
+            "placeOn": [
+                "buildings"
+            ],
+            "name": "Thermogrid connector",
+            "description": "A basic element to establish connection to the heating and cooling network",
+            "size": 1,
+            "replace": false,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [],
+            "flavors": [
+                "110_SBC_thermal-grid-connector"
+            ],
+            "renderData": {
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
                 },
-                "ENERGY-COMMUNITY": {
-                    "dynamicTypeId": "ENERGY-COMMUNITY",
-                    "name": "Energy Community",
-                    "description": "Member of which energy community",
-                    "visible": true,
-                    "unit": "",
-                    "defaultValue": "None",
-                    "dataLabels": [
-                        "Energy Community"
-                    ],
-                    "chartType": "TEXT",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "type": "string",
-                        "enum": [
-                            "None",
-                            "A",
-                            "B",
-                            "C"
-                        ]
-                    },
-                    "timestamp": 1752222762756,
-                    "touched": false,
-                    "tags": [
-                        "energyCommunityController",
-                        "ModuleTemplateFragment"
-                    ],
-                    "contributor": "ModuleTemplateFragment"
+                "scale": "default",
+                "rotationY": 0.75,
+                "category": "THERMAL",
+                "sorting": 201,
+                "nightmode": false,
+                "emissiveOnConnection": true
+            },
+            "timestamp": 1752774735920,
+            "touched": false,
+            "tags": [
+                "thermogrid"
+            ],
+            "contributor": "thermogrid",
+            "applicationData": {}
+            },
+            "EV-STATION": {
+            "structureTypeId": "EV-STATION",
+            "domain": "landscape",
+            "memberOf": [
+                "buildings",
+                "electrical"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "E-Car Charging Station",
+            "description": "E-charging station",
+            "size": 4,
+            "replace": false,
+            "defaultPairing": [],
+            "requiredPairing": [
+                "POWERGRID-CONNECTOR",
+                "CHARGING-POLE"
+            ],
+            "forbiddenPairing": [
+                "SOLAR-PANEL",
+                "BATTERY-SYSTEM"
+            ],
+            "dynamics": [],
+            "flavors": [
+                "38_SBC_ev-station"
+            ],
+            "renderData": {
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
                 },
-                "ACTIVE-POWER-3P": {
-                    "dynamicTypeId": "ACTIVE-POWER-3P",
-                    "name": "Active Power",
-                    "description": "3-phase voltage level",
-                    "visible": true,
-                    "unit": "kW",
-                    "defaultValue": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "dataLabels": [
-                        "L1",
-                        "L2",
-                        "L3"
-                    ],
-                    "chartType": "STACKED_AREA",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "items": {
-                            "type": "number"
-                        },
-                        "maxItems": 3,
-                        "minItems": 3,
-                        "type": "array"
-                    },
-                    "timestamp": 1752222762763,
-                    "touched": false,
-                    "tags": [
-                        "lvgrid",
-                        "BasicGeneratorFragment"
-                    ],
-                    "contributor": "BasicGeneratorFragment"
+                "rotationY": 0.75,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "ELECTRICAL",
+                "sorting": 301,
+                "nightmode": true,
+                "showPlaceholder": true,
+                "geoObject": true,
+                "widgetPosition": {
+                "38_SBC_ev-station": [
+                    -0.7,
+                    0.5,
+                    0
+                ]
                 },
-                "CABLE-LENGTH": {
-                    "dynamicTypeId": "CABLE-LENGTH",
-                    "name": "Cable Length",
-                    "description": "Cable length indicator",
-                    "visible": false,
-                    "unit": "m",
-                    "defaultValue": 10,
-                    "dataLabels": [],
-                    "chartType": "LINE",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "type": "number"
-                    },
-                    "timestamp": 1752222762763,
-                    "touched": false,
-                    "tags": [
-                        "lvgrid",
-                        "BasicGeneratorFragment"
-                    ],
-                    "contributor": "BasicGeneratorFragment"
-                },
-                "CABLE-POWER-3PF": {
-                    "dynamicTypeId": "CABLE-POWER-3PF",
-                    "name": "Cable Power From",
-                    "description": "3-phase power from",
-                    "visible": false,
-                    "unit": "kW",
-                    "defaultValue": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "dataLabels": [
-                        "L1",
-                        "L2",
-                        "L3"
-                    ],
-                    "chartType": "STACKED_AREA",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "items": {
-                            "type": "number"
-                        },
-                        "maxItems": 3,
-                        "minItems": 3,
-                        "type": "array"
-                    },
-                    "timestamp": 1752222762763,
-                    "touched": false,
-                    "tags": [
-                        "lvgrid",
-                        "BasicGeneratorFragment"
-                    ],
-                    "contributor": "BasicGeneratorFragment"
-                },
-                "CONDUCTIVE": {
-                    "dynamicTypeId": "CONDUCTIVE",
-                    "name": "Conductive",
-                    "description": "Conductiveness indicator",
-                    "visible": false,
-                    "unit": "",
-                    "defaultValue": true,
-                    "dataLabels": [],
-                    "chartType": "LINE",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "type": "boolean"
-                    },
-                    "timestamp": 1752222762764,
-                    "touched": false,
-                    "tags": [
-                        "lvgrid",
-                        "BasicGeneratorFragment"
-                    ],
-                    "contributor": "BasicGeneratorFragment"
-                },
-                "CURRENT-3P": {
-                    "dynamicTypeId": "CURRENT-3P",
-                    "name": "Current",
-                    "description": "3-phase current level",
-                    "visible": true,
-                    "unit": "A",
-                    "defaultValue": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "dataLabels": [
-                        "L1",
-                        "L2",
-                        "L3"
-                    ],
-                    "chartType": "LINE",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "items": {
-                            "type": "number"
-                        },
-                        "maxItems": 3,
-                        "minItems": 3,
-                        "type": "array"
-                    },
-                    "timestamp": 1752222762764,
-                    "touched": false,
-                    "tags": [
-                        "lvgrid",
-                        "BasicGeneratorFragment"
-                    ],
-                    "contributor": "BasicGeneratorFragment"
-                },
-                "GLOBAL-LOADFLOW": {
-                    "dynamicTypeId": "GLOBAL-LOADFLOW",
-                    "name": "Loadflow",
-                    "description": "Which Loadflow is used",
-                    "visible": true,
-                    "unit": "",
-                    "defaultValue": "symmetrical",
-                    "dataLabels": [],
-                    "chartType": "LINE",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "enum": [
-                            "symmetrical",
-                            "asymmetrical"
+                "decorators": {
+                "SOLAR-PANEL": {
+                    "link": "buildings/47_SBC_solar-panel",
+                    "flavors": {
+                    "38_SBC_ev-station": {
+                        "position": [
+                        -0.8,
+                        0.027,
+                        0.9
                         ],
-                        "type": "string"
-                    },
-                    "timestamp": 1752222762764,
-                    "touched": false,
-                    "tags": [
-                        "BasicGeneratorFragment"
-                    ],
-                    "contributor": "BasicGeneratorFragment"
-                },
-                "LOADING": {
-                    "dynamicTypeId": "LOADING",
-                    "name": "Loading",
-                    "description": "Loading with respect to rated current",
-                    "visible": false,
-                    "unit": "%",
-                    "defaultValue": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "dataLabels": [
-                        "L1",
-                        "L2",
-                        "L3"
-                    ],
-                    "chartType": "LINE",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "items": {
-                            "type": "number"
-                        },
-                        "maxItems": 3,
-                        "minItems": 3,
-                        "type": "array"
-                    },
-                    "timestamp": 1752222762764,
-                    "touched": false,
-                    "tags": [
-                        "base",
-                        "lvgrid",
-                        "BasicGeneratorFragment"
-                    ],
-                    "contributor": "BasicGeneratorFragment"
-                },
-                "POWERED": {
-                    "dynamicTypeId": "POWERED",
-                    "name": "Element Powered?",
-                    "description": "Indicates if the element is powered",
-                    "visible": false,
-                    "unit": "",
-                    "defaultValue": true,
-                    "dataLabels": [],
-                    "chartType": "LINE",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "type": "boolean"
-                    },
-                    "timestamp": 1752222762764,
-                    "touched": false,
-                    "tags": [
-                        "lvgrid",
-                        "BasicGeneratorFragment"
-                    ],
-                    "contributor": "BasicGeneratorFragment"
-                },
-                "REACTIVE-POWER-3P": {
-                    "dynamicTypeId": "REACTIVE-POWER-3P",
-                    "name": "Reactive Power",
-                    "description": "Element reactive power (positive = drawing)",
-                    "visible": false,
-                    "unit": "kvar",
-                    "defaultValue": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "dataLabels": [
-                        "L1",
-                        "L2",
-                        "L3"
-                    ],
-                    "chartType": "LINE",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "items": {
-                            "type": "number"
-                        },
-                        "maxItems": 3,
-                        "minItems": 3,
-                        "type": "array"
-                    },
-                    "timestamp": 1752222762764,
-                    "touched": false,
-                    "tags": [
-                        "lvgrid",
-                        "BasicGeneratorFragment"
-                    ],
-                    "contributor": "BasicGeneratorFragment"
-                },
-                "SWITCH-POSITION": {
-                    "dynamicTypeId": "SWITCH-POSITION",
-                    "name": "Switch Closed?",
-                    "description": "Switch open or closed status",
-                    "visible": true,
-                    "unit": "",
-                    "defaultValue": true,
-                    "dataLabels": [],
-                    "chartType": "LINE",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "type": "boolean"
-                    },
-                    "timestamp": 1752222762765,
-                    "touched": false,
-                    "tags": [
-                        "lvgrid",
-                        "BasicGeneratorFragment"
-                    ],
-                    "contributor": "BasicGeneratorFragment"
-                },
-                "TRAFO-CURRENT": {
-                    "dynamicTypeId": "TRAFO-CURRENT",
-                    "name": "Secondary Current",
-                    "description": "Current on the secondary side of the transformer",
-                    "visible": true,
-                    "unit": "A",
-                    "defaultValue": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "dataLabels": [
-                        "L1",
-                        "L2",
-                        "L3"
-                    ],
-                    "chartType": "LINE",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "items": {
-                            "type": "number"
-                        },
-                        "maxItems": 3,
-                        "minItems": 3,
-                        "type": "array"
-                    },
-                    "timestamp": 1752222762765,
-                    "touched": false,
-                    "tags": [
-                        "lvgrid",
-                        "BasicGeneratorFragment"
-                    ],
-                    "contributor": "BasicGeneratorFragment"
-                },
-                "TRAFO-TYPE": {
-                    "dynamicTypeId": "TRAFO-TYPE",
-                    "name": "LV-Transformer Type",
-                    "description": "The specific type of transformer",
-                    "visible": true,
-                    "unit": "",
-                    "defaultValue": "250 kVA",
-                    "dataLabels": [],
-                    "chartType": "LINE",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "enum": [
-                            "250 kVA",
-                            "400 kVA",
-                            "630 kVA",
-                            "1250 kVA"
-                        ],
-                        "type": "string"
-                    },
-                    "timestamp": 1752222762765,
-                    "touched": false,
-                    "tags": [
-                        "lvgrid",
-                        "BasicGeneratorFragment"
-                    ],
-                    "contributor": "BasicGeneratorFragment"
-                },
-                "TRAFO-VOLTAGE": {
-                    "dynamicTypeId": "TRAFO-VOLTAGE",
-                    "name": "Secondary Voltage",
-                    "description": "Voltage on the secondary side of the transformer",
-                    "visible": true,
-                    "unit": "V",
-                    "defaultValue": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "dataLabels": [
-                        "L1",
-                        "L2",
-                        "L3"
-                    ],
-                    "chartType": "LINE",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "items": {
-                            "type": "number"
-                        },
-                        "maxItems": 3,
-                        "minItems": 3,
-                        "type": "array"
-                    },
-                    "timestamp": 1752222762765,
-                    "touched": false,
-                    "tags": [
-                        "lvgrid",
-                        "BasicGeneratorFragment"
-                    ],
-                    "contributor": "BasicGeneratorFragment"
-                },
-                "VOLTAGE-3P": {
-                    "dynamicTypeId": "VOLTAGE-3P",
-                    "name": "Voltage",
-                    "description": "3-phase voltage level",
-                    "visible": true,
-                    "unit": "V",
-                    "defaultValue": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "dataLabels": [
-                        "L1",
-                        "L2",
-                        "L3"
-                    ],
-                    "chartType": "LINE",
-                    "widgetType": "NONE",
-                    "schema": {
-                        "items": {
-                            "maximum": 300,
-                            "minimum": 0,
-                            "type": "number"
-                        },
-                        "maxItems": 3,
-                        "minItems": 3,
-                        "type": "array"
-                    },
-                    "timestamp": 1752222762766,
-                    "touched": false,
-                    "tags": [
-                        "lvgrid",
-                        "BasicGeneratorFragment"
-                    ],
-                    "contributor": "BasicGeneratorFragment"
+                        "repeatX": 4
+                    }
+                    }
                 }
+                }
+            },
+            "timestamp": 1752774735934,
+            "touched": false,
+            "tags": [
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarm Asset Simulator",
+            "applicationData": {}
+            },
+            "SOLAR-FARM": {
+            "structureTypeId": "SOLAR-FARM",
+            "domain": "landscape",
+            "memberOf": [
+                "buildings",
+                "generators"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Solar Farm",
+            "description": "",
+            "size": 4,
+            "replace": false,
+            "defaultPairing": [],
+            "requiredPairing": [
+                "POWERGRID-CONNECTOR",
+                "SOLAR-PANEL"
+            ],
+            "forbiddenPairing": [
+                "CHARGING-POLE",
+                "BATTERY-SYSTEM"
+            ],
+            "dynamics": [],
+            "flavors": [
+                "68_SBC_powergrid"
+            ],
+            "renderData": {
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
+                },
+                "rotationY": 0.75,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "ELECTRICAL",
+                "sorting": 204,
+                "nightmode": true,
+                "geoObject": true,
+                "widgetPosition": {
+                "68_SBC_powergrid": [
+                    0,
+                    0.5,
+                    0.3
+                ]
+                },
+                "showPlaceholder": true
+            },
+            "timestamp": 1752774735934,
+            "touched": false,
+            "tags": [
+                "base",
+                "lvgrid",
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarm Asset Simulator",
+            "applicationData": {}
+            },
+            "BATTERY-STATION": {
+            "structureTypeId": "BATTERY-STATION",
+            "domain": "landscape",
+            "memberOf": [
+                "buildings",
+                "storage"
+            ],
+            "placeOn": [
+                "canvas"
+            ],
+            "name": "Battery Station",
+            "description": "",
+            "size": 4,
+            "replace": false,
+            "defaultPairing": [],
+            "requiredPairing": [
+                "POWERGRID-CONNECTOR",
+                "BATTERY-SYSTEM"
+            ],
+            "forbiddenPairing": [
+                "CHARGING-POLE",
+                "SOLAR-PANEL"
+            ],
+            "dynamics": [],
+            "flavors": [
+                "41_SBC_commercial-storage-small"
+            ],
+            "renderData": {
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
+                },
+                "rotationY": 0.75,
+                "scale": "default",
+                "hideInPanel": false,
+                "category": "ELECTRICAL",
+                "sorting": 302,
+                "nightmode": true,
+                "geoObject": true,
+                "widgetPosition": {
+                "41_SBC_commercial-storage-small": [
+                    0.5,
+                    0.5,
+                    -0.5
+                ]
+                },
+                "showPlaceholder": true
+            },
+            "timestamp": 1752774735935,
+            "touched": false,
+            "tags": [
+                "base",
+                "lvgrid",
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarm Asset Simulator",
+            "applicationData": {}
+            },
+            "SOLAR-PANEL": {
+            "structureTypeId": "SOLAR-PANEL",
+            "domain": "powergrid",
+            "memberOf": [
+                "electrical",
+                "sources"
+            ],
+            "placeOn": [
+                "POWERGRID-CONNECTOR"
+            ],
+            "name": "PV System",
+            "description": "Photovoltaic installation",
+            "size": 1,
+            "replace": false,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [
+                "PV-SYSTEM-POWER",
+                "PV-SYSTEM-MAX-POWER"
+            ],
+            "flavors": [
+                "76_SBC_plugin"
+            ],
+            "renderData": {
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
+                },
+                "rotationY": 0.75,
+                "hideObjectOnCanvas": true,
+                "scale": "default",
+                "hideInPanel": false,
+                "nightmode": false,
+                "emissiveOnConnection": true,
+                "category": "ELECTRICAL",
+                "sorting": 502
+            },
+            "timestamp": 1752774735935,
+            "touched": false,
+            "tags": [
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarm Asset Simulator",
+            "applicationData": {}
+            },
+            "CHARGING-POLE": {
+            "structureTypeId": "CHARGING-POLE",
+            "domain": "powergrid",
+            "memberOf": [
+                "electrical"
+            ],
+            "placeOn": [
+                "POWERGRID-CONNECTOR"
+            ],
+            "name": "E-Car Charging Pole",
+            "description": "E-car charging pole",
+            "size": 1,
+            "replace": false,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [
+                "CHGSTATION-POWER",
+                "CHGSTATION-MAX-POWER"
+            ],
+            "flavors": [
+                "77_SBC_software"
+            ],
+            "renderData": {
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
+                },
+                "rotationY": 0.75,
+                "hideObjectOnCanvas": true,
+                "scale": "default",
+                "hideInPanel": false,
+                "nightmode": false,
+                "emissiveOnConnection": true,
+                "category": "ELECTRICAL",
+                "sorting": 503
+            },
+            "timestamp": 1752774735935,
+            "touched": false,
+            "tags": [
+                "base",
+                "lvgrid",
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarm Asset Simulator",
+            "applicationData": {}
+            },
+            "BATTERY-SYSTEM": {
+            "structureTypeId": "BATTERY-SYSTEM",
+            "domain": "powergrid",
+            "memberOf": [
+                "electrical"
+            ],
+            "placeOn": [
+                "POWERGRID-CONNECTOR"
+            ],
+            "name": "Battery System",
+            "description": "Battery storage system",
+            "size": 4,
+            "replace": false,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [
+                "BATTERY-SYSTEM-POWER",
+                "BATTERY-SYSTEM-MAX-POWER",
+                "BATTERY-SYSTEM-SOC",
+                "BATTERY-STORAGE-CAPACITY"
+            ],
+            "flavors": [
+                "72_SBC_battery-storage"
+            ],
+            "renderData": {
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
+                },
+                "rotationY": 0.75,
+                "hideObjectOnCanvas": true,
+                "scale": "default",
+                "hideInPanel": false,
+                "nightmode": false,
+                "emissiveOnConnection": true,
+                "category": "ELECTRICAL",
+                "sorting": 302
+            },
+            "timestamp": 1752774735935,
+            "touched": false,
+            "tags": [
+                "base",
+                "lvgrid",
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarm Asset Simulator",
+            "applicationData": {}
+            },
+            "GRID-SENSOR": {
+            "structureTypeId": "GRID-SENSOR",
+            "domain": "powergrid",
+            "memberOf": [
+                "electrical"
+            ],
+            "placeOn": [
+                "POWERGRID-NODE"
+            ],
+            "name": "Grid Sensor",
+            "description": "Measurement for ALGO controller",
+            "size": 1,
+            "replace": false,
+            "defaultPairing": [],
+            "requiredPairing": [],
+            "forbiddenPairing": [],
+            "dynamics": [
+                "GRID-SENSOR-NAME",
+                "GRID-SENSOR-POWERMEASUREMENT",
+                "GRID-SENSOR-POWERLIMIT",
+                "GRID-SENSOR-ASSIGNMENT",
+                "GRID-SENSOR-FLOW-DIRECTION"
+            ],
+            "flavors": [
+                "74_SBC_transceiver"
+            ],
+            "renderData": {
+                "file": "buildings/",
+                "image": {
+                "base": "objects/inactive/buildings/",
+                "hover": "objects/active/buildings/",
+                "active": "objects/active/buildings/"
+                },
+                "rotationY": 0.75,
+                "hideObjectOnCanvas": true,
+                "scale": "default",
+                "hideInPanel": false,
+                "nightmode": false,
+                "emissiveOnConnection": true,
+                "category": "ELECTRICAL",
+                "sorting": 502
+            },
+            "timestamp": 1752774735935,
+            "touched": false,
+            "tags": [
+                "algo",
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarm Asset Simulator",
+            "applicationData": {}
             }
+        }
+        },
+        "dynamics": {
+        "ids": [
+            "CHGSTATION-POWER",
+            "PV-SYSTEM-POWER",
+            "BATTERY-SYSTEM-POWER",
+            "BATTERY-SYSTEM-MAX-POWER",
+            "BATTERY-SYSTEM-SOC",
+            "BATTERY-STORAGE-CAPACITY",
+            "CHGSTATION-MAX-POWER",
+            "PV-SYSTEM-MAX-POWER",
+            "GRID-SENSOR-NAME",
+            "GRID-SENSOR-ASSIGNMENT",
+            "GRID-SENSOR-POWERMEASUREMENT",
+            "GRID-SENSOR-POWERLIMIT",
+            "GRID-SENSOR-FLOW-DIRECTION",
+            "ENERGY-COMMUNITY",
+            "ACTIVE-POWER-3P",
+            "CABLE-LENGTH",
+            "CABLE-POWER-3PF",
+            "CONDUCTIVE",
+            "CURRENT-3P",
+            "GLOBAL-LOADFLOW",
+            "LOADING",
+            "POWERED",
+            "REACTIVE-POWER-3P",
+            "SWITCH-POSITION",
+            "TRAFO-CURRENT",
+            "TRAFO-TYPE",
+            "TRAFO-VOLTAGE",
+            "VOLTAGE-3P"
+        ],
+        "entities": {
+            "CHGSTATION-POWER": {
+            "dynamicTypeId": "CHGSTATION-POWER",
+            "name": "Chargestation Power",
+            "description": "Power situation of the charging station",
+            "visible": true,
+            "unit": "kW",
+            "defaultValue": [
+                0,
+                0,
+                0
+            ],
+            "dataLabels": [
+                "Power Demand",
+                "Actual Power",
+                "Shifted Demand"
+            ],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "type": "array",
+                "minItems": 3,
+                "maxItems": 3,
+                "items": {
+                "type": "number"
+                }
+            },
+            "timestamp": 1752774735941,
+            "touched": false,
+            "tags": [
+                "energyCommunityController",
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarmPoC1AssetSimulationModule"
+            },
+            "PV-SYSTEM-POWER": {
+            "dynamicTypeId": "PV-SYSTEM-POWER",
+            "name": "PV System Power",
+            "description": "Power situation of the PV system",
+            "visible": true,
+            "unit": "kW",
+            "defaultValue": [
+                0,
+                0
+            ],
+            "dataLabels": [
+                "Infeed Potential",
+                "Actual Infeed"
+            ],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2,
+                "items": {
+                "type": "number"
+                }
+            },
+            "timestamp": 1752774735942,
+            "touched": false,
+            "tags": [
+                "energyCommunityController",
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarmPoC1AssetSimulationModule"
+            },
+            "BATTERY-SYSTEM-POWER": {
+            "dynamicTypeId": "BATTERY-SYSTEM-POWER",
+            "name": "Battery System Power",
+            "description": "Power situation of the battery system",
+            "visible": true,
+            "unit": "kW",
+            "defaultValue": [
+                10,
+                0,
+                -10
+            ],
+            "dataLabels": [
+                "Charge Potential",
+                "Actual Power",
+                "Discharge Potential"
+            ],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "type": "array",
+                "minItems": 3,
+                "maxItems": 3,
+                "items": {
+                "type": "number"
+                }
+            },
+            "timestamp": 1752774735942,
+            "touched": false,
+            "tags": [
+                "energyCommunityController",
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarmPoC1AssetSimulationModule"
+            },
+            "BATTERY-SYSTEM-MAX-POWER": {
+            "dynamicTypeId": "BATTERY-SYSTEM-MAX-POWER",
+            "name": "Battery System Power Limit",
+            "description": "The currently limit of the power of this battery system",
+            "visible": true,
+            "unit": "kW",
+            "defaultValue": [
+                10,
+                -10
+            ],
+            "dataLabels": [
+                "Charge Limit",
+                "Discharge Limit"
+            ],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2,
+                "items": {
+                "type": "number"
+                }
+            },
+            "timestamp": 1752774735942,
+            "touched": false,
+            "tags": [
+                "energyCommunityController",
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarmPoC1AssetSimulationModule"
+            },
+            "BATTERY-SYSTEM-SOC": {
+            "dynamicTypeId": "BATTERY-SYSTEM-SOC",
+            "name": "Battery System State of Charge",
+            "description": "The current state of charge of the battery system",
+            "visible": true,
+            "unit": "%",
+            "defaultValue": 50,
+            "dataLabels": [
+                "State of Charge"
+            ],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+            },
+            "timestamp": 1752774735942,
+            "touched": false,
+            "tags": [
+                "energyCommunityController",
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarmPoC1AssetSimulationModule"
+            },
+            "BATTERY-STORAGE-CAPACITY": {
+            "dynamicTypeId": "BATTERY-STORAGE-CAPACITY",
+            "name": "Battery Syste, Capacity",
+            "description": "Total availabe capacity of the battery system",
+            "visible": true,
+            "unit": "kWh",
+            "defaultValue": 10,
+            "dataLabels": [],
+            "chartType": "NUMBER",
+            "widgetType": "NONE",
+            "schema": {
+                "type": "number"
+            },
+            "timestamp": 1752774735942,
+            "touched": false,
+            "tags": [
+                "lvgrid",
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarmPoC1AssetSimulationModule"
+            },
+            "CHGSTATION-MAX-POWER": {
+            "dynamicTypeId": "CHGSTATION-MAX-POWER",
+            "name": "Chargingstation Power Limit",
+            "description": "The currently limit of the power of this chargingstation",
+            "visible": true,
+            "unit": "kW",
+            "defaultValue": 100,
+            "dataLabels": [
+                "Charge Power Limit"
+            ],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "type": "number"
+            },
+            "timestamp": 1752774735942,
+            "touched": false,
+            "tags": [
+                "energyCommunityController",
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarmPoC1AssetSimulationModule"
+            },
+            "PV-SYSTEM-MAX-POWER": {
+            "dynamicTypeId": "PV-SYSTEM-MAX-POWER",
+            "name": "PV System Infeed Limit",
+            "description": "The currently limit of the infeed of this PV system",
+            "visible": true,
+            "unit": "kW",
+            "defaultValue": 100,
+            "dataLabels": [
+                "Infeed Limit"
+            ],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "type": "number"
+            },
+            "timestamp": 1752774735943,
+            "touched": false,
+            "tags": [
+                "energyCommunityController",
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarmPoC1AssetSimulationModule"
+            },
+            "GRID-SENSOR-NAME": {
+            "dynamicTypeId": "GRID-SENSOR-NAME",
+            "name": "Grid Sensor Name",
+            "description": "Name of the grid sensor",
+            "visible": true,
+            "unit": "",
+            "defaultValue": "Inactive",
+            "dataLabels": [
+                "Grid Sensor Name"
+            ],
+            "chartType": "TEXT",
+            "widgetType": "NONE",
+            "schema": {
+                "type": "string",
+                "enum": [
+                "S1",
+                "S2",
+                "S3",
+                "S4",
+                "S5",
+                "S6",
+                "S7",
+                "S8",
+                "S9",
+                "Inactive"
+                ]
+            },
+            "timestamp": 1752774735943,
+            "touched": false,
+            "tags": [
+                "energyCommunityController",
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarmPoC1AssetSimulationModule"
+            },
+            "GRID-SENSOR-ASSIGNMENT": {
+            "dynamicTypeId": "GRID-SENSOR-ASSIGNMENT",
+            "name": "Grid Sensor Assignment",
+            "description": "The assignment of the grid sensor to a specific grid segment",
+            "visible": true,
+            "unit": "",
+            "defaultValue": "Unassigned",
+            "dataLabels": [
+                "Grid Sensor Assignment"
+            ],
+            "chartType": "TEXT",
+            "widgetType": "NONE",
+            "schema": {
+                "type": "string",
+                "enum": [
+                "S1",
+                "S2",
+                "S3",
+                "S4",
+                "S5",
+                "S6",
+                "S7",
+                "S8",
+                "S9",
+                "Unassigned"
+                ]
+            },
+            "timestamp": 1752774735943,
+            "touched": false,
+            "tags": [
+                "energyCommunityController",
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarmPoC1AssetSimulationModule"
+            },
+            "GRID-SENSOR-POWERMEASUREMENT": {
+            "dynamicTypeId": "GRID-SENSOR-POWERMEASUREMENT",
+            "name": "Grid Sensor Power Measurement",
+            "description": "Power measurement of the grid sensor",
+            "visible": true,
+            "unit": "kW",
+            "defaultValue": 0,
+            "dataLabels": [
+                "Power Measurement"
+            ],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "type": "number"
+            },
+            "timestamp": 1752774735943,
+            "touched": false,
+            "tags": [
+                "energyCommunityController",
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarmPoC1AssetSimulationModule"
+            },
+            "GRID-SENSOR-POWERLIMIT": {
+            "dynamicTypeId": "GRID-SENSOR-POWERLIMIT",
+            "name": "Grid Sensor Power Limit",
+            "description": "The currently limit of the power of this grid sensor",
+            "visible": true,
+            "unit": "kW",
+            "defaultValue": 100,
+            "dataLabels": [
+                "Line Power Limit"
+            ],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "type": "number"
+            },
+            "timestamp": 1752774735943,
+            "touched": false,
+            "tags": [
+                "energyCommunityController",
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarmPoC1AssetSimulationModule"
+            },
+            "GRID-SENSOR-FLOW-DIRECTION": {
+            "dynamicTypeId": "GRID-SENSOR-FLOW-DIRECTION",
+            "name": "Grid Sensor Flow Direction",
+            "description": "The direction of the measured power flow by the grid sensor",
+            "visible": true,
+            "unit": "",
+            "defaultValue": "UP",
+            "dataLabels": [
+                "Flow Direction"
+            ],
+            "chartType": "TEXT",
+            "widgetType": "NONE",
+            "schema": {
+                "type": "string",
+                "enum": [
+                "UP",
+                "DOWN"
+                ]
+            },
+            "timestamp": 1752774735943,
+            "touched": false,
+            "tags": [
+                "energyCommunityController",
+                "OpenSwarmPoC1AssetSimulationModule"
+            ],
+            "contributor": "OpenSwarmPoC1AssetSimulationModule"
+            },
+            "ENERGY-COMMUNITY": {
+            "dynamicTypeId": "ENERGY-COMMUNITY",
+            "name": "Energy Community",
+            "description": "Member of which energy community",
+            "visible": true,
+            "unit": "",
+            "defaultValue": "None",
+            "dataLabels": [
+                "Energy Community"
+            ],
+            "chartType": "TEXT",
+            "widgetType": "NONE",
+            "schema": {
+                "type": "string",
+                "enum": [
+                "None",
+                "A",
+                "B",
+                "C"
+                ]
+            },
+            "timestamp": 1752774735949,
+            "touched": false,
+            "tags": [
+                "energyCommunityController",
+                "ModuleTemplateFragment"
+            ],
+            "contributor": "ModuleTemplateFragment"
+            },
+            "ACTIVE-POWER-3P": {
+            "dynamicTypeId": "ACTIVE-POWER-3P",
+            "name": "Active Power",
+            "description": "3-phase voltage level",
+            "visible": true,
+            "unit": "kW",
+            "defaultValue": [
+                0,
+                0,
+                0
+            ],
+            "dataLabels": [
+                "L1",
+                "L2",
+                "L3"
+            ],
+            "chartType": "STACKED_AREA",
+            "widgetType": "NONE",
+            "schema": {
+                "items": {
+                "type": "number"
+                },
+                "maxItems": 3,
+                "minItems": 3,
+                "type": "array"
+            },
+            "timestamp": 1752774735958,
+            "touched": false,
+            "tags": [
+                "lvgrid",
+                "BasicGeneratorFragment"
+            ],
+            "contributor": "BasicGeneratorFragment"
+            },
+            "CABLE-LENGTH": {
+            "dynamicTypeId": "CABLE-LENGTH",
+            "name": "Cable Length",
+            "description": "Cable length indicator",
+            "visible": false,
+            "unit": "m",
+            "defaultValue": 10,
+            "dataLabels": [],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "type": "number"
+            },
+            "timestamp": 1752774735958,
+            "touched": false,
+            "tags": [
+                "lvgrid",
+                "BasicGeneratorFragment"
+            ],
+            "contributor": "BasicGeneratorFragment"
+            },
+            "CABLE-POWER-3PF": {
+            "dynamicTypeId": "CABLE-POWER-3PF",
+            "name": "Cable Power From",
+            "description": "3-phase power from",
+            "visible": false,
+            "unit": "kW",
+            "defaultValue": [
+                0,
+                0,
+                0
+            ],
+            "dataLabels": [
+                "L1",
+                "L2",
+                "L3"
+            ],
+            "chartType": "STACKED_AREA",
+            "widgetType": "NONE",
+            "schema": {
+                "items": {
+                "type": "number"
+                },
+                "maxItems": 3,
+                "minItems": 3,
+                "type": "array"
+            },
+            "timestamp": 1752774735959,
+            "touched": false,
+            "tags": [
+                "lvgrid",
+                "BasicGeneratorFragment"
+            ],
+            "contributor": "BasicGeneratorFragment"
+            },
+            "CONDUCTIVE": {
+            "dynamicTypeId": "CONDUCTIVE",
+            "name": "Conductive",
+            "description": "Conductiveness indicator",
+            "visible": false,
+            "unit": "",
+            "defaultValue": true,
+            "dataLabels": [],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "type": "boolean"
+            },
+            "timestamp": 1752774735959,
+            "touched": false,
+            "tags": [
+                "lvgrid",
+                "BasicGeneratorFragment"
+            ],
+            "contributor": "BasicGeneratorFragment"
+            },
+            "CURRENT-3P": {
+            "dynamicTypeId": "CURRENT-3P",
+            "name": "Current",
+            "description": "3-phase current level",
+            "visible": true,
+            "unit": "A",
+            "defaultValue": [
+                0,
+                0,
+                0
+            ],
+            "dataLabels": [
+                "L1",
+                "L2",
+                "L3"
+            ],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "items": {
+                "type": "number"
+                },
+                "maxItems": 3,
+                "minItems": 3,
+                "type": "array"
+            },
+            "timestamp": 1752774735959,
+            "touched": false,
+            "tags": [
+                "lvgrid",
+                "BasicGeneratorFragment"
+            ],
+            "contributor": "BasicGeneratorFragment"
+            },
+            "GLOBAL-LOADFLOW": {
+            "dynamicTypeId": "GLOBAL-LOADFLOW",
+            "name": "Loadflow",
+            "description": "Which Loadflow is used",
+            "visible": true,
+            "unit": "",
+            "defaultValue": "symmetrical",
+            "dataLabels": [],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "enum": [
+                "symmetrical",
+                "asymmetrical"
+                ],
+                "type": "string"
+            },
+            "timestamp": 1752774735959,
+            "touched": false,
+            "tags": [
+                "BasicGeneratorFragment"
+            ],
+            "contributor": "BasicGeneratorFragment"
+            },
+            "LOADING": {
+            "dynamicTypeId": "LOADING",
+            "name": "Loading",
+            "description": "Loading with respect to rated current",
+            "visible": false,
+            "unit": "%",
+            "defaultValue": [
+                0,
+                0,
+                0
+            ],
+            "dataLabels": [
+                "L1",
+                "L2",
+                "L3"
+            ],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "items": {
+                "type": "number"
+                },
+                "maxItems": 3,
+                "minItems": 3,
+                "type": "array"
+            },
+            "timestamp": 1752774735959,
+            "touched": false,
+            "tags": [
+                "base",
+                "lvgrid",
+                "BasicGeneratorFragment"
+            ],
+            "contributor": "BasicGeneratorFragment"
+            },
+            "POWERED": {
+            "dynamicTypeId": "POWERED",
+            "name": "Element Powered?",
+            "description": "Indicates if the element is powered",
+            "visible": false,
+            "unit": "",
+            "defaultValue": true,
+            "dataLabels": [],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "type": "boolean"
+            },
+            "timestamp": 1752774735959,
+            "touched": false,
+            "tags": [
+                "lvgrid",
+                "BasicGeneratorFragment"
+            ],
+            "contributor": "BasicGeneratorFragment"
+            },
+            "REACTIVE-POWER-3P": {
+            "dynamicTypeId": "REACTIVE-POWER-3P",
+            "name": "Reactive Power",
+            "description": "Element reactive power (positive = drawing)",
+            "visible": false,
+            "unit": "kvar",
+            "defaultValue": [
+                0,
+                0,
+                0
+            ],
+            "dataLabels": [
+                "L1",
+                "L2",
+                "L3"
+            ],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "items": {
+                "type": "number"
+                },
+                "maxItems": 3,
+                "minItems": 3,
+                "type": "array"
+            },
+            "timestamp": 1752774735960,
+            "touched": false,
+            "tags": [
+                "lvgrid",
+                "BasicGeneratorFragment"
+            ],
+            "contributor": "BasicGeneratorFragment"
+            },
+            "SWITCH-POSITION": {
+            "dynamicTypeId": "SWITCH-POSITION",
+            "name": "Switch Closed?",
+            "description": "Switch open or closed status",
+            "visible": true,
+            "unit": "",
+            "defaultValue": true,
+            "dataLabels": [],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "type": "boolean"
+            },
+            "timestamp": 1752774735960,
+            "touched": false,
+            "tags": [
+                "lvgrid",
+                "BasicGeneratorFragment"
+            ],
+            "contributor": "BasicGeneratorFragment"
+            },
+            "TRAFO-CURRENT": {
+            "dynamicTypeId": "TRAFO-CURRENT",
+            "name": "Secondary Current",
+            "description": "Current on the secondary side of the transformer",
+            "visible": true,
+            "unit": "A",
+            "defaultValue": [
+                0,
+                0,
+                0
+            ],
+            "dataLabels": [
+                "L1",
+                "L2",
+                "L3"
+            ],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "items": {
+                "type": "number"
+                },
+                "maxItems": 3,
+                "minItems": 3,
+                "type": "array"
+            },
+            "timestamp": 1752774735960,
+            "touched": false,
+            "tags": [
+                "lvgrid",
+                "BasicGeneratorFragment"
+            ],
+            "contributor": "BasicGeneratorFragment"
+            },
+            "TRAFO-TYPE": {
+            "dynamicTypeId": "TRAFO-TYPE",
+            "name": "LV-Transformer Type",
+            "description": "The specific type of transformer",
+            "visible": true,
+            "unit": "",
+            "defaultValue": "250 kVA",
+            "dataLabels": [],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "enum": [
+                "250 kVA",
+                "400 kVA",
+                "630 kVA",
+                "1250 kVA"
+                ],
+                "type": "string"
+            },
+            "timestamp": 1752774735960,
+            "touched": false,
+            "tags": [
+                "lvgrid",
+                "BasicGeneratorFragment"
+            ],
+            "contributor": "BasicGeneratorFragment"
+            },
+            "TRAFO-VOLTAGE": {
+            "dynamicTypeId": "TRAFO-VOLTAGE",
+            "name": "Secondary Voltage",
+            "description": "Voltage on the secondary side of the transformer",
+            "visible": true,
+            "unit": "V",
+            "defaultValue": [
+                0,
+                0,
+                0
+            ],
+            "dataLabels": [
+                "L1",
+                "L2",
+                "L3"
+            ],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "items": {
+                "type": "number"
+                },
+                "maxItems": 3,
+                "minItems": 3,
+                "type": "array"
+            },
+            "timestamp": 1752774735960,
+            "touched": false,
+            "tags": [
+                "lvgrid",
+                "BasicGeneratorFragment"
+            ],
+            "contributor": "BasicGeneratorFragment"
+            },
+            "VOLTAGE-3P": {
+            "dynamicTypeId": "VOLTAGE-3P",
+            "name": "Voltage",
+            "description": "3-phase voltage level",
+            "visible": true,
+            "unit": "V",
+            "defaultValue": [
+                0,
+                0,
+                0
+            ],
+            "dataLabels": [
+                "L1",
+                "L2",
+                "L3"
+            ],
+            "chartType": "LINE",
+            "widgetType": "NONE",
+            "schema": {
+                "items": {
+                "maximum": 300,
+                "minimum": 0,
+                "type": "number"
+                },
+                "maxItems": 3,
+                "minItems": 3,
+                "type": "array"
+            },
+            "timestamp": 1752774735961,
+            "touched": false,
+            "tags": [
+                "lvgrid",
+                "BasicGeneratorFragment"
+            ],
+            "contributor": "BasicGeneratorFragment"
+            }
+        }
         }
     },
     "storyModules": {
