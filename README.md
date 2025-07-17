@@ -55,7 +55,7 @@ This section explains how to build and configure the individual components of th
 
 ### Grid-Sensor Placement and Correct Allocation
 
-A grid sensor must be connected to a grid node (NODE), which in turn is connected with only two cables. This ensures that the power measurement works correctly, as the sensor randomly selects one of the cables. To do this, it is advisable to insert an ‘intermediate node’ when pulling the cables. Here is an example in which four feeders are to be connected to a transformer:
+A grid sensor must be connected to a grid node (NODE), which in turn is connected with only two cables. This ensures that the power measurement works correctly, as the sensor randomly selects one of the cables. To do this, it is advisable to insert an "intermediate node" when pulling the cables. Here is an example in which four feeders are to be connected to a transformer:
 
 ![GridSensorPlacement_01](./images/GridSensorPlacement_01.JPG)
 
@@ -71,7 +71,7 @@ Now the individual feeders can be connected to this grid node:
 
 ![GridSensorPlacement_06](./images/GridSensorPlacement_06.JPG)
 
-Up next is to add the ‘Grid Sensor’ component to the node. To do this, select it from the Build menu and place it on the previously created ‘intermediate nodes’ in the power grid layer:
+Up next is to add the `Grid Sensor` component to the node. To do this, select it from the Build menu and place it on the previously created "intermediate nodes" in the power grid layer:
 
 ![GridSensorPlacement_09](./images/GridSensorPlacement_09.JPG)
 
@@ -79,7 +79,7 @@ BIFROST helps by displaying the nodes in the network where a sensor can be place
 
 ![GridSensorPlacement_11](./images/GridSensorPlacement_11.JPG)
 
-For clarity, it is recommended to store the sensor name as a widget in the BIFROST UI so that it is clear where a sensor is installed. This also makes it easier to configure the remaining components. To do this, simply select the respective grid node and drag the dynamic card ‘Grid Sensor Name’ onto the canvas with the mouse to anchor a widget:
+For clarity, it is recommended to place the sensor name as a widget in the BIFROST UI so that it is clear, where a sensor is installed. This also makes it easier to configure the remaining components. To do this, simply select the respective grid node and drag the dynamic card `Grid Sensor Name` onto the canvas with the mouse to anchor a widget:
 
 ![GridSensorPlacement_12](./images/GridSensorPlacement_12.gif)
 
@@ -91,21 +91,21 @@ Here, you should ensure that each sensor is given a unique name from the list! I
 
 ![GridSensorPlacement_14](./images/GridSensorPlacement_14.JPG)
 
-Now the power grid connectors must be assigned to the respective sensors. To do this, enter the name of the sensor for the respective feeder in which the power grid connector is located in the dynamic ‘Grid Sensor Assignment’. This must be done for all power grid connectors.
+Now all the power grid connectors of the grid must be assigned to the respective sensors. To do this, enter the name of the sensor for the respective feeder in which the power grid connector is located in the dynamic `Grid Sensor Assignment`. This must be done for all power grid connectors.
 
 ![GridSensorConfiguration_01](./images/GridSensorConfiguration_02.JPG)
 
-Sensors can also be cascaded. Grid sensors also have the dynamic ‘Grid Sensor Assignment’ for this purpose. In the example below, sensor S5 would therefore have to be assigned the value “S1” as ‘Grid Sensor Assignment’ because sensor S5 is located ‘behind’ sensor S1 in the network. Sensors that measure at the beginning of the feeders retain the value ‘Unassigned’ for dynamic grid sensor assignment.
+Sensors can also be cascaded. Grid sensors also have the dynamic `Grid Sensor Assignment` for this purpose. In the example below, sensor S5 would therefore have to be assigned the value “S1” as `Grid Sensor Assignment` because sensor S5 is located "behind" sensor S1 in the network. Sensors that measure at the beginning of the feeders retain the value "Unassigned" for the dynamic `Grid Sensor Assignment`.
 
 ![GridSensorConfiguration_01](./images/GridSensorConfiguration_03.JPG)
 
 ### Grid-Sensor Measurement and Limit Configuration
 
-Since the sensor randomly selects a cable for power measurement and the direction of the cable (in relation to the load flow, i.e. whether the cable was pulled away from or towards the node when it was created) is not known, it is possible to change the measurement direction of the load flow.
- 
-The dynamic ‘Grid Sensor Flow Direction’ is available for this purpose, which can take the values “UP” and ‘DOWN’. It is therefore advisable to carry out a test simulation and compare the expected load flow with the measured values. For example, if only load is installed in one feeder, the power measurement of the sensor should be positive. If this is not the case (values are negative), adjust the measurement direction with the dynamic ‘Grid Sensor Flow Direction’.
+Since the sensor randomly selects a cable for power measurement and the direction of the cable (in relation to the load flow, i.e. whether the cable was pulled away from or towards the node when it was created) is not known, it is possible to change the measurement direction of the load flow to assure correct sensor measurement "direction".
 
-A power limit can also be set for each grid sensor via the dynamic ‘Grid Sensor Power Limit’. This limit corresponds, for example, to the maximum power that the cable can handle. The community controller then ensures that this limit is not exceeded by community operation.
+The dynamic `Grid Sensor Flow Direction` is available for this purpose, which can take the values “UP” and "DOWN". It is therefore advisable to carry out a test simulation and compare the expected load flow with the measured values. For example, if only load is installed in one feeder, the power measurement of the sensor should be positive. If this is not the case (values are negative), adjust the measurement direction with the dynamic `Grid Sensor Flow Direction` by changing its value.
+
+A power limit can also be set for each grid sensor via the dynamic `Grid Sensor Power Limit`. This limit corresponds, for example, to the maximum power that the cable can handle. The community controller then ensures that this limit is not exceeded by the community operation.
 
 ### Energy-Communities and their Components
 
