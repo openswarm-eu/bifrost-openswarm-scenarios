@@ -40,6 +40,8 @@ services:
                 npm run build:server && 
                 npm run start:server -- -- --config-user-module=openswarm-scenarios-core-config.js
             "
+        depends_on:
+            - influxdb
 
     energy-community-controller-connector:
         image: $REGISTRY_MODULE_CONNECTOR:$IMG_TAG_MODULE_CONNECTOR
@@ -75,3 +77,7 @@ services:
             SAMPLING_RATE: 60
             HOOK: '[100, 200]'
             NODE_ENV: 'production'
+        volumes:
+            - ../configs/asset-simulator/:/opt/energy-community-asset-simulator/config/
+        depends_on:
+            - bifrost-core
