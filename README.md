@@ -9,7 +9,6 @@ python ./tools/reset_for_demo.py
 
 **Step 1:** zip the BSX for the demos (only the ones you need):
 ```sh
-python ./tools/zero_bsx_zip.py --story_label="OpenSwarm-Scenarios"
 python ./tools/zero_bsx_zip.py --story_label="Simple-Test"
 python ./tools/zero_bsx_zip.py --story_label="Simple-Test-Load"
 python ./tools/zero_bsx_zip.py --story_label="Simple-Test-Cascade"
