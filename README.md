@@ -23,6 +23,7 @@ Use
 docker pull cr.siemens.com/openswarm/energy-community-controller/charger
 docker pull cr.siemens.com/openswarm/energy-community-controller/pv
 docker pull cr.siemens.com/openswarm/energy-community-controller/sensor
+docker pull cr.siemens.com/openswarm/energy-community-controller/storage
 ```
 to pull the latest version them from cr.siemens.com. If you want to use tagged versions, see [here](#use-previous-versions-of-the-openswarm-energy-community-controller-docker-images).
 
