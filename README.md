@@ -24,7 +24,7 @@ docker pull cr.siemens.com/openswarm/energy-community-controller/charger
 docker pull cr.siemens.com/openswarm/energy-community-controller/pv
 docker pull cr.siemens.com/openswarm/energy-community-controller/sensor
 ```
-to pull them from cr.siemens.com.
+to pull the latest version them from cr.siemens.com. If you want to use tagged versions, see [here](#use-previous-versions-of-the-openswarm-energy-community-controller-docker-images).
 
 **Step 2:** Start BIFROST ZERO.
 ```sh
@@ -37,7 +37,6 @@ and open http://127.0.0.1:9091/
 
 Add the changes to this repo via
 ```sh
-python ./tools/zero_bsx_get.py --story_label="OpenSwarm-Scenarios" --operating_system="windows"
 python ./tools/zero_bsx_get.py --story_label="Simple-Test" --operating_system="windows"
 python ./tools/zero_bsx_get.py --story_label="Simple-Test-Load" --operating_system="windows"
 python ./tools/zero_bsx_get.py --story_label="Simple-Test-Cascade" --operating_system="windows"
@@ -150,3 +149,55 @@ You can use than a URL like http://127.0.0.1:9091/custom/[`your-image-name`] to 
 
 Current available images:
 - GridFailure.gif (http://127.0.0.1:9091/custom/GridFailure.gif)
+
+## Version Handling
+
+The idea behind demo versions is that whenever a working demo is available, it is made available in the release branch and tagged for later. Currently, this is a manual process. The following sections explain the steps required to do this.
+
+### Release a New Demo Version
+
+1. Merge all commits to be released into the `release` branch:
+    ```bash
+    git checkout release
+    git merge main
+    ```
+2. Tag here
+    ```bash
+    git tag -a v2.0.0 -m "Demo running with 2.Y.Z components (community operation + grid sensors)"
+    ```
+3. Push the commit and tag
+    ```bash
+    git push
+    git push origin v2.0.0
+    ```
+4. Continue working on the `main` branch
+     ```bash
+    git checkout main
+    ```
+5. Also give the latest versions of the openswarm energy community controller docker images a corresponding tag:
+    ```bash
+    docker pull cr.siemens.com/openswarm/energy-community-controller/charger
+    docker pull cr.siemens.com/openswarm/energy-community-controller/pv
+    docker pull cr.siemens.com/openswarm/energy-community-controller/sensor
+    ```
+    ```bash
+    docker tag cr.siemens.com/openswarm/energy-community-controller/charger:latest cr.siemens.com/openswarm/energy-community-demo-scenarios/charger:v2.0.0
+    docker tag cr.siemens.com/openswarm/energy-community-controller/pv:latest cr.siemens.com/openswarm/energy-community-demo-scenarios/pv:v2.0.0
+    docker tag cr.siemens.com/openswarm/energy-community-controller/sensor:latest cr.siemens.com/openswarm/energy-community-demo-scenarios/sensor:v2.0.0
+    ```
+    and push them into the local registry of the demo repository with
+    ```bash
+    docker push cr.siemens.com/openswarm/energy-community-demo-scenarios/charger:v2.0.0
+    docker push cr.siemens.com/openswarm/energy-community-demo-scenarios/pv:v2.0.0
+    docker push cr.siemens.com/openswarm/energy-community-demo-scenarios/sensor:v2.0.0
+    ```
+
+### Use Previous Versions of the Openswarm Energy Community Controller Docker Images
+
+When you want to use specific previously tagged images, you have to get sure, these are tagged as `latest`, so the community controller connector uses the correct images:
+```bash
+docker tag cr.siemens.com/openswarm/energy-community-demo-scenarios/charger:v2.0.0 cr.siemens.com/openswarm/energy-community-demo-scenarios/charger:latest
+docker tag cr.siemens.com/openswarm/energy-community-demo-scenarios/pv:v2.0.0 cr.siemens.com/openswarm/energy-community-demo-scenarios/pv:latest
+docker tag cr.siemens.com/openswarm/energy-community-demo-scenarios/sensor:v2.0.0 cr.siemens.com/openswarm/energy-community-demo-scenarios/sensor:latest
+```
+**ATTENTION**: Don't push these images to the CR!!! Use them only locally!!
