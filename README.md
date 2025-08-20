@@ -131,6 +131,8 @@ Here some commands which where used to mirror the code.siemens.com repository to
 ```sh
 git remote add openswarmgithub https://github.com/openswarm-eu/bifrost-openswarm-scenarios.git
 git push openswarmgithub main
+git push openswarmgithub release
+git push openswarmgithub v2.0.0
 ```
 
 ## Adding Images
