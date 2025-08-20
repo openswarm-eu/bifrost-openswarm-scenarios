@@ -7,7 +7,7 @@
 python ./tools/reset_for_demo.py
 ```
 
-**Step 1:** zip the BSX for the demos (only the ones you need):
+**Step 1:** zip the BSX for the demos (maybe only the ones you need):
 ```sh
 python ./tools/zero_bsx_zip.py --story_label="Simple-Test"
 python ./tools/zero_bsx_zip.py --story_label="Simple-Test-Load"
@@ -18,6 +18,7 @@ python ./tools/zero_bsx_zip.py --story_label="Simple-Test-Cascade"
 * cr.siemens.com/openswarm/energy-community-controller/charger 
 * cr.siemens.com/openswarm/energy-community-controller/pv
 * cr.siemens.com/openswarm/energy-community-controller/sensor
+* cr.siemens.com/openswarm/energy-community-controller/storage
 Use
 ```sh
 docker pull cr.siemens.com/openswarm/energy-community-controller/charger

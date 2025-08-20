@@ -108,7 +108,7 @@ for file in os.listdir(dir_raw):
         fileobject = open(os.path.join(dir_raw,file))
         state = json.load(fileobject)
         with open(os.path.join(dir_raw,file), 'w') as outfile:
-            json.dump(state, outfile, indent=4, ensure_ascii=False)
+            json.dump(state, outfile, indent=2, ensure_ascii=False)
         logger.info("    Formatted: " + os.path.join(file))
 # Iterate over all the files in the sub-folders:
 for root, dirs, walkfiles in os.walk(dir_raw):
@@ -118,7 +118,7 @@ for root, dirs, walkfiles in os.walk(dir_raw):
                 fileobject = open(os.path.join(root,walkdir,file))
                 state = json.load(fileobject)
                 with open(os.path.join(root,walkdir,file), 'w') as outfile:
-                    json.dump(state, outfile, indent=4, ensure_ascii=False)
+                    json.dump(state, outfile, indent=2, ensure_ascii=False)
                 logger.info("    Formatted: " + os.path.join(walkdir,file))
 logger.info("... Succesfull!")
 

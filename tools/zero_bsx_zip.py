@@ -13,8 +13,8 @@ parser = argparse.ArgumentParser(
     epilog=""
 )  
 parser.add_argument('-l', '--story_label', 
-                    type=str, required = True, 
-                    help='Story to handle (can also be just a partial string, than all matching stories will be zipped)')  
+                    type=str, required = False, 
+                    help='Story to handle (can also be empty, than all stories in bsx_source_dir will be zipped)')  
 parser.add_argument('-s', '--bsx_source_dir', 
                     type=str, default='./data/bsx_raw', 
                     help='source directory of raw bsx, from viewpoint Repo folder. Defaults to "./data/bsx_raw"')  
@@ -46,7 +46,10 @@ dir_raws    = Path(dir_script.parent,bsx_source_dir)
 
 bsx_folders= []
 for raw_bsx_folder in os.listdir(dir_raws):
-    if story_label in raw_bsx_folder:
+    if story_label is not None:
+        if story_label == raw_bsx_folder:
+            bsx_folders.append(story_label)
+    else:
         bsx_folders.append(raw_bsx_folder)
 
 
