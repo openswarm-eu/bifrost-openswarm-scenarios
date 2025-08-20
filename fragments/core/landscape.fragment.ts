@@ -17,7 +17,7 @@ const landscapeFragment: TFragment = {
             forbiddenPairing: [],
             dynamics: [],
             flavors: [
-                '10_SBC_residentialsingle'
+                '13_SBC_residentialsingle'
             ],
             renderData: {
                 flavorNames: [
@@ -38,27 +38,27 @@ const landscapeFragment: TFragment = {
                 showPlaceholder: true,
                 geoObject: true,
                 widgetPosition: {
-                    '10_SBC_residentialsingle': [0.2, 1, -0.3]
+                    '13_SBC_residentialsingle': [0, 1.1, 0]
                 },
                 decorators: {
                     'SOLAR-PANEL': {
                         link: 'buildings/47_SBC_solar-panel',
                         flavors: {
-                            '10_SBC_residentialsingle': {
+                            '13_SBC_residentialsingle': {
                                 link: 'buildings/65_SBC_flat-solar-panel',
-                                position: [0.04, 0.55, -0.4],
+                                position: [-0.12, 0.835, -0.19],
                                 rotationY: 0,
-                                rotationX: 0.2,
-                                scale: 1.4
+                                rotationX: 0.312,
+                                scale: 1.3
                             }
                         }
                     },
                     'CHARGING-POLE': {
                         link: 'buildings/63_SBC_ev-ground-charger',
                         flavors: {
-                            '10_SBC_residentialsingle': {
-                                position: [0.2, 0, 0.62],
-                                rotationY: 0
+                            '13_SBC_residentialsingle': {
+                                position: [0.7, 0, -0.45],
+                                rotationY: 1
                             }
                         }
                     }
@@ -119,7 +119,9 @@ const landscapeFragment: TFragment = {
             dynamics: [],
             flavors: ['55_SBC_council-housing'],
             renderData: {
-                flavorNames: ['Huge house'],
+                flavorNames: [
+                    'Huge house'
+                ],
                 file: 'buildings/',
                 image: {
                     base: 'objects/inactive/buildings/',

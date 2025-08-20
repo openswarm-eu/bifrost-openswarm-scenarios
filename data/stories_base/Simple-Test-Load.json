@@ -450,7 +450,7 @@
                 "SOLAR-PANEL"
             ],
             "extraParameters": {
-                "flavor": "10_SBC_residentialsingle",
+                "flavor": "13_SBC_residentialsingle",
                 "rotation": 0
             },
             "position": [
@@ -477,7 +477,7 @@
                 "CHARGING-POLE"
             ],
             "extraParameters": {
-                "flavor": "10_SBC_residentialsingle",
+                "flavor": "13_SBC_residentialsingle",
                 "rotation": 0
             },
             "position": [
