@@ -73,7 +73,7 @@ services:
         image: $REGISTRY_MODULE_ASSETSIMULATION:$IMG_TAG_MODULE_ASSETSIMULATION
         environment:
             BIFROST_URL: 'http://bifrost-core:9091'
-            MODULE_URL: 'http://energy-community-asset-simulator:1809'
+            MODULE_URL: 'http://energy-community-asset-simulator:1810'
             SAMPLING_RATE: 60
             HOOK: '[100, 200]'
             NODE_ENV: 'production'
