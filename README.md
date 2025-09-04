@@ -12,6 +12,7 @@ python ./tools/reset_for_demo.py
 python ./tools/zero_bsx_zip.py --story_label="Simple-Test"
 python ./tools/zero_bsx_zip.py --story_label="Simple-Test-Load"
 python ./tools/zero_bsx_zip.py --story_label="Simple-Test-Cascade"
+python ./tools/zero_bsx_zip.py --story_label="Simple-Test-Cascade-Load"
 ```
 
 **Step 1a:** (Optional) Get sure, you have pulled / built the latest versions of the openswarm energy community controller docker images
@@ -42,6 +43,7 @@ Add the changes to this repo via
 python ./tools/zero_bsx_get.py --story_label="Simple-Test" --operating_system="windows"
 python ./tools/zero_bsx_get.py --story_label="Simple-Test-Load" --operating_system="windows"
 python ./tools/zero_bsx_get.py --story_label="Simple-Test-Cascade" --operating_system="windows"
+python ./tools/zero_bsx_get.py --story_label="Simple-Test-Cascade-Load" --operating_system="windows"
 ```
 
 After you are finished, shut down BIFROST with
