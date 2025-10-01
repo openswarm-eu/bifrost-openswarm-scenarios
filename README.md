@@ -203,3 +203,8 @@ docker tag cr.siemens.com/openswarm/energy-community-demo-scenarios/pv:v2.0.0 cr
 docker tag cr.siemens.com/openswarm/energy-community-demo-scenarios/sensor:v2.0.0 cr.siemens.com/openswarm/energy-community-demo-scenarios/sensor:latest
 ```
 **ATTENTION**: Don't push these images to the CR!!! Use them only locally!!
+# Acknowledgement
+
+Part of the source code in this repository is developed within the frame and for the purpose of the OpenSwarm project. This project has received funding from the European Unioan's Horizon Europe Framework Programme under Grant Agreement No. 101093046.
+
+![OpenSwarm - Funded by the European Union](logos/ack.png)
