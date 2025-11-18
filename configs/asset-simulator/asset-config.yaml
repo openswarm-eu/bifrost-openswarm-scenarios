@@ -26,13 +26,78 @@ batterySystem:
 structureTypes:
   smallHouse:
     load:
-      # Load scale factor that represents typical single-family home consumption
-      scaleFactor: 1
+      # Load scale factor in p.u. that represents typical single-family home consumption
+      scaleFactor: 2
   
   hugeHouse:
     load:
-      # Load scale factor that represents large residential buildings or small commercial properties
+      # Load scale factor in p.u. that represents large residential buildings or small commercial properties
       scaleFactor: 10
+  
+  evStation:
+    evCharger:
+      # Definition of number of charging slots at a EV station
+      chargingSlots: 3
+      # Initial charge percentage for newly connected EVs (0.0 to 1.0, where 0.15 = 15%)
+      initialChargePercent: 0.15
+      # Increased charge power - multiplier applied to car's nominal power (e.g., 1.2 = 120% of nominal power)
+      increasedChargePower: 1.2
+    load:
+      # Load scale factor for EV stations in p.u.
+      # EV stations have no additional load beyond the charging itself, thus their load scale factor should be 0
+      scaleFactor: 0
+    carStats:
+      # EV station car statistics definition
+      "-1":
+        # No car
+        carColor: "0x000000"
+        carPower: 0
+        carMaxCap: 0
+      "0":
+        # Red car
+        carColor: "0x0000FF"
+        carPower: 5
+        carMaxCap: 10
+      "1":
+        # Grey car
+        carColor: "0x808080"
+        carPower: 2
+        carMaxCap: 20
+      "2":
+        # Currently no car available
+        carColor: "0x000000"
+        carPower: 3
+        carMaxCap: 30
+      "3":
+        # White car
+        carColor: "0xFFFFFF"
+        carPower: 4
+        carMaxCap: 15
+      "4":
+        # Currently no car available
+        carColor: "0x000000"
+        carPower: 5
+        carMaxCap: 50
+      "5":
+        # Dark blue car
+        carColor: "0xFF0000"
+        carPower: 6
+        carMaxCap: 30
+      "6":
+        # Light blue car
+        carColor: "0x00FFFF"
+        carPower: 7
+        carMaxCap: 25
+      "7":
+        # Green car
+        carColor: "0x00FF00"
+        carPower: 8
+        carMaxCap: 40
+      "8":
+        # Currently no car available
+        carColor: "0x000000"
+        carPower: 9
+        carMaxCap: 90
   
   solarFarm:
     solarSystem:
@@ -40,15 +105,6 @@ structureTypes:
       scaleFactor: 8
     load:
       # Solar farms have no load consumption (pure generation), thus their load scale factor should be 0
-      scaleFactor: 0
-  
-  evStation:
-    evCharger:
-      # Definition of number of charging slots at a EV station
-      chargingSlots: 3
-    load:
-      # Load scale factor for EV stations in p.u.
-      # EV stations have no additional load beyond the charging itself, thus their load scale factor should be 0
       scaleFactor: 0
 
   batteryStation:
