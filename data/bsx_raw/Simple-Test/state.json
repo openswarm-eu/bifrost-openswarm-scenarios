@@ -3,7 +3,9 @@
     "storyId": "STORY::aOhqo4BC",
     "label": "Simple-Test",
     "about": "",
-    "tags": [],
+    "tags": [
+      "imported"
+    ],
     "moduleIds": [
       "EnergyCommunityControllerConnector",
       "Fenrir",
@@ -457,7 +459,8 @@
         ],
         "childIds": [
           "BATTERY-SYSTEM::[5|1,5|2,6|1,6|2]>2I1D2jLe@EXPERIMENT::fIpcxGDl",
-          "CABLE-UNDERGROUND-SD::[2|2,5|2]@EXPERIMENT::fIpcxGDl"
+          "CABLE-UNDERGROUND-SD::[2|2,5|2]@EXPERIMENT::fIpcxGDl",
+          "CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl"
         ],
         "dynamicIds": [
           "ENERGY-COMMUNITY->POWERGRID-CONNECTOR::[5|1,5|2,6|1,6|2]>hf7Cbetc@EXPERIMENT::fIpcxGDl",
@@ -534,7 +537,8 @@
         ],
         "childIds": [
           "BATTERY-SYSTEM::[5|-4,5|-3,6|-4,6|-3]>6DztQXci@EXPERIMENT::fIpcxGDl",
-          "CABLE-UNDERGROUND-SD::[2|-3,5|-3]@EXPERIMENT::fIpcxGDl"
+          "CABLE-UNDERGROUND-SD::[2|-3,5|-3]@EXPERIMENT::fIpcxGDl",
+          "CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl"
         ],
         "dynamicIds": [
           "ENERGY-COMMUNITY->POWERGRID-CONNECTOR::[5|-4,5|-3,6|-4,6|-3]>2yIpN2Xk@EXPERIMENT::fIpcxGDl",
@@ -766,7 +770,8 @@
           "WIND-TURBINE::[9|1,9|2,10|1,10|2]@EXPERIMENT::fIpcxGDl"
         ],
         "childIds": [
-          "WIND-POWER::[9|1,9|2,10|1,10|2]>pJ7nh1vU@EXPERIMENT::fIpcxGDl"
+          "WIND-POWER::[9|1,9|2,10|1,10|2]>pJ7nh1vU@EXPERIMENT::fIpcxGDl",
+          "CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl"
         ],
         "dynamicIds": [
           "ENERGY-COMMUNITY->POWERGRID-CONNECTOR::[9|1,9|2,10|1,10|2]>Ip2Z5nC1@EXPERIMENT::fIpcxGDl",
@@ -845,7 +850,8 @@
           "WIND-TURBINE::[9|-4,9|-3,10|-4,10|-3]@EXPERIMENT::fIpcxGDl"
         ],
         "childIds": [
-          "WIND-POWER::[9|-4,9|-3,10|-4,10|-3]>1xqPu9b2@EXPERIMENT::fIpcxGDl"
+          "WIND-POWER::[9|-4,9|-3,10|-4,10|-3]>1xqPu9b2@EXPERIMENT::fIpcxGDl",
+          "CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl"
         ],
         "dynamicIds": [
           "ENERGY-COMMUNITY->POWERGRID-CONNECTOR::[9|-4,9|-3,10|-4,10|-3]>BDipKjdf@EXPERIMENT::fIpcxGDl",
@@ -1045,7 +1051,15 @@
       "PV-SYSTEM-MAX-POWER->WIND-POWER::[9|-4,9|-3,10|-4,10|-3]>1xqPu9b2@EXPERIMENT::fIpcxGDl",
       "WIND-VELOCITY->WIND-POWER::[9|-4,9|-3,10|-4,10|-3]>1xqPu9b2@EXPERIMENT::fIpcxGDl",
       "WIND-TURBINE-LOCATION->WIND-POWER::[9|-4,9|-3,10|-4,10|-3]>1xqPu9b2@EXPERIMENT::fIpcxGDl",
-      "WIND-TURBINE-DAY->WIND-POWER::[9|-4,9|-3,10|-4,10|-3]>1xqPu9b2@EXPERIMENT::fIpcxGDl"
+      "WIND-TURBINE-DAY->WIND-POWER::[9|-4,9|-3,10|-4,10|-3]>1xqPu9b2@EXPERIMENT::fIpcxGDl",
+      "CABLE-LENGTH->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+      "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+      "CURRENT-3P->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+      "LOADING->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+      "CABLE-LENGTH->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+      "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+      "CURRENT-3P->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+      "LOADING->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl"
     ],
     "entities": {
       "GLOBAL-LOADFLOW->GLOBAL@EXPERIMENT::fIpcxGDl": {
@@ -2132,6 +2146,62 @@
         "experimentId": "EXPERIMENT::fIpcxGDl",
         "parentId": "WIND-POWER::[9|-4,9|-3,10|-4,10|-3]>1xqPu9b2@EXPERIMENT::fIpcxGDl",
         "typeId": "WIND-TURBINE-DAY"
+      },
+      "CABLE-LENGTH->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl": {
+        "dynamicId": "CABLE-LENGTH->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+        "objectId": "CABLE-LENGTH->CABLE-UNDERGROUND-SD::[6|2,9|2]",
+        "experimentId": "EXPERIMENT::fIpcxGDl",
+        "parentId": "CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+        "typeId": "CABLE-LENGTH"
+      },
+      "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl": {
+        "dynamicId": "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+        "objectId": "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[6|2,9|2]",
+        "experimentId": "EXPERIMENT::fIpcxGDl",
+        "parentId": "CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+        "typeId": "CABLE-POWER-3PF"
+      },
+      "CURRENT-3P->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl": {
+        "dynamicId": "CURRENT-3P->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+        "objectId": "CURRENT-3P->CABLE-UNDERGROUND-SD::[6|2,9|2]",
+        "experimentId": "EXPERIMENT::fIpcxGDl",
+        "parentId": "CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+        "typeId": "CURRENT-3P"
+      },
+      "LOADING->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl": {
+        "dynamicId": "LOADING->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+        "objectId": "LOADING->CABLE-UNDERGROUND-SD::[6|2,9|2]",
+        "experimentId": "EXPERIMENT::fIpcxGDl",
+        "parentId": "CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+        "typeId": "LOADING"
+      },
+      "CABLE-LENGTH->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl": {
+        "dynamicId": "CABLE-LENGTH->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+        "objectId": "CABLE-LENGTH->CABLE-UNDERGROUND-SD::[6|-3,9|-3]",
+        "experimentId": "EXPERIMENT::fIpcxGDl",
+        "parentId": "CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+        "typeId": "CABLE-LENGTH"
+      },
+      "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl": {
+        "dynamicId": "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+        "objectId": "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[6|-3,9|-3]",
+        "experimentId": "EXPERIMENT::fIpcxGDl",
+        "parentId": "CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+        "typeId": "CABLE-POWER-3PF"
+      },
+      "CURRENT-3P->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl": {
+        "dynamicId": "CURRENT-3P->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+        "objectId": "CURRENT-3P->CABLE-UNDERGROUND-SD::[6|-3,9|-3]",
+        "experimentId": "EXPERIMENT::fIpcxGDl",
+        "parentId": "CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+        "typeId": "CURRENT-3P"
+      },
+      "LOADING->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl": {
+        "dynamicId": "LOADING->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+        "objectId": "LOADING->CABLE-UNDERGROUND-SD::[6|-3,9|-3]",
+        "experimentId": "EXPERIMENT::fIpcxGDl",
+        "parentId": "CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+        "typeId": "LOADING"
       }
     }
   },
@@ -2291,7 +2361,15 @@
       "PV-SYSTEM-MAX-POWER->WIND-POWER::[9|-4,9|-3,10|-4,10|-3]>1xqPu9b2@EXPERIMENT::fIpcxGDl",
       "WIND-VELOCITY->WIND-POWER::[9|-4,9|-3,10|-4,10|-3]>1xqPu9b2@EXPERIMENT::fIpcxGDl",
       "WIND-TURBINE-LOCATION->WIND-POWER::[9|-4,9|-3,10|-4,10|-3]>1xqPu9b2@EXPERIMENT::fIpcxGDl",
-      "WIND-TURBINE-DAY->WIND-POWER::[9|-4,9|-3,10|-4,10|-3]>1xqPu9b2@EXPERIMENT::fIpcxGDl"
+      "WIND-TURBINE-DAY->WIND-POWER::[9|-4,9|-3,10|-4,10|-3]>1xqPu9b2@EXPERIMENT::fIpcxGDl",
+      "CABLE-LENGTH->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+      "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+      "CURRENT-3P->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+      "LOADING->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+      "CABLE-LENGTH->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+      "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+      "CURRENT-3P->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+      "LOADING->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl"
     ],
     "entities": {
       "GLOBAL-LOADFLOW->GLOBAL@EXPERIMENT::fIpcxGDl": {
@@ -2303,9 +2381,9 @@
       "ACTIVE-POWER-3P->LV-TRANSFORMER::[-8|-1]>1jToKsBk@EXPERIMENT::fIpcxGDl": {
         "valueId": "ACTIVE-POWER-3P->LV-TRANSFORMER::[-8|-1]>1jToKsBk@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.2666605466953298,
-          0.2666605466953298,
-          0.2666605466953298
+          0.6261637317670857,
+          0.6261637317670857,
+          0.6261637317670857
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2313,9 +2391,9 @@
       "LOADING->LV-TRANSFORMER::[-8|-1]>1jToKsBk@EXPERIMENT::fIpcxGDl": {
         "valueId": "LOADING->LV-TRANSFORMER::[-8|-1]>1jToKsBk@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.3199926861208147,
-          0.3199926861208147,
-          0.3199926861208147
+          0.7513964783925491,
+          0.7513964783925491,
+          0.7513964783925491
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2329,9 +2407,9 @@
       "REACTIVE-POWER-3P->LV-TRANSFORMER::[-8|-1]>1jToKsBk@EXPERIMENT::fIpcxGDl": {
         "valueId": "REACTIVE-POWER-3P->LV-TRANSFORMER::[-8|-1]>1jToKsBk@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.2666605466953298,
-          0.2666605466953298,
-          0.2666605466953298
+          0.6261637317670857,
+          0.6261637317670857,
+          0.6261637317670857
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2339,9 +2417,9 @@
       "TRAFO-CURRENT->LV-TRANSFORMER::[-8|-1]>1jToKsBk@EXPERIMENT::fIpcxGDl": {
         "valueId": "TRAFO-CURRENT->LV-TRANSFORMER::[-8|-1]>1jToKsBk@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.000608334364849362,
-          0.000608334364849362,
-          0.000608334364849362
+          1.5567304419187118,
+          1.5567304419187118,
+          1.5567304419187118
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2355,9 +2433,9 @@
       "TRAFO-VOLTAGE->LV-TRANSFORMER::[-8|-1]>1jToKsBk@EXPERIMENT::fIpcxGDl": {
         "valueId": "TRAFO-VOLTAGE->LV-TRANSFORMER::[-8|-1]>1jToKsBk@EXPERIMENT::fIpcxGDl",
         "value": [
-          230.93480861232277,
-          230.93480861232277,
-          230.93480861232277
+          230.92045596901937,
+          230.92045596901937,
+          230.92045596901937
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2397,9 +2475,9 @@
       "VOLTAGE-3P->POWERGRID-CONNECTOR::[-3|1,-3|2,-2|1,-2|2]>sJtoiHWP@EXPERIMENT::fIpcxGDl": {
         "valueId": "VOLTAGE-3P->POWERGRID-CONNECTOR::[-3|1,-3|2,-2|1,-2|2]>sJtoiHWP@EXPERIMENT::fIpcxGDl",
         "value": [
-          230.93480873729192,
-          230.93480873729192,
-          230.93480873729192
+          230.91538896825926,
+          230.91538896825926,
+          230.91538896825926
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2413,7 +2491,7 @@
       "PV-SYSTEM-POWER->SOLAR-PANEL::[-3|1,-3|2,-2|1,-2|2]>yFs7JYBV@EXPERIMENT::fIpcxGDl": {
         "valueId": "PV-SYSTEM-POWER->SOLAR-PANEL::[-3|1,-3|2,-2|1,-2|2]>yFs7JYBV@EXPERIMENT::fIpcxGDl",
         "value": [
-          0,
+          14.6944,
           0
         ],
         "updatedAt": 0,
@@ -2460,9 +2538,9 @@
       "VOLTAGE-3P->POWERGRID-CONNECTOR::[1|-4,1|-3,2|-4,2|-3]>BlFmTdbx@EXPERIMENT::fIpcxGDl": {
         "valueId": "VOLTAGE-3P->POWERGRID-CONNECTOR::[1|-4,1|-3,2|-4,2|-3]>BlFmTdbx@EXPERIMENT::fIpcxGDl",
         "value": [
-          230.93480875027586,
-          230.93480875027586,
-          230.93480875027586
+          230.9140377478638,
+          230.9140377478638,
+          230.9140377478638
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2476,7 +2554,7 @@
       "PV-SYSTEM-POWER->SOLAR-PANEL::[1|-4,1|-3,2|-4,2|-3]>yCxzj1cQ@EXPERIMENT::fIpcxGDl": {
         "valueId": "PV-SYSTEM-POWER->SOLAR-PANEL::[1|-4,1|-3,2|-4,2|-3]>yCxzj1cQ@EXPERIMENT::fIpcxGDl",
         "value": [
-          0,
+          14.6944,
           0
         ],
         "updatedAt": 0,
@@ -2507,9 +2585,9 @@
       "VOLTAGE-3P->POWERGRID-NODE::[-7|-1]@EXPERIMENT::fIpcxGDl": {
         "valueId": "VOLTAGE-3P->POWERGRID-NODE::[-7|-1]@EXPERIMENT::fIpcxGDl",
         "value": [
-          230.93480863531497,
-          230.93480863531497,
-          230.93480863531497
+          230.9197803751969,
+          230.9197803751969,
+          230.9197803751969
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2523,9 +2601,9 @@
       "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[-8|-1,-7|-1]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[-8|-1,-7|-1]@EXPERIMENT::fIpcxGDl",
         "value": [
-          -8.749948068706854e-12,
-          -8.749948068706854e-12,
-          -8.749948068706854e-12
+          1.0784425964228739,
+          1.0784425964228739,
+          1.0784425964228739
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2533,9 +2611,9 @@
       "CURRENT-3P->CABLE-UNDERGROUND-SD::[-8|-1,-7|-1]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CURRENT-3P->CABLE-UNDERGROUND-SD::[-8|-1,-7|-1]@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.0006083343661239545,
-          0.0006083343661239545,
-          0.0006083343661239545
+          1.5567304420512327,
+          1.5567304420512327,
+          1.5567304420512327
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2543,9 +2621,9 @@
       "LOADING->CABLE-UNDERGROUND-SD::[-8|-1,-7|-1]@EXPERIMENT::fIpcxGDl": {
         "valueId": "LOADING->CABLE-UNDERGROUND-SD::[-8|-1,-7|-1]@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.00038020897882747154,
-          0.00038020897882747154,
-          0.00038020897882747154
+          0.9729565262820203,
+          0.9729565262820203,
+          0.9729565262820203
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2569,9 +2647,9 @@
       "VOLTAGE-3P->POWERGRID-NODE::[-7|2]@EXPERIMENT::fIpcxGDl": {
         "valueId": "VOLTAGE-3P->POWERGRID-NODE::[-7|2]@EXPERIMENT::fIpcxGDl",
         "value": [
-          230.9348086937421,
-          230.9348086937421,
-          230.9348086937421
+          230.91775358327365,
+          230.91775358327365,
+          230.91775358327365
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2585,9 +2663,9 @@
       "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[-7|-1,-7|2]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[-7|-1,-7|2]@EXPERIMENT::fIpcxGDl",
         "value": [
-          4.721399161204613e-11,
-          4.721399161204613e-11,
-          4.721399161204613e-11
+          0.5392197205695178,
+          0.5392197205695178,
+          0.5392197205695178
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2595,9 +2673,9 @@
       "CURRENT-3P->CABLE-UNDERGROUND-SD::[-7|-1,-7|2]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CURRENT-3P->CABLE-UNDERGROUND-SD::[-7|-1,-7|2]@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.00029709352633710943,
-          0.00029709352633710943,
-          0.00029709352633710943
+          0.7783652178002876,
+          0.7783652178002876,
+          0.7783652178002876
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2605,9 +2683,9 @@
       "LOADING->CABLE-UNDERGROUND-SD::[-7|-1,-7|2]@EXPERIMENT::fIpcxGDl": {
         "valueId": "LOADING->CABLE-UNDERGROUND-SD::[-7|-1,-7|2]@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.00018568345396069338,
-          0.00018568345396069338,
-          0.00018568345396069338
+          0.4864782611251797,
+          0.4864782611251797,
+          0.4864782611251797
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2631,9 +2709,9 @@
       "VOLTAGE-3P->POWERGRID-NODE::[-6|2]@EXPERIMENT::fIpcxGDl": {
         "valueId": "VOLTAGE-3P->POWERGRID-NODE::[-6|2]@EXPERIMENT::fIpcxGDl",
         "value": [
-          230.93480870888982,
-          230.93480870888982,
-          230.93480870888982
+          230.91707798166928,
+          230.91707798166928,
+          230.91707798166928
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2646,7 +2724,7 @@
       },
       "GRID-SENSOR-POWERMEASUREMENT->GRID-SENSOR::[-6|2]>y6L5tKPk@EXPERIMENT::fIpcxGDl": {
         "valueId": "GRID-SENSOR-POWERMEASUREMENT->GRID-SENSOR::[-6|2]>y6L5tKPk@EXPERIMENT::fIpcxGDl",
-        "value": 5.0557812084290947e-11,
+        "value": 0.5392149876400503,
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
       },
@@ -2677,9 +2755,9 @@
       "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[-7|2,-6|2]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[-7|2,-6|2]@EXPERIMENT::fIpcxGDl",
         "value": [
-          5.055781208429094e-11,
-          5.055781208429094e-11,
-          5.055781208429094e-11
+          0.5392149876400503,
+          0.5392149876400503,
+          0.5392149876400503
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2687,9 +2765,9 @@
       "CURRENT-3P->CABLE-UNDERGROUND-SD::[-7|2,-6|2]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CURRENT-3P->CABLE-UNDERGROUND-SD::[-7|2,-6|2]@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.0002122096609391356,
-          0.0002122096609391356,
-          0.0002122096609391356
+          0.7783651840893587,
+          0.7783651840893587,
+          0.7783651840893587
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2697,9 +2775,9 @@
       "LOADING->CABLE-UNDERGROUND-SD::[-7|2,-6|2]@EXPERIMENT::fIpcxGDl": {
         "valueId": "LOADING->CABLE-UNDERGROUND-SD::[-7|2,-6|2]@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.00013263103808695974,
-          0.00013263103808695974,
-          0.00013263103808695974
+          0.48647824005584916,
+          0.48647824005584916,
+          0.48647824005584916
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2723,9 +2801,9 @@
       "VOLTAGE-3P->POWERGRID-NODE::[-7|-4]@EXPERIMENT::fIpcxGDl": {
         "valueId": "VOLTAGE-3P->POWERGRID-NODE::[-7|-4]@EXPERIMENT::fIpcxGDl",
         "value": [
-          230.93480869374213,
-          230.93480869374213,
-          230.93480869374213
+          230.91775358327374,
+          230.91775358327374,
+          230.91775358327374
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2739,9 +2817,9 @@
       "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[-7|-1,-7|-4]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[-7|-1,-7|-4]@EXPERIMENT::fIpcxGDl",
         "value": [
-          3.30032974503392e-11,
-          3.30032974503392e-11,
-          3.30032974503392e-11
+          0.5392197205410996,
+          0.5392197205410996,
+          0.5392197205410996
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2749,9 +2827,9 @@
       "CURRENT-3P->CABLE-UNDERGROUND-SD::[-7|-1,-7|-4]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CURRENT-3P->CABLE-UNDERGROUND-SD::[-7|-1,-7|-4]@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.0002970935288991437,
-          0.0002970935288991437,
-          0.0002970935288991437
+          0.7783652177592638,
+          0.7783652177592638,
+          0.7783652177592638
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2759,9 +2837,9 @@
       "LOADING->CABLE-UNDERGROUND-SD::[-7|-1,-7|-4]@EXPERIMENT::fIpcxGDl": {
         "valueId": "LOADING->CABLE-UNDERGROUND-SD::[-7|-1,-7|-4]@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.0001856834555619648,
-          0.0001856834555619648,
-          0.0001856834555619648
+          0.4864782610995399,
+          0.4864782610995399,
+          0.4864782610995399
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2785,9 +2863,9 @@
       "VOLTAGE-3P->POWERGRID-NODE::[-6|-4]@EXPERIMENT::fIpcxGDl": {
         "valueId": "VOLTAGE-3P->POWERGRID-NODE::[-6|-4]@EXPERIMENT::fIpcxGDl",
         "value": [
-          230.93480870888993,
-          230.93480870888993,
-          230.93480870888993
+          230.9170779816694,
+          230.9170779816694,
+          230.9170779816694
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2800,7 +2878,7 @@
       },
       "GRID-SENSOR-POWERMEASUREMENT->GRID-SENSOR::[-6|-4]>Pz4PMVmI@EXPERIMENT::fIpcxGDl": {
         "valueId": "GRID-SENSOR-POWERMEASUREMENT->GRID-SENSOR::[-6|-4]>Pz4PMVmI@EXPERIMENT::fIpcxGDl",
-        "value": 2.2136423742247747e-11,
+        "value": 0.5392149875832126,
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
       },
@@ -2831,9 +2909,9 @@
       "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[-7|-4,-6|-4]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[-7|-4,-6|-4]@EXPERIMENT::fIpcxGDl",
         "value": [
-          2.2136423742247747e-11,
-          2.2136423742247747e-11,
-          2.2136423742247747e-11
+          0.5392149875832126,
+          0.5392149875832126,
+          0.5392149875832126
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2841,9 +2919,9 @@
       "CURRENT-3P->CABLE-UNDERGROUND-SD::[-7|-4,-6|-4]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CURRENT-3P->CABLE-UNDERGROUND-SD::[-7|-4,-6|-4]@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.00021220966606320173,
-          0.00021220966606320173,
-          0.00021220966606320173
+          0.7783651840073124,
+          0.7783651840073124,
+          0.7783651840073124
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2851,9 +2929,9 @@
       "LOADING->CABLE-UNDERGROUND-SD::[-7|-4,-6|-4]@EXPERIMENT::fIpcxGDl": {
         "valueId": "LOADING->CABLE-UNDERGROUND-SD::[-7|-4,-6|-4]@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.00013263104128950109,
-          0.00013263104128950109,
-          0.00013263104128950109
+          0.4864782400045702,
+          0.4864782400045702,
+          0.4864782400045702
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2867,9 +2945,9 @@
       "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[-6|2,-3|2]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[-6|2,-3|2]@EXPERIMENT::fIpcxGDl",
         "value": [
-          2.0378031883177915e-12,
-          2.0378031883177915e-12,
-          2.0378031883177915e-12
+          0.5392134099691943,
+          0.5392134099691943,
+          0.5392134099691943
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2877,9 +2955,9 @@
       "CURRENT-3P->CABLE-UNDERGROUND-SD::[-6|2,-3|2]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CURRENT-3P->CABLE-UNDERGROUND-SD::[-6|2,-3|2]@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.00018391503785112937,
-          0.00018391503785112937,
-          0.00018391503785112937
+          0.7783651748544871,
+          0.7783651748544871,
+          0.7783651748544871
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2887,9 +2965,9 @@
       "LOADING->CABLE-UNDERGROUND-SD::[-6|2,-3|2]@EXPERIMENT::fIpcxGDl": {
         "valueId": "LOADING->CABLE-UNDERGROUND-SD::[-6|2,-3|2]@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.00011494689865695586,
-          0.00011494689865695586,
-          0.00011494689865695586
+          0.4864782342840544,
+          0.4864782342840544,
+          0.4864782342840544
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -2929,9 +3007,9 @@
       "VOLTAGE-3P->POWERGRID-CONNECTOR::[5|1,5|2,6|1,6|2]>hf7Cbetc@EXPERIMENT::fIpcxGDl": {
         "valueId": "VOLTAGE-3P->POWERGRID-CONNECTOR::[5|1,5|2,6|1,6|2]>hf7Cbetc@EXPERIMENT::fIpcxGDl",
         "value": [
-          230.93480875460367,
-          230.93480875460367,
-          230.93480875460367
+          230.91268651887458,
+          230.91268651887458,
+          230.91268651887458
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3008,9 +3086,9 @@
       "VOLTAGE-3P->POWERGRID-CONNECTOR::[5|-4,5|-3,6|-4,6|-3]>2yIpN2Xk@EXPERIMENT::fIpcxGDl": {
         "valueId": "VOLTAGE-3P->POWERGRID-CONNECTOR::[5|-4,5|-3,6|-4,6|-3]>2yIpN2Xk@EXPERIMENT::fIpcxGDl",
         "value": [
-          230.9348087546038,
-          230.9348087546038,
-          230.9348087546038
+          230.91268651887475,
+          230.91268651887475,
+          230.91268651887475
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3061,9 +3139,9 @@
       "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[2|-3,5|-3]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[2|-3,5|-3]@EXPERIMENT::fIpcxGDl",
         "value": [
-          -2.732153541658973e-12,
-          -2.732153541658973e-12,
-          -2.732153541658973e-12
+          0.5392063105487159,
+          0.5392063105487159,
+          0.5392063105487159
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3071,9 +3149,9 @@
       "CURRENT-3P->CABLE-UNDERGROUND-SD::[2|-3,5|-3]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CURRENT-3P->CABLE-UNDERGROUND-SD::[2|-3,5|-3]@EXPERIMENT::fIpcxGDl",
         "value": [
-          5.658924359865263e-05,
-          5.658924359865263e-05,
-          5.658924359865263e-05
+          0.7783651460749947,
+          0.7783651460749947,
+          0.7783651460749947
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3081,16 +3159,16 @@
       "LOADING->CABLE-UNDERGROUND-SD::[2|-3,5|-3]@EXPERIMENT::fIpcxGDl": {
         "valueId": "LOADING->CABLE-UNDERGROUND-SD::[2|-3,5|-3]@EXPERIMENT::fIpcxGDl",
         "value": [
-          3.5368277249157894e-05,
-          3.5368277249157894e-05,
-          3.5368277249157894e-05
+          0.48647821629687166,
+          0.48647821629687166,
+          0.48647821629687166
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
       },
       "ENERGY-COMMUNITY->POWERGRID-CONNECTOR::[1|1,1|2,2|1,2|2]>VGz28n6d@EXPERIMENT::fIpcxGDl": {
         "valueId": "ENERGY-COMMUNITY->POWERGRID-CONNECTOR::[1|1,1|2,2|1,2|2]>VGz28n6d@EXPERIMENT::fIpcxGDl",
-        "value": "None",
+        "value": "A",
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
       },
@@ -3123,9 +3201,9 @@
       "VOLTAGE-3P->POWERGRID-CONNECTOR::[1|1,1|2,2|1,2|2]>VGz28n6d@EXPERIMENT::fIpcxGDl": {
         "valueId": "VOLTAGE-3P->POWERGRID-CONNECTOR::[1|1,1|2,2|1,2|2]>VGz28n6d@EXPERIMENT::fIpcxGDl",
         "value": [
-          230.9348087502757,
-          230.9348087502757,
-          230.9348087502757
+          230.9140377478637,
+          230.9140377478637,
+          230.9140377478637
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3155,7 +3233,7 @@
       "EV-STATION-SOC->CHARGING-POLE::[1|1,1|2,2|1,2|2]>biAtfczY@EXPERIMENT::fIpcxGDl": {
         "valueId": "EV-STATION-SOC->CHARGING-POLE::[1|1,1|2,2|1,2|2]>biAtfczY@EXPERIMENT::fIpcxGDl",
         "value": [
-          26.333333333333304,
+          16.41950376157407,
           0,
           0
         ],
@@ -3181,9 +3259,9 @@
       "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[-2|2,1|2]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[-2|2,1|2]@EXPERIMENT::fIpcxGDl",
         "value": [
-          8.796254902447438e-12,
-          8.796254902447438e-12,
-          8.796254902447438e-12
+          0.5392094658498151,
+          0.5392094658498151,
+          0.5392094658498151
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3191,9 +3269,9 @@
       "CURRENT-3P->CABLE-UNDERGROUND-SD::[-2|2,1|2]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CURRENT-3P->CABLE-UNDERGROUND-SD::[-2|2,1|2]@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.00011317848719921785,
-          0.00011317848719921785,
-          0.00011317848719921785
+          0.7783651563177568,
+          0.7783651563177568,
+          0.7783651563177568
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3201,9 +3279,9 @@
       "LOADING->CABLE-UNDERGROUND-SD::[-2|2,1|2]@EXPERIMENT::fIpcxGDl": {
         "valueId": "LOADING->CABLE-UNDERGROUND-SD::[-2|2,1|2]@EXPERIMENT::fIpcxGDl",
         "value": [
-          7.073655449951115e-05,
-          7.073655449951115e-05,
-          7.073655449951115e-05
+          0.48647822269859803,
+          0.48647822269859803,
+          0.48647822269859803
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3243,9 +3321,9 @@
       "VOLTAGE-3P->POWERGRID-CONNECTOR::[-3|-4,-3|-3,-2|-4,-2|-3]>NICVUnNx@EXPERIMENT::fIpcxGDl": {
         "valueId": "VOLTAGE-3P->POWERGRID-CONNECTOR::[-3|-4,-3|-3,-2|-4,-2|-3]>NICVUnNx@EXPERIMENT::fIpcxGDl",
         "value": [
-          230.93480873729206,
-          230.93480873729206,
-          230.93480873729206
+          230.91538896825944,
+          230.91538896825944,
+          230.91538896825944
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3301,9 +3379,9 @@
       "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[-6|-4,-3|-4]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[-6|-4,-3|-4]@EXPERIMENT::fIpcxGDl",
         "value": [
-          1.6248248974379502e-11,
-          1.6248248974379502e-11,
-          1.6248248974379502e-11
+          0.5392134099834047,
+          0.5392134099834047,
+          0.5392134099834047
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3311,9 +3389,9 @@
       "CURRENT-3P->CABLE-UNDERGROUND-SD::[-6|-4,-3|-4]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CURRENT-3P->CABLE-UNDERGROUND-SD::[-6|-4,-3|-4]@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.0001839150391350181,
-          0.0001839150391350181,
-          0.0001839150391350181
+          0.7783651748749989,
+          0.7783651748749989,
+          0.7783651748749989
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3321,9 +3399,9 @@
       "LOADING->CABLE-UNDERGROUND-SD::[-6|-4,-3|-4]@EXPERIMENT::fIpcxGDl": {
         "valueId": "LOADING->CABLE-UNDERGROUND-SD::[-6|-4,-3|-4]@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.00011494689945938632,
-          0.00011494689945938632,
-          0.00011494689945938632
+          0.48647823429687426,
+          0.48647823429687426,
+          0.48647823429687426
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3337,9 +3415,9 @@
       "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[-2|-4,1|-4]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[-2|-4,1|-4]@EXPERIMENT::fIpcxGDl",
         "value": [
-          -5.414273681960515e-12,
-          -5.414273681960515e-12,
-          -5.414273681960515e-12
+          0.5392094658640261,
+          0.5392094658640261,
+          0.5392094658640261
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3347,9 +3425,9 @@
       "CURRENT-3P->CABLE-UNDERGROUND-SD::[-2|-4,1|-4]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CURRENT-3P->CABLE-UNDERGROUND-SD::[-2|-4,1|-4]@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.00011317848719730526,
-          0.00011317848719730526,
-          0.00011317848719730526
+          0.7783651563382692,
+          0.7783651563382692,
+          0.7783651563382692
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3357,9 +3435,9 @@
       "LOADING->CABLE-UNDERGROUND-SD::[-2|-4,1|-4]@EXPERIMENT::fIpcxGDl": {
         "valueId": "LOADING->CABLE-UNDERGROUND-SD::[-2|-4,1|-4]@EXPERIMENT::fIpcxGDl",
         "value": [
-          7.073655449831579e-05,
-          7.073655449831579e-05,
-          7.073655449831579e-05
+          0.4864782227114182,
+          0.4864782227114182,
+          0.4864782227114182
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3373,9 +3451,9 @@
       "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[2|2,5|2]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[2|2,5|2]@EXPERIMENT::fIpcxGDl",
         "value": [
-          -2.7323191353149617e-12,
-          -2.7323191353149617e-12,
-          -2.7323191353149617e-12
+          0.5392063105771334,
+          0.5392063105771334,
+          0.5392063105771334
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3383,9 +3461,9 @@
       "CURRENT-3P->CABLE-UNDERGROUND-SD::[2|2,5|2]@EXPERIMENT::fIpcxGDl": {
         "valueId": "CURRENT-3P->CABLE-UNDERGROUND-SD::[2|2,5|2]@EXPERIMENT::fIpcxGDl",
         "value": [
-          5.6589246162602864e-05,
-          5.6589246162602864e-05,
-          5.6589246162602864e-05
+          0.7783651461160171,
+          0.7783651461160171,
+          0.7783651461160171
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3393,25 +3471,25 @@
       "LOADING->CABLE-UNDERGROUND-SD::[2|2,5|2]@EXPERIMENT::fIpcxGDl": {
         "valueId": "LOADING->CABLE-UNDERGROUND-SD::[2|2,5|2]@EXPERIMENT::fIpcxGDl",
         "value": [
-          3.536827885162679e-05,
-          3.536827885162679e-05,
-          3.536827885162679e-05
+          0.4864782163225107,
+          0.4864782163225107,
+          0.4864782163225107
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
       },
       "ENERGY-COMMUNITY->POWERGRID-CONNECTOR::[9|1,9|2,10|1,10|2]>Ip2Z5nC1@EXPERIMENT::fIpcxGDl": {
         "valueId": "ENERGY-COMMUNITY->POWERGRID-CONNECTOR::[9|1,9|2,10|1,10|2]>Ip2Z5nC1@EXPERIMENT::fIpcxGDl",
-        "value": "None",
+        "value": "A",
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
       },
       "ACTIVE-POWER-3P->POWERGRID-CONNECTOR::[9|1,9|2,10|1,10|2]>Ip2Z5nC1@EXPERIMENT::fIpcxGDl": {
         "valueId": "ACTIVE-POWER-3P->POWERGRID-CONNECTOR::[9|1,9|2,10|1,10|2]>Ip2Z5nC1@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.09986666666666666,
-          0.09986666666666666,
-          0.09986666666666666
+          0.17973333333333333,
+          0.17973333333333333,
+          0.17973333333333333
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3435,9 +3513,9 @@
       "VOLTAGE-3P->POWERGRID-CONNECTOR::[9|1,9|2,10|1,10|2]>Ip2Z5nC1@EXPERIMENT::fIpcxGDl": {
         "valueId": "VOLTAGE-3P->POWERGRID-CONNECTOR::[9|1,9|2,10|1,10|2]>Ip2Z5nC1@EXPERIMENT::fIpcxGDl",
         "value": [
-          0,
-          0,
-          0
+          230.91133528129194,
+          230.91133528129194,
+          230.91133528129194
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3451,7 +3529,7 @@
       "PV-SYSTEM-POWER->WIND-POWER::[9|1,9|2,10|1,10|2]>pJ7nh1vU@EXPERIMENT::fIpcxGDl": {
         "valueId": "PV-SYSTEM-POWER->WIND-POWER::[9|1,9|2,10|1,10|2]>pJ7nh1vU@EXPERIMENT::fIpcxGDl",
         "value": [
-          7.375,
+          8.83325,
           0
         ],
         "updatedAt": 0,
@@ -3490,9 +3568,9 @@
       "ACTIVE-POWER-3P->POWERGRID-CONNECTOR::[9|-4,9|-3,10|-4,10|-3]>BDipKjdf@EXPERIMENT::fIpcxGDl": {
         "valueId": "ACTIVE-POWER-3P->POWERGRID-CONNECTOR::[9|-4,9|-3,10|-4,10|-3]>BDipKjdf@EXPERIMENT::fIpcxGDl",
         "value": [
-          0.09986666666666666,
-          0.09986666666666666,
-          0.09986666666666666
+          0.17973333333333333,
+          0.17973333333333333,
+          0.17973333333333333
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3516,9 +3594,9 @@
       "VOLTAGE-3P->POWERGRID-CONNECTOR::[9|-4,9|-3,10|-4,10|-3]>BDipKjdf@EXPERIMENT::fIpcxGDl": {
         "valueId": "VOLTAGE-3P->POWERGRID-CONNECTOR::[9|-4,9|-3,10|-4,10|-3]>BDipKjdf@EXPERIMENT::fIpcxGDl",
         "value": [
-          0,
-          0,
-          0
+          230.91133528129208,
+          230.91133528129208,
+          230.91133528129208
         ],
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
@@ -3532,7 +3610,7 @@
       "PV-SYSTEM-POWER->WIND-POWER::[9|-4,9|-3,10|-4,10|-3]>1xqPu9b2@EXPERIMENT::fIpcxGDl": {
         "valueId": "PV-SYSTEM-POWER->WIND-POWER::[9|-4,9|-3,10|-4,10|-3]>1xqPu9b2@EXPERIMENT::fIpcxGDl",
         "value": [
-          7.375,
+          8.83325,
           0
         ],
         "updatedAt": 0,
@@ -3561,6 +3639,78 @@
         "value": "medium",
         "updatedAt": 0,
         "updatedBy": "updatePlayheadPosition"
+      },
+      "CABLE-LENGTH->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl": {
+        "valueId": "CABLE-LENGTH->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+        "value": 2,
+        "updatedAt": 0,
+        "updatedBy": "updatePlayheadPosition"
+      },
+      "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl": {
+        "valueId": "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+        "value": [
+          0.5392031552678453,
+          0.5392031552678453,
+          0.5392031552678453
+        ],
+        "updatedAt": 0,
+        "updatedBy": "updatePlayheadPosition"
+      },
+      "CURRENT-3P->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl": {
+        "valueId": "CURRENT-3P->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+        "value": [
+          0.7783651399456148,
+          0.7783651399456148,
+          0.7783651399456148
+        ],
+        "updatedAt": 0,
+        "updatedBy": "updatePlayheadPosition"
+      },
+      "LOADING->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl": {
+        "valueId": "LOADING->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+        "value": [
+          0.4864782124660093,
+          0.4864782124660093,
+          0.4864782124660093
+        ],
+        "updatedAt": 0,
+        "updatedBy": "updatePlayheadPosition"
+      },
+      "CABLE-LENGTH->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl": {
+        "valueId": "CABLE-LENGTH->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+        "value": 2,
+        "updatedAt": 0,
+        "updatedBy": "updatePlayheadPosition"
+      },
+      "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl": {
+        "valueId": "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+        "value": [
+          0.5392031552678457,
+          0.5392031552678457,
+          0.5392031552678457
+        ],
+        "updatedAt": 0,
+        "updatedBy": "updatePlayheadPosition"
+      },
+      "CURRENT-3P->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl": {
+        "valueId": "CURRENT-3P->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+        "value": [
+          0.7783651399456147,
+          0.7783651399456147,
+          0.7783651399456147
+        ],
+        "updatedAt": 0,
+        "updatedBy": "updatePlayheadPosition"
+      },
+      "LOADING->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl": {
+        "valueId": "LOADING->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+        "value": [
+          0.4864782124660092,
+          0.4864782124660092,
+          0.4864782124660092
+        ],
+        "updatedAt": 0,
+        "updatedBy": "updatePlayheadPosition"
       }
     }
   },
@@ -3580,7 +3730,9 @@
       "CABLE-UNDERGROUND-SD::[-2|2,1|2]@EXPERIMENT::fIpcxGDl",
       "CABLE-UNDERGROUND-SD::[-6|-4,-3|-4]@EXPERIMENT::fIpcxGDl",
       "CABLE-UNDERGROUND-SD::[-2|-4,1|-4]@EXPERIMENT::fIpcxGDl",
-      "CABLE-UNDERGROUND-SD::[2|2,5|2]@EXPERIMENT::fIpcxGDl"
+      "CABLE-UNDERGROUND-SD::[2|2,5|2]@EXPERIMENT::fIpcxGDl",
+      "CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+      "CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl"
     ],
     "entities": {
       "CABLE-UNDERGROUND-SD::[-8|-1,-7|-1]@EXPERIMENT::fIpcxGDl": {
@@ -3757,6 +3909,38 @@
           "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[2|2,5|2]@EXPERIMENT::fIpcxGDl",
           "CURRENT-3P->CABLE-UNDERGROUND-SD::[2|2,5|2]@EXPERIMENT::fIpcxGDl",
           "LOADING->CABLE-UNDERGROUND-SD::[2|2,5|2]@EXPERIMENT::fIpcxGDl"
+        ]
+      },
+      "CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl": {
+        "experimentId": "EXPERIMENT::fIpcxGDl",
+        "connectionId": "CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+        "objectId": "CABLE-UNDERGROUND-SD::[6|2,9|2]",
+        "sourceId": "POWERGRID-CONNECTOR::[5|1,5|2,6|1,6|2]>hf7Cbetc@EXPERIMENT::fIpcxGDl",
+        "targetId": "POWERGRID-CONNECTOR::[9|1,9|2,10|1,10|2]>Ip2Z5nC1@EXPERIMENT::fIpcxGDl",
+        "sourcePosition": "6|2",
+        "targetPosition": "9|2",
+        "typeId": "CABLE-UNDERGROUND-SD",
+        "dynamicIds": [
+          "CABLE-LENGTH->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+          "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+          "CURRENT-3P->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl",
+          "LOADING->CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl"
+        ]
+      },
+      "CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl": {
+        "experimentId": "EXPERIMENT::fIpcxGDl",
+        "connectionId": "CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+        "objectId": "CABLE-UNDERGROUND-SD::[6|-3,9|-3]",
+        "sourceId": "POWERGRID-CONNECTOR::[5|-4,5|-3,6|-4,6|-3]>2yIpN2Xk@EXPERIMENT::fIpcxGDl",
+        "targetId": "POWERGRID-CONNECTOR::[9|-4,9|-3,10|-4,10|-3]>BDipKjdf@EXPERIMENT::fIpcxGDl",
+        "sourcePosition": "6|-3",
+        "targetPosition": "9|-3",
+        "typeId": "CABLE-UNDERGROUND-SD",
+        "dynamicIds": [
+          "CABLE-LENGTH->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+          "CABLE-POWER-3PF->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+          "CURRENT-3P->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl",
+          "LOADING->CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl"
         ]
       }
     }
@@ -6561,7 +6745,6 @@
       "EVENT::o6LaZv7C@EXPERIMENT::fIpcxGDl",
       "EVENT::kHtfM6wy@EXPERIMENT::fIpcxGDl",
       "EVENT::P16tOc81@EXPERIMENT::fIpcxGDl",
-      "EVENT::2DMeSgBv@EXPERIMENT::fIpcxGDl",
       "EVENT::v5yxQ2EN@EXPERIMENT::fIpcxGDl",
       "EVENT::T3ZSmp6Z@EXPERIMENT::fIpcxGDl",
       "EVENT::rYbIhora@EXPERIMENT::fIpcxGDl",
@@ -6571,7 +6754,12 @@
       "EVENT::78QSiFh1@EXPERIMENT::fIpcxGDl",
       "EVENT::meomfRU3@EXPERIMENT::fIpcxGDl",
       "EVENT::NVv6O9uK@EXPERIMENT::fIpcxGDl",
-      "EVENT::Magvj7MR@EXPERIMENT::fIpcxGDl"
+      "EVENT::Magvj7MR@EXPERIMENT::fIpcxGDl",
+      "EVENT::pkTDzItj@EXPERIMENT::fIpcxGDl",
+      "EVENT::mapPGc3F@EXPERIMENT::fIpcxGDl",
+      "EVENT::oFVw2noz@EXPERIMENT::fIpcxGDl",
+      "EVENT::SHjl9BPc@EXPERIMENT::fIpcxGDl",
+      "EVENT::3oISxYTS@EXPERIMENT::fIpcxGDl"
     ],
     "entities": {
       "EVENT::LH3GDvqq@EXPERIMENT::fIpcxGDl": {
@@ -7739,30 +7927,6 @@
         "processed": false,
         "at": 0
       },
-      "EVENT::2DMeSgBv@EXPERIMENT::fIpcxGDl": {
-        "eventId": "EVENT::2DMeSgBv@EXPERIMENT::fIpcxGDl",
-        "experimentId": "EXPERIMENT::fIpcxGDl",
-        "operationId": "scheduleDynamicUpdate",
-        "ids": [
-          "POWERGRID-CONNECTOR::[1|1,1|2,2|1,2|2]>VGz28n6d@EXPERIMENT::fIpcxGDl"
-        ],
-        "params": {
-          "storyId": "STORY::aOhqo4BC",
-          "experimentId": "EXPERIMENT::fIpcxGDl",
-          "at": 0,
-          "structureId": "POWERGRID-CONNECTOR::[1|1,1|2,2|1,2|2]>VGz28n6d@EXPERIMENT::fIpcxGDl",
-          "structureTypeId": "POWERGRID-CONNECTOR",
-          "dynamicTypeId": "GRID-SENSOR-ASSIGNMENT",
-          "value": "S1",
-          "dryrun": false
-        },
-        "user": {
-          "user": "Franz",
-          "robot": false
-        },
-        "processed": false,
-        "at": 0
-      },
       "EVENT::v5yxQ2EN@EXPERIMENT::fIpcxGDl": {
         "eventId": "EVENT::v5yxQ2EN@EXPERIMENT::fIpcxGDl",
         "experimentId": "EXPERIMENT::fIpcxGDl",
@@ -8013,6 +8177,121 @@
           "structureTypeId": "WIND-POWER",
           "dynamicTypeId": "WIND-TURBINE-DAY",
           "value": "medium"
+        },
+        "user": {
+          "user": "Franz",
+          "robot": false
+        },
+        "processed": false,
+        "at": 0
+      },
+      "EVENT::pkTDzItj@EXPERIMENT::fIpcxGDl": {
+        "eventId": "EVENT::pkTDzItj@EXPERIMENT::fIpcxGDl",
+        "experimentId": "EXPERIMENT::fIpcxGDl",
+        "operationId": "newConnection",
+        "ids": [
+          "CABLE-UNDERGROUND-SD::[6|2,9|2]@EXPERIMENT::fIpcxGDl"
+        ],
+        "params": {
+          "storyId": "STORY::aOhqo4BC",
+          "experimentId": "EXPERIMENT::fIpcxGDl",
+          "typeId": "CABLE-UNDERGROUND-SD",
+          "vertexes": [
+            "6|2",
+            "9|2"
+          ]
+        },
+        "user": {
+          "user": "Franz",
+          "robot": false
+        },
+        "processed": false,
+        "at": 0
+      },
+      "EVENT::mapPGc3F@EXPERIMENT::fIpcxGDl": {
+        "eventId": "EVENT::mapPGc3F@EXPERIMENT::fIpcxGDl",
+        "experimentId": "EXPERIMENT::fIpcxGDl",
+        "operationId": "newConnection",
+        "ids": [
+          "CABLE-UNDERGROUND-SD::[6|-3,9|-3]@EXPERIMENT::fIpcxGDl"
+        ],
+        "params": {
+          "storyId": "STORY::aOhqo4BC",
+          "experimentId": "EXPERIMENT::fIpcxGDl",
+          "typeId": "CABLE-UNDERGROUND-SD",
+          "vertexes": [
+            "6|-3",
+            "9|-3"
+          ]
+        },
+        "user": {
+          "user": "Franz",
+          "robot": false
+        },
+        "processed": false,
+        "at": 0
+      },
+      "EVENT::oFVw2noz@EXPERIMENT::fIpcxGDl": {
+        "eventId": "EVENT::oFVw2noz@EXPERIMENT::fIpcxGDl",
+        "experimentId": "EXPERIMENT::fIpcxGDl",
+        "operationId": "scheduleDynamicUpdate",
+        "ids": [
+          "POWERGRID-CONNECTOR::[1|1,1|2,2|1,2|2]>VGz28n6d@EXPERIMENT::fIpcxGDl"
+        ],
+        "params": {
+          "storyId": "STORY::aOhqo4BC",
+          "experimentId": "EXPERIMENT::fIpcxGDl",
+          "at": 0,
+          "structureId": "POWERGRID-CONNECTOR::[1|1,1|2,2|1,2|2]>VGz28n6d@EXPERIMENT::fIpcxGDl",
+          "structureTypeId": "POWERGRID-CONNECTOR",
+          "dynamicTypeId": "GRID-SENSOR-ASSIGNMENT",
+          "value": "S1"
+        },
+        "user": {
+          "user": "Franz",
+          "robot": false
+        },
+        "processed": false,
+        "at": 0
+      },
+      "EVENT::SHjl9BPc@EXPERIMENT::fIpcxGDl": {
+        "eventId": "EVENT::SHjl9BPc@EXPERIMENT::fIpcxGDl",
+        "experimentId": "EXPERIMENT::fIpcxGDl",
+        "operationId": "scheduleDynamicUpdate",
+        "ids": [
+          "POWERGRID-CONNECTOR::[1|1,1|2,2|1,2|2]>VGz28n6d@EXPERIMENT::fIpcxGDl"
+        ],
+        "params": {
+          "storyId": "STORY::aOhqo4BC",
+          "experimentId": "EXPERIMENT::fIpcxGDl",
+          "at": 0,
+          "structureId": "POWERGRID-CONNECTOR::[1|1,1|2,2|1,2|2]>VGz28n6d@EXPERIMENT::fIpcxGDl",
+          "structureTypeId": "POWERGRID-CONNECTOR",
+          "dynamicTypeId": "ENERGY-COMMUNITY",
+          "value": "None"
+        },
+        "user": {
+          "user": "Franz",
+          "robot": false
+        },
+        "processed": false,
+        "at": 0
+      },
+      "EVENT::3oISxYTS@EXPERIMENT::fIpcxGDl": {
+        "eventId": "EVENT::3oISxYTS@EXPERIMENT::fIpcxGDl",
+        "experimentId": "EXPERIMENT::fIpcxGDl",
+        "operationId": "scheduleDynamicUpdate",
+        "ids": [
+          "POWERGRID-CONNECTOR::[9|1,9|2,10|1,10|2]>Ip2Z5nC1@EXPERIMENT::fIpcxGDl"
+        ],
+        "params": {
+          "storyId": "STORY::aOhqo4BC",
+          "experimentId": "EXPERIMENT::fIpcxGDl",
+          "at": 0,
+          "structureId": "POWERGRID-CONNECTOR::[9|1,9|2,10|1,10|2]>Ip2Z5nC1@EXPERIMENT::fIpcxGDl",
+          "structureTypeId": "POWERGRID-CONNECTOR",
+          "dynamicTypeId": "ENERGY-COMMUNITY",
+          "value": "None"
         },
         "user": {
           "user": "Franz",
